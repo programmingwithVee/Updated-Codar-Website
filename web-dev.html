@@ -1,0 +1,2360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Development</title>
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/fontawesome.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="shortcut icon" href="./images/codar-logo1.png" type="image/x-icon">
+  <link rel="stylesheet" href="./fonts/icomoon/style.css">
+  <link rel="stylesheet" href="./fonts/flaticon/font/flaticon.css">
+  <link rel="stylesheet" href="./css/tiny-slider.css">
+  <link rel="stylesheet" href="./css/aos.css">
+  <link rel="stylesheet" href="./css/glightbox.min.css">
+  <link rel="stylesheet" href="./css/style (2).css">
+</head>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Karla&family=Source+Sans+Pro:wght@300;400;500;600;700&display=swap');
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  ::before,
+  ::after {
+    box-sizing: border-box;
+  }
+
+  /* page-wrapper */
+  .page-wrapper {
+    overflow: hidden;
+  }
+
+  /* container */
+  .container {
+    max-width: 1170px;
+    margin: auto;
+  }
+
+  /* grid */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 30px;
+  }
+
+  /* header */
+  .header .containers {
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    /* padding: 15px; */
+    position: fixed;
+    z-index: 99;
+    box-shadow: 5px 7px 5px rgb(228, 224, 224);
+    /* background-color: rgb(4, 78, 78); */
+    background-color: white;
+  }
+
+  .logo img {
+    width: 200px;
+    margin-left: 45%;
+  }
+
+  nav {
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 2%;
+    /* margin-left: -10%; */
+  }
+
+  nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 20px;
+  }
+
+  nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-family: 'Fira Sans', sans-serif;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-weight: bold;
+  }
+
+  nav ul li a:hover {
+    transition: all ease-in-out 0.3s;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  #show {
+    display: none;
+  }
+
+  /* hover section */
+  .containers .hovers .dropdown {
+    position: absolute;
+    /* left: 105%; */
+    width: 200px;
+    /* height: 200px; */
+    text-align: left;
+    z-index: 60;
+    -webkit-transform: translateY(10px);
+    -ms-transform: translateY(10px);
+    transform: translateY(10px);
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: 0.2s all;
+    transition: 0.2s all;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px 1px silver;
+  }
+
+  .containers #hove .dropdown {
+    width: 200px;
+  }
+
+  .containers .hovers:hover>.dropdown {
+    -webkit-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    /* transform: translateY(0px); */
+    transform: translate(-15px, 25px);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .dropdown-list li a {
+    font-size: 12px;
+    line-height: normal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Fira Sans', sans-serif;
+    /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+    font-weight: 600;
+    color: grey;
+  }
+
+  .dropdown-list li a:hover {
+    color: rgb(191, 29, 83);
+  }
+
+  /* hover section end */
+  .cons,
+  .log {
+    position: relative;
+    right: 100px;
+  }
+
+  .cons button {
+    padding: 15px 30px;
+    border: 2px solid rgb(191, 29, 83);
+    border-radius: 10px;
+    background: none;
+  }
+
+  .cons {
+    padding-right: 5%;
+  }
+
+  #width,
+  #shift {
+    display: none;
+  }
+
+  .ham {
+    display: none;
+  }
+
+  .cons button a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: rgb(191, 29, 83);
+  }
+
+  .log {
+    margin-top: 1%;
+  }
+
+  .log p {
+    padding: 15px 30px;
+    border: 2px solid rgb(191, 29, 83);
+    border-radius: 10px;
+    background: rgb(191, 29, 83);
+  }
+
+  .log p a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    font-family: 'Fira Sans', sans-serif;
+    /* font-family: sans-serif; */
+  }
+
+  .ham img {
+    width: 50px;
+    position: relative;
+    right: 60px;
+    cursor: pointer;
+  }
+
+  .containers input[type="checkbox"] {
+    display: none;
+  }
+
+  /* banner section starts */
+  .banner {
+    /* background-color: rgb(36, 5, 65); */
+    /* background: linear-gradient(to top, midnightblue, rgb(191, 29, 83)); */
+    background-color: rgba(0, 0, 0, 0.881);
+    padding: 200px 0 150px;
+    /* border-bottom: rgb(158, 6, 56) solid 10px; */
+  }
+
+  .home-text,
+  .home-course {
+    grid-column: span 6;
+    align-self: center;
+  }
+
+  .course-grid img {
+    width: 10%;
+  }
+
+  .home-text h6 {
+    text-transform: uppercase;
+    color: white;
+    font-weight: 500;
+    letter-spacing: 2px;
+    font-family: 'Fira Sans', sans-serif;
+    /* background-color: midnightblue; */
+    background: linear-gradient(to left, midnightblue, rgb(191, 29, 83));
+    width: 30%;
+    font-size: 0.6975rem;
+    /* padding: 10px 50px; */
+    padding: 7px;
+    text-align: center;
+    border-radius: 10px;
+    /* box-shadow: 5px 5px 5px silver; */
+  }
+
+  .course-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    padding: 30px;
+    border-radius: 20px;
+    background: rgb(158, 6, 56);
+  }
+
+  .course-grid h6 {
+    font-size: 1.3rem;
+    font-weight: 100;
+    line-height: 2;
+    letter-spacing: 2px;
+    color: white;
+  }
+
+  .home-text .button button {
+    border: none;
+    background: linear-gradient(to left, midnightblue, rgb(191, 29, 83));
+    padding: 10px 30px;
+    border-radius: 20px;
+    width: 100%;
+  }
+
+  .home-text .button button a {
+    color: white;
+    text-transform: uppercase;
+  }
+
+  .home-text .button button a:hover {
+    text-decoration: none;
+  }
+
+  .home-text h1 {
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+  }
+
+  .home-text p {
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 100;
+    line-height: 2;
+    font-size: 1rem;
+    color: white;
+  }
+
+  /* banner section end */
+
+  /* semester section starts */
+  .kickoff {
+    padding: 70px 0 10px;
+    border-bottom: rgb(191, 29, 83) solid 10px;
+  }
+
+  .kick-off {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .kick-off img {
+    width: 20%;
+  }
+
+  .kick-3 img {
+    width: 29%;
+  }
+
+  .kick-2 img {
+    width: 20%;
+  }
+
+  .kick-off .button button {
+    border: none;
+    background: linear-gradient(to left, midnightblue, rgb(191, 29, 83));
+    padding: 10px 30px;
+    border-radius: 20px;
+  }
+
+  .kick-off .button button a {
+    color: white;
+    text-transform: uppercase;
+  }
+
+  .kick-off .button button a:hover {
+    text-decoration: none;
+  }
+
+  .kick-1 h6,
+  .kick-1 p {
+    text-transform: uppercase;
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 600;
+    font-size: 0.8975rem;
+  }
+
+  .kick-2 p,
+  .kick-3 p,
+  .kick-4 p {
+    text-transform: capitalize;
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 600;
+    color: rgb(158, 6, 56);
+    font-size: 0.8975rem;
+  }
+
+  .kick-off {
+    text-align: center;
+  }
+
+  .kick-1 h4 {
+    color: rgb(158, 6, 56);
+    font-weight: bold;
+    text-transform: capitalize;
+    font-weight: bold;
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 1.6rem;
+  }
+
+  /* semester section end */
+
+  /* course section starts */
+  .course {
+    padding: 150px 0 150px;
+    /* background-color: ghostwhite; */
+  }
+
+  .course-whole .course-content {
+    transform: translateY(70px);
+  }
+
+  .course-content,
+  .course-img {
+    grid-column: span 6;
+    align-self: center;
+  }
+
+  .course-content h1 {
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: bold;
+    font-size: 2rem;
+    color: rgb(158, 6, 56);
+    padding-bottom: 10px;
+  }
+
+  .course-content p {
+    font-family: 'Fira Sans', sans-serif;
+    line-height: 2;
+    font-size: 0.8975rem;
+    font-weight: 600;
+  }
+
+  .course-img img {
+    width: 100%;
+    border-radius: 30px;
+  }
+
+  .section-titles h1 {
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: bold;
+    font-size: 4rem;
+    color: rgb(191, 29, 83);
+    width: 60%;
+  }
+
+  .section-titles p {
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 600;
+  }
+
+  /* course section end */
+
+  /* what to do section starts */
+  .what-to-do {
+    padding: 70px 0 60px;
+    background-color: ghostwhite;
+  }
+
+  .section-title h1 {
+    text-align: center;
+    font-family: 'Fira Sans', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: rgb(158, 6, 56);
+  }
+
+  .learn-text {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-top: 5%;
+  }
+
+  .learn-text .text1,
+  .learn-text .text2,
+  .learn-text .text3,
+  .learn-text .text4,
+  .learn-text .text5,
+  .learn-text .text6,
+  .learn-text .text7 {
+    padding-top: 5%;
+  }
+
+  .learn-text .text1 h1,
+  .learn-text .text2 h1,
+  .learn-text .text3 h1,
+  .learn-text .text4 h1,
+  .learn-text .text5 h1,
+  .learn-text .text6 h1,
+  .learn-text .text7 h1 {
+    color: rgb(158, 6, 56);
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-size: 4rem;
+  }
+
+  .learn-text .text1 h4,
+  .learn-text .text2 h4,
+  .learn-text .text3 h4,
+  .learn-text .text4 h4,
+  .learn-text .text5 h4,
+  .learn-text .text6 h4,
+  .learn-text .text7 h4 {
+    font-weight: 400;
+    font-family: 'Fira Sans', sans-serif;
+  }
+
+  .learn-text .text1 p,
+  .learn-text .text2 p,
+  .learn-text .text3 p,
+  .learn-text .text4 p,
+  .learn-text .text5 p,
+  .learn-text .text6 p,
+  .learn-text .text7 p {
+    font-family: 'Fira Sans', sans-serif;
+  }
+
+  .learn-text .text1 h6,
+  .learn-text .text2 h6,
+  .learn-text .text3 h6,
+  .learn-text .text4 h6,
+  .learn-text .text5 h6,
+  .learn-text .text6 h6,
+  .learn-text .text7 h6 {
+    text-transform: uppercase;
+    color: white;
+    font-weight: 500;
+    letter-spacing: 2px;
+    font-family: 'Fira Sans', sans-serif;
+    /* background-color: midnightblue; */
+    background: linear-gradient(to left, midnightblue, rgb(191, 29, 83));
+    width: 10%;
+    font-size: 0.6975rem;
+    /* padding: 10px 50px; */
+    padding: 7px;
+    text-align: center;
+    border-radius: 10px;
+    /* box-shadow: 5px 5px 5px silver; */
+  }
+
+  /* what to do section end */
+
+  /* teacher section starts */
+  .teachers {
+    padding: 70px 0 60px;
+    /* background-color: ghostwhite; */
+    /* background-color: rgb(158, 6, 56); */
+    background-color: rgb(191, 29, 83);
+  }
+
+  .contained {
+    margin-top: 100px;
+  }
+
+  #align h1 {
+    color: white;
+    font-weight: bold;
+    font-family: 'Fira Sans', sans-serif;
+    width: 80%;
+  }
+
+  .section-titleds p {
+    color: white;
+    font-weight: 500;
+    font-family: 'Fira Sans', sans-serif;
+  }
+
+  .section-titled,
+  .section-titleds {
+    grid-column: span 6;
+    align-self: center;
+  }
+
+  .contained .col-lg-4 {
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: center;
+    padding-bottom: 100px;
+  }
+
+  .card {
+    width: 300px;
+    height: 300px;
+    transform-style: preserve-3d;
+    perspective: 500px;
+    background-color: inherit;
+  }
+
+  .card .face {
+    position: absolute;
+    color: black;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    /* box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1); */
+    border-radius: 15px;
+    /* background: rgba(255, 255, 255, 0.06); */
+    background-color: white;
+    transform-style: preserve-3d;
+    transition: 0.5s;
+    backface-visibility: hidden;
+    /* border-top: 1px solid #ddd; */
+    /* border-left: 1px solid #ddd; */
+    /* border-right: 1px solid #999;
+border-bottom: 1px solid #999; */
+  }
+
+  .card .face.front-face,
+  .card .face.back-face {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card .face.front-face .profile {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .card .face.front-face .name {
+    letter-spacing: 2px;
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: bold;
+  }
+
+  .card .face.front-face .designation {
+    font-size: 0.8rem;
+    color: rgb(191, 29, 83);
+    letter-spacing: 0.8px;
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: bold;
+  }
+
+  /* .card:hover .face.front-face {
+  transform: rotateY(180deg);
+} */
+  .card .face.back-face {
+    position: absolute;
+    transform: rotateY(180deg);
+    padding: 20px 30px;
+    text-align: center;
+    user-select: none;
+  }
+
+  .card .face.back-face .fa-quote-left {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    font-size: 1.2rem;
+  }
+
+  .card .face.back-face .fa-quote-right {
+    position: absolute;
+    bottom: 35px;
+    right: 25px;
+    font-size: 1.2rem;
+  }
+
+  /* .card:hover .face.back-face {
+  transform: rotateY(360deg);
+} */
+
+  @media(max-width: 991.5px) {
+    .col-lg-4 {
+      margin-top: 40px;
+      margin-bottom: 20px;
+    }
+  }
+
+  /* teacher section end */
+
+  /* certificate section starts  */
+  .certificate {
+    padding: 70px 0 60px;
+    /* background-color: ghostwhite; */
+    border: 1px solid midnightblue;
+    margin-top: 10%;
+  }
+
+  .cert-img,
+  .cert-text {
+    grid-column: span 6;
+    align-self: center;
+  }
+
+  .cert-img img {
+    width: 100%;
+  }
+
+  .cert-text h1 {
+    color: midnightblue;
+    font-weight: bolder;
+    font-family: 'Fira Sans', sans-serif;
+    width: 80%;
+    padding-bottom: 30px;
+  }
+
+  .cert-text p {
+    color: black;
+    font-weight: 500;
+    font-family: 'Fira Sans', sans-serif;
+  }
+
+  /* certificate section end  */
+
+  /* testimonials start */
+  .test {
+    padding: 100px 0 10px;
+    animation: background-color 60s;
+    min-height: 100vh;
+    background: white;
+  }
+
+  .contained {
+    margin-top: 30px;
+  }
+
+  .contained .col-lg-4 {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 100px;
+  }
+
+  .card {
+    width: 300px;
+    height: 300px;
+    transform-style: preserve-3d;
+    perspective: 500px;
+    background-color: inherit;
+  }
+
+  .card .face {
+    position: absolute;
+    color: black;
+    font-weight: 600;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 15px;
+    background-color: lavenderblush;
+    transform-style: preserve-3d;
+    transition: 0.5s;
+    backface-visibility: hidden;
+  }
+
+  .card .face.front-face,
+  .card .face.back-face {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card .face.front-face .profile {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .card .face.front-face .name {
+    letter-spacing: 2px;
+  }
+
+  .card .face.front-face .designation {
+    font-size: 0.8rem;
+    color: black;
+    letter-spacing: 0.8px;
+  }
+
+  .card:hover .face.front-face {
+    transform: rotateY(180deg);
+  }
+
+  .card .face.back-face {
+    position: absolute;
+    background-color: ghostwhite;
+    transform: rotateY(180deg);
+    padding: 20px 30px;
+    text-align: center;
+    user-select: none;
+  }
+
+  .card .face.back-face .fa-quote-left {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    font-size: 1.2rem;
+  }
+
+  .card .face.back-face .fa-quote-right {
+    position: absolute;
+    bottom: 35px;
+    right: 25px;
+    font-size: 1.2rem;
+  }
+
+  .card:hover .face.back-face {
+    transform: rotateY(360deg);
+  }
+
+  @media(max-width: 991.5px) {
+    .col-lg-4 {
+      margin-top: 40px;
+      margin-bottom: 20px;
+    }
+  }
+
+  .section-titles {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .section-titled h1 {
+    font-size: 2.5rem;
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 600;
+    width: 100%;
+    text-align: center;
+    color: rgb(191, 29, 83);
+    padding-bottom: 10px;
+  }
+
+  .section-titled p {
+    font-family: 'Fira Sans', sans-serif;
+    color: black;
+    font-size: 1.1rem;
+    font-weight: 500;
+    width: 100%;
+    flex: 1;
+    text-align: center;
+    padding-bottom: 30px;
+  }
+  .read-more{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to left, rgb(191, 29, 83), purple);
+    width: 80%;
+    margin:  0 auto;
+    padding: 3px 3px;
+    text-align: center;
+    border-radius: 20px;
+    margin-top: 7%;
+  }
+  .read-more a{
+    text-transform: capitalize;
+    font-size: 13px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Fira Sans',sans-serif;
+  }
+  .read-more a:hover{
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  /* testimonials end */
+
+  /* application starts */
+  .achieve {
+    background-color: lavender;
+    padding: 100px;
+  }
+
+  .flex-img-container .flex-img-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  .think-it-heading h1 {
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: bold;
+    font-size: 4rem;
+    width: 60%;
+  }
+
+  .think-it-heading h1 span {
+    color: rgb(3, 3, 54);
+  }
+
+  .flex-img-container .flex-img-content img {
+    width: 100%;
+  }
+
+  .flex-img-content .flex-text {
+    background-color: rgb(150, 8, 55);
+    text-align: center;
+    width: 100%;
+    padding-top: 30%;
+  }
+
+  .flex-img-content .flex1-text {
+    background-color: rgb(3, 3, 54);
+    width: 100%;
+    text-align: center;
+    padding-top: 30%;
+  }
+
+  .flex-img-content .flex-text h1 {
+    color: white;
+    font-weight: bold;
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 4rem;
+  }
+
+  .flex-img-content .flex-text p {
+    color: white;
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 1rem;
+  }
+
+  .flex-img-content .flex1-text p {
+    color: white;
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 1rem;
+  }
+
+  .flex-img-content .flex1-text h1 {
+    color: white;
+    font-weight: bold;
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 4rem;
+  }
+
+  /* application end */
+
+  /* application starts */
+  .apply {
+    padding: 60px 0 60px;
+    background: linear-gradient(to right, rgb(191, 29, 83), purple);
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    line-height: 2;
+    font-weight: bold;
+  }
+
+  .form h1 {
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 2.3rem;
+  }
+
+  .form p {
+    font-family: 'Fira Sans', sans-serif;
+  }
+
+  .form #change button {
+    background: none;
+    border: 1px solid white;
+    border-radius: 20px;
+    padding: 10px 30px;
+  }
+
+  .form .butt button a {
+    color: white;
+    text-transform: uppercase;
+  }
+
+  /* application end */
+
+  /* footer starts */
+  .site-footer {
+    padding-top: 70px;
+    padding-bottom: 30px;
+    font-size: 14px;
+  }
+
+  @media (max-width: 767.98px) {
+    .site-footer {
+      padding-top: 30px;
+    }
+  }
+
+  .site-footer a {
+    color: #000;
+  }
+
+  .site-footer a:hover {
+    color: #fc5404;
+  }
+
+  .site-footer .widget {
+    margin-bottom: 30px;
+  }
+
+  .site-footer .widget h3,
+  .site-footer .widget .h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+  }
+
+  .site-footer .widget img {
+    width: 30%;
+  }
+
+  .site-footer .widget .social li {
+    display: inline-block;
+  }
+
+  .site-footer .widget .social li a {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #f8f9fa;
+    display: inline-block;
+    position: relative;
+    color: black;
+  }
+
+  .site-footer .widget .social li a span {
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+  .site-footer .widget .social li a:hover {
+    /* background-color: #fc5404; */
+    background: rgb(191, 29, 83);
+    color: #fff;
+  }
+
+  .site-footer .widget .links li {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .site-footer .widget .links li a {
+    color: black;
+    font-weight: bold;
+    line-height: 2;
+  }
+
+  .site-footer .widget .links li a:hover {
+    color: rgb(191, 29, 83);
+  }
+
+  .site-footer .copyright {
+    position: relative;
+    padding-top: 40px;
+    margin-top: 40px;
+  }
+
+  .site-footer .copyright:before {
+    top: 0;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    content: "";
+    height: 1px;
+    background: #d3d8dc;
+  }
+
+  /* footer end */
+
+  /* media query starts */
+  @media only screen and (max-width:1200px) {
+    .head .contain {
+      max-width: 100%;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      /* padding: 15px; */
+      position: fixed;
+      z-index: 1;
+      box-shadow: 5px 7px 5px rgb(228, 224, 224);
+      /* background-color: rgb(4, 78, 78); */
+      background-color: white;
+    }
+
+    #show {
+      display: flex;
+    }
+
+    #hide {
+      display: none;
+    }
+
+    .contain nav .links {
+      display: block;
+      position: fixed;
+      /* background-color: #14181f; */
+      /* background-color: teal; */
+      background-color: white;
+      height: 100%;
+      width: 100%;
+      top: 9%;
+      left: -100%;
+      margin-left: 0;
+      overflow-y: auto;
+      padding-bottom: 100px;
+      /* max-width: 350px; */
+      transition: all 0.3s ease;
+    }
+
+    nav #show-burger:checked~ul {
+      left: 0%;
+    }
+
+    .contain input[type="checkbox"] {
+      display: none;
+    }
+
+    .logos img {
+      width: 200px;
+      margin-left: 30%;
+    }
+
+    nav ul li a {
+      display: none;
+    }
+
+    nav ul li {
+      width: 100%;
+      text-align: left;
+    }
+
+    .contain .links li {
+      margin: 15px 20px;
+    }
+
+    .contain .links li label {
+      line-height: 10px;
+      font-size: 1.125rem;
+      display: block;
+      padding: 8px 18px;
+      cursor: pointer;
+    }
+
+    nav ul li a:hover {
+      transition: all ease-in-out 0.3s;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .contain .links li label {
+      cursor: pointer;
+      text-transform: uppercase;
+      font-size: 1.3rem;
+      color: rgb(150, 8, 55);
+      font-weight: bold;
+      font-family: 'Fira Sans', sans-serif;
+      position: relative;
+      top: 50px;
+      line-height: 2;
+    }
+
+    .contain .links ul {
+      position: static;
+      opacity: 1;
+      visibility: visible;
+      background: none;
+      max-height: 0px;
+      overflow: hidden;
+    }
+
+    .contain .links #show-started:checked~ul,
+    .contain .links #show-courses:checked~ul,
+    .contain .links #show-about:checked~ul,
+    .contain .links #show-companies:checked~ul {
+      max-height: 170vh;
+    }
+
+    .burger img {
+      width: 50px;
+      position: relative;
+      right: 60px;
+      cursor: pointer;
+    }
+
+    .width {
+      text-align: center;
+      margin-top: 5%;
+      padding-bottom: 3%;
+    }
+
+    .shift {
+      text-align: center;
+    }
+
+    .width button {
+      padding: 15px 30px;
+      border: 2px solid rgb(191, 29, 83);
+      border-radius: 10px;
+      background: none;
+      width: 80%;
+    }
+
+    .width button a {
+      text-transform: uppercase;
+      text-decoration: none;
+      color: rgb(191, 29, 83);
+    }
+
+    .shift button {
+      padding: 15px 30px;
+      border: 2px solid rgb(191, 29, 83);
+      border-radius: 10px;
+      background: rgb(150, 8, 55);
+      width: 80%;
+      text-align: center;
+    }
+
+    .shift button a {
+      text-transform: uppercase;
+      text-decoration: none;
+      color: white;
+      font-family: 'Fira Sans', sans-serif;
+    }
+
+    .section-titles {
+      margin-left: 8.333333%;
+    }
+
+    .left {
+      margin-left: 8.333333%;
+    }
+
+    .course-img,
+    .course-content {
+      margin-left: 8.333333%;
+    }
+
+    .side {
+      padding-bottom: 50px;
+    }
+
+    .home-text,
+    .home-course {
+      margin-left: 8.333333%;
+    }
+
+    .down {
+      margin-top: 1%;
+    }
+  }
+
+  @media only screen and (max-width:991px) {
+
+    .home-text,
+    .home-course {
+      grid-column: span 12;
+      align-self: center;
+    }
+
+    .course-img,
+    .course-content {
+      margin-left: 8.333333%;
+      grid-column: span 12;
+      align-self: center;
+    }
+
+    .learn-text p {
+      width: 70%;
+    }
+
+    .course-grid {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      width: 100%;
+    }
+
+    .grid-img,
+    .grid-text {
+      grid-column: span 12;
+      align-self: center;
+      margin-left: 8.333333%;
+    }
+
+    .grid-img img {
+      width: 20%;
+    }
+
+    .cert-img,
+    .cert-text {
+      grid-column: span 12;
+      align-self: center;
+      margin-left: 8.333333%;
+    }
+
+    .cert-img img {
+      width: 80%;
+    }
+
+    .think-it-heading h1 {
+      width: 100%;
+    }
+  }
+
+  @media only screen and (max-width:820px) {
+    .learn-text {
+      margin-left: 8.333333%;
+    }
+
+    .section-titled {
+      margin-left: 8.333333%;
+    }
+  }
+
+  @media only screen and (max-width:786px) {
+    .section-topic h1 {
+      width: 100%;
+    }
+
+    .section-titled,
+    .section-titleds {
+      grid-column: span 12;
+      align-self: center;
+      margin-left: 8.333333%;
+    }
+
+    .learn-text .text1 h6,
+    .learn-text .text2 h6,
+    .learn-text .text3 h6,
+    .learn-text .text4 h6,
+    .learn-text .text5 h6,
+    .learn-text .text6 h6,
+    .learn-text .text7 h6 {
+      width: 20%;
+    }
+  }
+
+  @media only screen and (max-width:540px) {
+    .think-it-heading h1 {
+      width: 30%;
+    }
+
+    .home-text h1 {
+      width: 100%;
+    }
+
+    .banner {
+      padding: 100px 0 100px;
+    }
+  }
+
+  @media only screen and (max-width:586px) {
+    .think-it-heading h1 {
+      font-size: 2.5rem;
+      width: 110%;
+    }
+
+    .achieve {
+      padding: 70px 10px 70px 10px;
+    }
+
+    .logos img {
+      margin-left: 5%;
+    }
+  }
+
+  @media only screen and (max-width:414px) {
+    .apply {
+      padding: 70px 10px 70px 10px;
+      /* padding-top: 70px; */
+    }
+
+    .think-it-heading h1 {
+      width: 100%;
+      font-size: 2rem;
+    }
+
+    .logos img {
+      margin-left: 10%;
+      width: 150px;
+    }
+
+    .section-titles h1 {
+      font-size: 2.5rem;
+    }
+
+    .burger img {
+      width: 40px;
+    }
+
+    .banner {
+      padding: 100px 0 100px;
+    }
+
+    .kick-off {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .learn-text {
+      margin-left: 8.333333%;
+    }
+
+    .learn-text .text1 h1,
+    .learn-text .text2 h1,
+    .learn-text .text3 h1,
+    .learn-text .text4 h1,
+    .learn-text .text5 h1,
+    .learn-text .text6 h1,
+    .learn-text .text7 h1 {
+      font-size: 2.5rem;
+    }
+
+    .cert-text h1 {
+      width: 100%;
+    }
+
+    .home-text h1 {
+      font-size: 1.9rem;
+    }
+  }
+
+  @media only screen and (max-width:375px) {
+
+    .learn-text .text1 h1,
+    .learn-text .text2 h1,
+    .learn-text .text3 h1,
+    .learn-text .text4 h1,
+    .learn-text .text5 h1,
+    .learn-text .text6 h1,
+    .learn-text .text7 h1 {
+      font-size: 2.5rem;
+    }
+
+    .banner {
+      padding: 100px 0 100px;
+    }
+
+    .learn-text {
+      margin-left: 8.333333%;
+    }
+
+    .section-titles h1 {
+      font-size: 3rem;
+    }
+
+    .home-text h6 {
+      width: 50%;
+    }
+
+    .home-text h1 {
+      font-size: 2rem;
+    }
+
+    .logos img {
+      margin-left: 10%;
+    }
+
+    .course-content h1 {
+      font-size: 1.5rem;
+    }
+
+    .course-whole .course-content {
+      transform: translateY(10px);
+    }
+
+    .course {
+      padding: 50px 0 100px;
+    }
+
+    .kick-off {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .form {
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
+
+  @media only screen and (max-width:320px) {
+    .logos img {
+      width: 100px;
+      margin-left: 15%;
+    }
+
+    .burger img {
+      width: 30px;
+      padding-top: 5px;
+    }
+
+    .think-it-heading h1 {
+      font-size: 1.5rem;
+    }
+
+    .banner {
+      padding: 100px 0 100px;
+    }
+
+    .home-text h1 {
+      font-size: 2rem;
+      width: 80%;
+    }
+
+    .home-text p {
+      width: 90%;
+    }
+
+    .button {
+      width: 50%;
+    }
+
+    .home-course {
+      width: 80%;
+    }
+
+    .home-text h6 {
+      width: 50%;
+    }
+
+    .home-text .button button {
+      padding: 5px 25px;
+    }
+
+    .kick-off {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+
+    .kick-off .button button {
+      padding: 5px 40px;
+      width: 200%;
+    }
+
+    .kick-off .button button a {
+      font-size: 10px;
+    }
+
+    .course {
+      padding: 70px 0 100px;
+    }
+
+    .course-img {
+      margin-right: 8.333333%;
+    }
+
+    .course-img img {
+      width: 95%;
+    }
+
+    .course-content h1 {
+      font-size: 1.2rem;
+      /* width: 80%; */
+      margin-right: 8.333333%;
+    }
+
+    .course-content p {
+      margin-right: 8.333333%;
+      width: 80%;
+    }
+
+    .learn-text .text1 p,
+    .learn-text .text2 p,
+    .learn-text .text3 p,
+    .learn-text .text4 p,
+    .learn-text .text5 p,
+    .learn-text .text6 p,
+    .learn-text .text7 p {
+      width: 100%;
+    }
+
+    .learn-text .text1 h6,
+    .learn-text .text2 h6,
+    .learn-text .text3 h6,
+    .learn-text .text4 h6,
+    .learn-text .text5 h6,
+    .learn-text .text6 h6,
+    .learn-text .text7 h6 {
+      width: 50%;
+    }
+
+    .section-titleds p {
+      width: 80%;
+    }
+
+    .cert-text p {
+      width: 80%;
+    }
+
+    .section-titled h1 {
+      width: 100%;
+      margin-right: 8.333333%;
+      font-size: 2rem;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .section-topic h1 {
+      text-align: right;
+      margin: 0 auto;
+    }
+  }
+
+  @media only screen and (max-width:280px) {
+    .home-text h1 {
+      font-size: 1.2rem;
+      width: 75%;
+    }
+
+    .home-text p {
+      font-size: 10px;
+      width: 70%;
+    }
+
+    .course-grid {
+      width: 80%;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .course-grid h6 {
+      line-height: 1;
+      font-size: 12px;
+    }
+
+    .kick-1 h4 {
+      font-size: 1rem;
+    }
+
+    .kick-1 p {
+      font-size: 10px;
+    }
+
+    .kick-2 p,
+    .kick-3 p,
+    .kick-4 p {
+      font-size: 13px;
+      width: 100%;
+    }
+
+    .kick-off .button button {
+      padding: 5px 5px;
+    }
+
+    .section-titles h1 {
+      font-size: 1.6rem;
+    }
+
+    .course-img img {
+      width: 80%;
+    }
+
+    .course-content h1 {
+      font-size: 1rem;
+      width: 70%;
+    }
+
+    .course-content p {
+      width: 70%;
+    }
+
+    .what-to-do {
+      margin-top: 5%;
+    }
+
+    .section-titleds p {
+      width: 80%;
+    }
+
+    .section-titleds h1 {
+      width: 90%;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .cert-text h1 {
+      width: 85%;
+    }
+
+    .course-whole .course-content {
+      transform: translateY(10px);
+    }
+
+    .learn-text .text1 h1,
+    .learn-text .text2 h1,
+    .learn-text .text3 h1,
+    .learn-text .text4 h1,
+    .learn-text .text5 h1,
+    .learn-text .text6 h1,
+    .learn-text .text7 h1 {
+      font-size: 1.5rem;
+    }
+
+    .learn-text .text1 h4,
+    .learn-text .text2 h4,
+    .learn-text .text3 h4,
+    .learn-text .text4 h4,
+    .learn-text .text5 h4,
+    .learn-text .text6 h4,
+    .learn-text .text7 h4 {
+      font-size: 1rem;
+    }
+
+    .cert-img,
+    .cert-text {
+      margin-left: 3.333333%;
+    }
+
+    .cert-text p {
+      width: 75%;
+    }
+
+    #footer {
+      margin-left: 3.333333%;
+    }
+
+    .logos img {
+      margin-left: 20%;
+    }
+
+    .site-footer .widget h3,
+    .site-footer .widget .h3 {
+      font-size: 1.1rem;
+    }
+
+    #align h1 {
+      margin: 0 auto;
+      text-align: center;
+      width: 70%;
+      margin-left: -10%;
+    }
+
+    .section-titleds p {
+      width: 65%;
+    }
+    .section-titled h1{
+      font-size: 2rem;
+    }
+  }
+
+  /* media query ends */
+</style>
+
+<body>
+  <!-- page-wrapper starts -->
+  <div class="page-wrapper">
+    <header class="header" id="hide">
+      <div class="containers">
+        <div class="logo">
+          <a href="./codar.html">
+            <img src="./images/codar-logo.png" alt="">
+          </a>
+        </div>
+        <nav>
+          <input type="checkbox" id="show-menu">
+          <ul>
+            <li class="hovers"><a href="">get started</a>
+              <div class="dropdown">
+                <div class="dropdown-body">
+                  <ul class="dropdown-list">
+                    <li><a href="./how-it-works.html">how it works</a></li>
+                    <li><a href="./how-to-apply.html">how to apply</a></li>
+                    <li><a href="./tuition-options.html">tuition options</a></li>
+                    <li><a href="./career-support.html">career support</a></li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li class="hovers" id="hove"><a href="./courses.html">courses</a>
+              <div class="dropdown">
+                <div class="dropdown-body">
+                  <ul class="dropdown-list">
+                    <li><a href="./design.html">ui/ux</a></li>
+                    <li><a href="./digital.html">digital marketing</a></li>
+                    <li><a href="./data-science.html">data science</a></li>
+                    <li><a href="./web-dev.html">full stack web development</a></li>
+                    <li><a href="./backend-dev.html">backend development</a></li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li class="hovers" id="hove"><a href="./online-school.html">online school</a>
+            </li>
+            <li class="hovers" id="hove"><a href="">for companies</a>
+              <div class="dropdown">
+                <div class="dropdown-body">
+                  <ul class="dropdown-list">
+                    <li><a href="./work-force.html">build our workforce</a></li>
+                    <li><a href="./learn-more.html">learn more</a></li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </nav>
+        <div class="cons">
+          <button><a href="./apply.html">apply now</a></button>
+        </div>
+        <div class="log">
+          <p><a href="./apply.html">login</a></p>
+        </div>
+        <label for="show-menu" class="menu-icon">
+          <div class="ham">
+            <img src="./images/burger.jpeg" alt="">
+          </div>
+        </label>
+      </div>
+    </header>
+
+    <!-- Aside Nav -->
+    <header class="head" id="show">
+      <div class="contain">
+        <div class="logos">
+          <a href="./codar.html">
+          <img src="./images/codar-logo.png" alt="">
+          </a>
+        </div>
+        <nav>
+          <input type="checkbox" id="show-burger">
+          <ul class="links">
+            <li class="hovers" id="seperate"><a href="">get started</a>
+              <input type="checkbox" id="show-started">
+              <label for="show-started">get started</label>
+              <ul class="dropdown-list">
+                <li><a href="">get started</a></li>
+                <li><a href="./how-it-works.html">how it works</a></li>
+                <li><a href="./how-to-apply.html">how to apply</a></li>
+                <li><a href="./tuition-options.html">tuition options</a></li>
+                <li><a href="./career-support.html">career support</a></li>
+              </ul>
+            </li>
+            <li class="hovers" id="hove"><a href="./courses.html">courses</a>
+              <input type="checkbox" id="show-courses">
+              <label for="show-courses">courses</label>
+              <ul class="dropdown-list">
+                <li><a href="">courses</a></li>
+                <li><a href="./courses.html">courses</a></li>
+                <li><a href="./design.html">ui/ux</a></li>
+                <li><a href="./digital.html">digital marketing</a></li>
+                <li><a href="./data-science.html">data science</a></li>
+                <li><a href="./web-dev.html">full stack web development</a></li>
+                <li><a href="./backend-dev.html">backend development</a></li>
+              </ul>
+            </li>
+            <li class="hovers"><a href="./online-school.html">online school</a>
+              <input type="checkbox" id="show-about">
+              <label for="show-about">online school</label>
+              <ul class="dropdown-list">
+                <li><a href="">online school</a></li>
+                <li><a href="./online-school.html">online school</a></li>
+              </ul>
+            </li>
+            <li class="hovers" id="hove"><a href="">for companies</a>
+              <input type="checkbox" id="show-companies">
+              <label for="show-companies">for companies</label>
+              <ul class="dropdown-list">
+                <li><a href="">for companies</a></li>
+                <li><a href="./work-force.html">build your workforce</a></li>
+                <li><a href="./learn-more.html">learn more</a></li>
+              </ul>
+            </li>
+            <div class="width">
+              <button><a href="./apply.html">apply now</a></button>
+            </div>
+            <div class="shift">
+              <button><a href="./apply.html">login</a></button>
+            </div>
+          </ul>
+        </nav>
+        <label for="show-burger" class="menu-icon">
+          <div class="burger">
+            <img src="./images/burger.jpeg" alt="">
+          </div>
+        </label>
+      </div>
+    </header>
+    <!-- Aside Nav -->
+
+
+    <!-- banner section starts -->
+    <section class="banner" id="banner">
+      <div class="container">
+        <div class="grid">
+          <div class="home-text" data-aos="fade-down">
+            <h6>intermediate</h6>
+            <h1>Full Stack Web Dev Course</h1>
+            <p>This course is designed to take you from absolute beginner to competent full-stack web developer in a
+              matter of weeks. It is a practical course where you will start building real websites from the first
+              lecture. Application will consist of the frontend and backend parts.</p>
+            <div class="button">
+              <button><a href="./apply.html">apply now</a></button>
+            </div>
+          </div>
+          <div class="home-course" data-aos="fade-up">
+            <div class="course-grid">
+              <h6> <img src="./images/checked2.png" alt=""> HTML</h6>
+              <h6><img src="./images/checked2.png" alt=""> Redux</h6>
+              <h6><img src="./images/checked2.png" alt=""> CSS</h6>
+              <h6><img src="./images/checked2.png" alt="">JavaScript</h6>
+              <h6><img src="./images/checked2.png" alt=""> python</h6>
+              <h6><img src="./images/checked2.png" alt="">React</h6>
+              <h6><img src="./images/checked2.png" alt="">NodeJS</h6>
+              <h6><img src="./images/checked2.png" alt="">SQL</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- banner section end -->
+
+    <!-- semester section starts -->
+    <section class="kickoff" id="kickoff" data-aos="zoom-out">
+      <div class="container">
+        <div class="kick-off">
+          <div class="kick-1">
+            <h6>next semester</h6>
+            <h4>January 10</h4>
+            <p>9:00am - 2:00pm wat</p>
+            <p>9:00am - 6:00pm wat</p>
+          </div>
+          <div class="kick-2">
+            <img src="./icons/lineal/calendar.svg" alt="">
+            <p>6 months <br>(weekdays / weekend)</p>
+          </div>
+          <div class="kick-3">
+            <img src="./icons/lineal/laptop.svg" alt="">
+            <p>virtual <br> live classes</p>
+          </div>
+          <div class="kick-4">
+            <img src="./icons/lineal/user.svg" alt="">
+            <p>expert <br> tutors</p>
+          </div>
+          <div class="button">
+            <button><a href="./apply.html">apply now</a></button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- semester section end -->
+
+    <!-- course section starts -->
+    <section class="course" id="course">
+      <div class="container">
+        <div class="section-titles"  data-aos="zoom-in">
+          <h1>Curriculum</h1>
+          <p>Codar offers a wide variety of programs and course led by experts.</p>
+        </div>
+        <div class="grid course-whole">
+          <div class="course-img"  data-aos="fade-right">
+            <img src="./images/education.jpeg" alt="">
+          </div>
+          <div class="course-content"  data-aos="fade-left">
+            <h1>Our full stack web curriculum is designed to teach you the technical and professional skills hiring
+              managers need most.</h1>
+            <p> In the Full Stack Web Dev Course you’ll attend live, online lectures led by industry experts who will
+              teach you the foundations of full-stack web app development using HTML, CSS, and JavaScript. You’ll also
+              develop web servers using Node.js and RDBMS, including SQLite and PostgreSQL, as well as be able to
+              understand, explain, and apply fundamental computer science concepts.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- course section ends -->
+
+    <!-- what we will do section starts -->
+    <section class="what-to-do" id="what-to-do">
+      <div class="container">
+        <div class="section-title"  data-aos="zoom-in">
+          <h1>what we will do</h1>
+        </div>
+        <div class="learn-text left">
+          <div class="text1"  data-aos="flip-down">
+            <h6>sprint</h6>
+            <h1>00</h1>
+            <h4>Orientation & Precourse Work</h4>
+            <p>All Data Science learners are required to complete orientation and the precourse work</p>
+          </div>
+          <div class="text2"  data-aos="flip-up">
+            <h6>sprint</h6>
+            <h1>01-04</h1>
+            <h4>Web Foundations</h4>
+            <p>‍ HTML, CSS, Git, JavaScript and UI Principle</p>
+          </div>
+          <div class="text3"  data-aos="flip-down">
+            <h6>sprint</h6>
+            <h1>05-08</h1>
+            <h4>Web Application Development</h4>
+            <p>React, Redux, React Router, HTTP/Ajax, and Functional Programming Techniques</p>
+          </div>
+          <div class="text4"  data-aos="flip-up">
+            <h6>sprint</h6>
+            <h1>09-12</h1>
+            <h4>Advanced Web Development</h4>
+            <p>Advanced React, State Management and Web Applications</p>
+          </div>
+          <div class="text5"  data-aos="flip-down">
+            <h6>sprint</h6>
+            <h1>13-16</h1>
+            <h4>Back End Development</h4>
+            <p> Node – Node.js Web APIs, Data Persistence, Authentication and Testing</p>
+          </div>
+          <div class="text6"  data-aos="flip-up"
+            <h6>sprint</h6>
+            <h1>17-20</h1>
+            <h4>Computer Science</h4>
+            <p>Intro to Python and OOP, Algorithms, Data Structures, Graphs, Hash Tables, and Coding Interview Tips</p>
+          </div>
+          <div class="text7"  data-aos="flip-down">
+            <h6>sprint</h6>
+            <h1>21-24</h1>
+            <h4>Labs</h4>
+            <p>Participate in our in-house apprenticeship by building a real-world project in a small team</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- what we will do section end -->
+
+    <!-- teachers section start -->
+    <section class="teachers" id="teachers">
+      <div class="container">
+        <div class="grid left">
+          <div class="section-titled" id="align" data-aos="fade-right">
+            <h1>Taught by Experienced Experts</h1>
+          </div>
+          <div class="section-titleds" data-aos="fade-left">
+            <p>Codar Instructors are experienced practitioners who work at the world's most innovative companies.
+              They're experts in their field, and enter the classroom with years of experience making sure you're
+              learning the most up-to-date and practical skills companies around the world need.</p>
+          </div>
+        </div>
+        <div class="contained">
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="card" data-aos="fade-down">
+                <div class="face front-face">
+                  <img src="./images/teach3.jpeg" alt="" class="profile">
+                  <div class="pt-3 text-uppercase name">
+                    Michael Cohen
+                  </div>
+                  <div class="designation">Product Designer</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card" data-aos="fade-up">
+                <div class="face front-face">
+                  <img src="./images/teach1.jpeg" alt="" class="profile">
+                  <div class="pt-3 text-uppercase name">
+                    Joseph Catan
+                  </div>
+                  <div class="designation">Lead, UI/UX Designer</div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card" data-aos="fade-right">
+                <div class="face front-face">
+                  <img src="./images/teach2.jpeg" alt="" class="profile">
+                  <div class="pt-3 text-uppercase name">
+                    Cynthia Jones
+                  </div>
+                  <div class="designation">Product Designer</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- teachers section end -->
+
+    <!-- certificate section starts -->
+    <section class="certificate" id="certificate">
+      <div class="container">
+        <div class="grid">
+          <div class="cert-img" data-aos="fade-up">
+            <img src="./images/c.jpg" alt="">
+          </div>
+          <div class="cert-text" data-aos="fade-down">
+            <h1>Earn a Codar Fullstack Web Development Certification</h1>
+            <p> Upon completing Codar's Fullstack Web Development Course, you'll receive an industry-recognized
+              professional certificate to share with your network and showcase all that you've learned. Codar
+              certificates are formatted for sharing on LinkedIn.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- certificate section end -->
+
+    <!-- testimonials start -->
+    <section class="test" id="test">
+      <div class="container">
+        <div class="section-titled" data-aos="zoom-in" data-aos-easing="ease-in-sine">
+          <h1>See What Our Students Are Saying About Us...</h1>
+          <p>Our old and new students always have something good to say about us. Check it out.</p>
+        </div>
+        <div class="contained">
+          <div class="row">
+            <div class="col-lg-4" data-aos="fade-down" data-aos-easing="ease-in-sine">
+              <div class="card">
+                <div class="face front-face">
+                  <img src="./images/test1.jpg" alt="" class="profile">
+                  <div class="pt-3 text-uppercase name">
+                    Onyiyechi Anyawu
+                  </div>
+                  <div class="designation">Front-end Developer</div>
+                </div>
+                <div class="face back-face">
+                  <span class="fas fa-quote-left"></span>
+                  <div class="testimonial">
+                    I never thought I could turn out this good! I am very grateful to Codar for this Opportunity. I am ready to pursue more and
+                    more with the support I get from my trainers and other students.
+                    <div class="read-more">
+                      <a href="./outcomes.html">read more testimonials <i class="fas fa-arrow-alt-circle-right"></i></a>
+                    </div>
+                  </div>
+                  <span class="fas fa-quote-right"></span>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4" data-aos="fade-down" data-aos-easing="ease-in-sine">
+              <div class="card">
+                <div class="face front-face">
+                  <img src="./images/test2.jpg" alt="" class="profile">
+                  <div class="pt-3 text-uppercase name">
+                    Bright Williams
+                  </div>
+                  <div class="designation">Full Stack Developer</div>
+                </div>
+                <div class="face back-face">
+                  <span class="fas fa-quote-left"></span>
+                  <div class="testimonial">
+                    Codar has impacted my career progression in a positive way as the changes in the last couple of
+                    months have been rapid.I
+                    feel fulfilled implementing my passion.
+                    <div class="read-more">
+                      <a href="./outcomes.html">read more testimonials <i class="fas fa-arrow-alt-circle-right"></i></a>
+                    </div>
+                  </div>
+                  <span class="fas fa-quote-right"></span>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4" data-aos="fade-down" data-aos-easing="ease-in-sine">
+              <div class="card">
+                <div class="face front-face">
+                  <img src="./images/cus-2.png" alt="" class="profile">
+                  <div class="pt-3 text-uppercase name">
+                    Isaac Maxwell
+                  </div>
+                  <div class="designation">Back-end Developer</div>
+                </div>
+                <div class="face back-face">
+                  <span class="fas fa-quote-left"></span>
+                  <div class="testimonial">
+                    Codar gave me the opportunity to know more. The training significantly helped me with my career transition
+                    <div class="read-more">
+                      <a href="./outcomes.html">read more testimonials <i class="fas fa-arrow-alt-circle-right"></i></a>
+                    </div>
+                  </div>
+                  <span class="fas fa-quote-right"></span>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4" data-aos="fade-down" data-aos-easing="ease-in-sine">
+              <div class="card">
+                <div class="face front-face">
+                  <img src="./images/test4.jpg" alt="" class="profile">
+                  <div class="pt-3 text-uppercase name">
+                    Peterson Igwe
+                  </div>
+                  <div class="designation">Data Analyst</div>
+                </div>
+                <div class="face back-face">
+                  <span class="fas fa-quote-left"></span>
+                  <div class="testimonial">
+                    I was really excited about Codar going virtual. Excited that I was able to learn from home. I couldn't drive myself but Codar was able to drive me to
+                    discipline myself.
+                    <div class="read-more">
+                      <a href="./outcomes.html">read more testimonials <i class="fas fa-arrow-alt-circle-right"></i></a>
+                    </div>
+                  </div>
+                  <span class="fas fa-quote-right"></span>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4" data-aos="fade-down" data-aos-easing="ease-in-sine">
+              <div class="card">
+                <div class="face front-face">
+                  <img src="./images/cus-3.png" alt="" class="profile">
+                  <div class="pt-3 text-uppercase name">
+                    Rachael Johnson
+                  </div>
+                  <div class="designation">UI/UX Designer</div>
+                </div>
+                <div class="face back-face">
+                  <span class="fas fa-quote-left"></span>
+                  <div class="testimonial">
+                    Since I've taken this class, I have been able to see how web development is important to my job. It has also positioned me as a better professional in my workplace.
+                    <div class="read-more">
+                      <a href="./outcomes.html">read more testimonials <i class="fas fa-arrow-alt-circle-right"></i></a>
+                    </div>
+                  </div>
+                  <span class="fas fa-quote-right"></span>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4" data-aos="fade-down" data-aos-easing="ease-in-sine">
+              <div class="card">
+                <div class="face front-face">
+                  <img src="./images/cus-1.png" alt="" class="profile">
+                  <div class="pt-3 text-uppercase name">
+                    Jaiyeola Aminat
+                  </div>
+                  <div class="designation">Cyber Engineer</div>
+                </div>
+                <div class="face back-face">
+                  <span class="fas fa-quote-left"></span>
+                  <div class="testimonial">
+                    The Codar digital marketing program is important for me because today, I can boldly say I am a
+                    Social Media Manager. Codar has done really well with me and for me, I am a better person.
+                    <div class="read-more">
+                      <a href="./outcomes.html">read more testimonials <i class="fas fa-arrow-alt-circle-right"></i></a>
+                    </div>
+                  </div>
+                  <span class="fas fa-quote-right"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- testimonials end -->
+
+    <!-- application starts -->
+    <section id="achieve" class="achieve">
+      <div class="container">
+        <div class="think-it-heading" data-aos="zoom-in">
+          <h1>Accelerate Your Growth. <span>Think it, become it with Codar</span></h1>
+        </div>
+        <div class="flex-img-container">
+          <div class="flex-img-content" data-aos="fade-up">
+            <div class="flex-text">
+              <h1>10K+</h1>
+              <p>students trained</p>
+            </div>
+            <img src="./images/flex-img.jpeg" alt="">
+            <div class="flex1-text">
+              <h1>80%</h1>
+              <p>Hiring rate of Codar Learners</p>
+            </div>
+            <img src="./images/flex1-img.jpeg" alt="">
+          </div>
+        </div>
+      </div>
+  </div>
+  </section>
+  <!-- application end -->
+
+  <!-- application starts -->
+  <section id="apply" class="apply">
+    <div class="container">
+      <div class="form" data-aos="fade-right" data-aos-easing="ease-in-sine">
+        <h1>Start your application today</h1>
+        <p>The latest application deadline is
+          30th of December, 2022</p>
+        <div class="butt" id="change" data-aos="fade-left" data-aos-easing="ease-in-sine">
+          <button><a href="./apply.html">apply now</a></button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- application end -->
+
+  <!-- footer starts -->
+  <div class="site-footer bg-light" data-aos="fade-down">
+    <div class="container" id="footer">
+
+      <div class="row justify-content-between">
+        <div class="col-lg-4">
+          <div class="widget">
+            <!-- <h3 class="line-top">About</h3> -->
+            <img src="./images/codar-logo.png" alt="">
+            <!-- <p class="mb-5">Delectus voluptatum distinctio quos eius excepturi sunt pariatur, aut, doloribus officia ea molestias beatae laudantium, quam odio ipsum veritatis est maiores velit quasi blanditiis et natus accusamus itaque. Veniam quidem debitis odio amet voluptas distinctio dicta placeat! Et pariatur doloremque ea veniam. Separated they live.</p> -->
+
+          </div>
+          <div class="widget">
+            <h3 class="line-top">Connect with us</h3>
+            <ul class="social list-unstyled mb-5">
+              <li><a href="https://www.linkedin.com/company/codarhq/"><span class="icon-linkedin"></span></a></li>
+              <li><a href="https://twitter.com/CodarHq?t=TtJxGuSU_i-EMkL2hwVFuw&s=09"><span class="icon-twitter"></span></a></li>
+              <li><a href="https://instagram.com/codarhq?igshid=YmMyMTA2M2Y="><span class="icon-instagram"></span></a></li>
+              <li><a href="https://youtube.com/channel/UCUaMPb7dm0K86sPOd-ZRucQ"><span class="icon-youtube"></span></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="row">
+            <div class="col-12">
+              <div class="widget">
+              </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4">
+              <div class="widget">
+                <ul class="links list-unstyled">
+                  <h3 class="line-top">Get Started</h3>
+                  <li><a href="./how-it-works.html">How it Works</a></li>
+                  <li><a href="./how-to-apply.html">How to Apply</a></li>
+                  <li><a href="./tuition-options.html">Tuition Options</a></li>
+                  <li><a href="./career-support.html">Career Support</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4">
+              <div class="widget">
+                <ul class="links list-unstyled">
+                  <h3 class="line-top">Courses</h3>
+                  <li><a href="./design.html">UI/UX Design</a></li>
+                  <li><a href="./digital.html">Digital Marketing</a></li>
+                  <li><a href="./data-science.html">Data Science</a></li>
+                  <li><a href="./web-dev.html">Full Stack Web Development</a></li>
+                  <li><a href="./backend-dev.html">Backend Development</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4">
+              <div class="widget">
+                <ul class="links list-unstyled">
+                  <h3 class="line-top">Online School</h3>
+                  <li><a href="./online-school.html">Coming Soon</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4">
+              <div class="widget">
+                <ul class="links list-unstyled">
+                  <h3 class="line-top">For Companies</h3>
+                  <li><a href="./work-force.html">Build Your Workforce</a></li>
+                  <li><a href="./learn-more.html">Learn More</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4">
+              <div class="widget">
+                <ul class="links list-unstyled">
+                  <h3 class="line-top">Resources</h3>
+                  <li><a href="./privacy-policy.html">Privacy</a></li>
+                  <li><a href="./faqkuda.html">FAQ</a></li>
+                  <li><a href="./terms-of-use.html">Terms of Use</a></li>
+                  <li><a href="mailto:info@codarhq.com">Contact</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row justify-content-center text-center copyright">
+        <div class="col-md-8">
+          <p class="small text-black-50">Copyright &copy;
+            <script>document.write(new Date().getFullYear());</script>. All Rights Reserved. &mdash; Designed with love
+            by <a href="https://untree.co">programmingwithVee</a></br>Distributed By <a
+              href="https://codarhq.com/">Codar Institute</a> <!-- License information: https://untree.co/license/ -->
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- footer end -->
+
+  </div>
+  <!-- page-wrapper end -->
+
+  <script src="./js/bootstrap.bundle.min.js"></script>
+  <script src="./js/tiny-slider.js"></script>
+  <script src="./js/aos (2).js"></script>
+  <script src="./js/glightbox.min.js"></script>
+  <script src="./js/custom.js"></script>
+</body>
+
+</html>

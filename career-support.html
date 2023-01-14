@@ -1,0 +1,1283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Career Support</title>
+  <link rel="stylesheet" href="./css/codar.css">
+  <link rel="stylesheet" href="./css/fontawesome.min.css">
+  <link rel="icon" href="./images/codar-logo.png">
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+  <link rel="stylesheet" href="./css/owl.carousel.min.css">
+  <link rel="stylesheet" href="./css/owl.theme.default.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/4.5.6/css/ionicons.min.css">
+  <link rel="stylesheet" href="./fonts/icomoon/style.css">
+  <link rel="stylesheet" href="./fonts/flaticon/font/flaticon.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/aos.css">
+  <link rel="stylesheet" href="./css/style (2).css">
+  <link rel="shortcut icon" href="./images/codar-logo.png" type="image/x-icon">
+</head>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Karla&family=Source+Sans+Pro:wght@300;400;500;600;700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+::before,
+::after{
+  box-sizing: border-box;
+}
+/* page-wrapper */
+.page-wrapper{
+  overflow: hidden;
+}
+/* container */
+.container{
+  max-width: 1170px;
+  margin: auto;
+}
+/* grid */
+.grid{
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 30px;
+}
+/* header */
+.header .containers{
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    /* padding: 15px; */
+    position: fixed;
+    z-index: 99;
+    box-shadow: 5px 7px 5px rgb(228, 224, 224);
+    /* background-color: rgb(4, 78, 78); */
+    background-color: white;
+}
+ .logo img{
+  width: 200px;
+  margin-left: 45%;
+}
+nav{
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 2%;
+  /* margin-left: -10%; */
+}
+nav ul li{
+  list-style: none;
+  display: inline-block;
+  margin: 20px;
+}
+nav ul li a{
+  text-decoration: none;
+  color: black;
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-family: 'Fira Sans', sans-serif;
+  /* font-family: Arial, Helvetica, sans-serif; */
+  font-weight: bold;
+}
+nav ul li a:hover{
+  transition: all ease-in-out 0.3s;
+  font-weight: bold;
+  text-decoration: none;
+}
+#show{
+  display: none;
+}
+/* hover section */
+.containers .hovers .dropdown{
+  position: absolute;
+  /* left: 105%; */
+  width: 200px;
+  /* height: 200px; */
+  text-align: left;
+  z-index: 60;
+  -webkit-transform: translateY(10px);
+  -ms-transform: translateY(10px);
+  transform: translateY(10px);
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 1px 1px 1px 1px silver;
+}
+.containers #hove .dropdown{
+  width: 290px;
+}
+.containers .hovers:hover>.dropdown{
+  -webkit-transform: translateY(0px);
+  -ms-transform: translateY(0px);
+  /* transform: translateY(0px); */
+  transform: translate(-15px, 25px);
+  opacity: 1;
+  visibility: visible;
+}
+.dropdown-list li a{
+  font-size: 12px;
+  line-height: normal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Fira Sans', sans-serif;
+  /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+  font-weight: 600;
+  color: grey;
+}
+.dropdown-list li a:hover{
+  color: rgb(191, 29, 83);
+}
+/* hover section end */
+.cons,.log{
+  position: relative;
+  right: 100px;
+}
+.cons button{
+  padding: 15px 30px;
+  border: 2px solid rgb(191, 29, 83);
+  border-radius: 10px;
+  background: none;
+}
+.cons{
+  padding-right: 5%;
+}
+#width,#shift{
+  display: none;
+}
+.ham{
+  display: none;
+}
+.cons button a{
+  text-transform: uppercase;
+  text-decoration: none;
+  color: rgb(191, 29, 83);
+}
+.log{
+  margin-top: 1%;
+}
+.log p{
+  padding: 15px 30px;
+  border: 2px solid rgb(191, 29, 83);
+  border-radius: 10px;
+  background: rgb(191, 29, 83);
+}
+.log p a{
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
+  font-family: 'Fira Sans', sans-serif;
+  /* font-family: sans-serif; */
+}
+.ham img{
+  width: 50px;
+  position: relative;
+  right: 60px;
+  cursor: pointer;
+}
+.containers input[type= "checkbox"]{
+  display: none;
+}
+
+/* banner starts */
+.banner{
+  padding: 60px 0 100px;
+  margin-top: 10%;
+}
+.home-text,
+.home-img{
+  grid-column: span 6;
+  align-self: center;
+}
+.home-img img{
+  width: 100%;
+  border-radius: 20px;
+}
+.home-text h6{
+  text-transform: uppercase;
+  color: white;
+  font-weight: 500;
+  letter-spacing: 2px;
+  font-family: 'Fira Sans', sans-serif;
+  /* background-color: midnightblue; */
+  background: linear-gradient(to left, midnightblue, rgb(191, 29, 83));
+  width: 25%;
+  font-size: 0.6975rem;
+  /* padding: 10px 50px; */
+  padding: 7px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px silver;
+}
+.home-text h1{
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 3rem;
+  font-weight: bold;
+  color: black;
+}
+.home-text p{
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 100;
+  line-height: 2;
+  font-size: 1rem;
+}
+/* banner end */
+
+/* job-plan starts */
+.job-plan{
+  padding: 60px 0 60px;
+  background-color: lavenderblush;
+  margin-top: 5%;
+}
+.section-titles{
+  margin: 0 auto;
+  text-align: center;
+}
+.section-titles h1{
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 3rem;
+  color: rgb(191, 29, 83);
+  font-weight: bolder;
+  width: 30%;
+  text-align: center;
+  margin: 0 auto;
+  padding-bottom: 20px;
+}
+.section-titles p{
+  font-family: 'Fira Sans', sans-serif;
+}
+.section-titles p span{
+  font-weight: bolder;
+  font-size: 1.2rem;
+}
+.pay-box{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 70px;
+}
+.pay-box1,.pay-box2{
+  background-color: white;
+  padding: 50px;
+  border-radius: 30px;
+}
+.pay-box1 h3,.pay-box2 h3{
+  text-transform: capitalize;
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: bold;
+}
+.pay-box1 p,.pay-box2 p{
+  /* text-transform: capitalize; */
+  font-family: 'Fira Sans', sans-serif;
+  line-height: 2;
+}
+.cone{
+  margin: 0 auto;
+  text-align: center;
+}
+.cone button{
+  border: none;
+  background: linear-gradient(to left, midnightblue, rgb(191, 29, 83));
+  padding: 10px 30px;
+  border-radius: 20px;
+}
+.cone button a{
+  color: white;
+  text-transform: uppercase;
+}
+.cone button a:hover{
+  text-decoration: none;
+}
+.center{
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.center p{
+  font-family: 'Fira Sans', sans-serif;
+}
+/* job-plan end */
+
+/* career sections starts */
+.certified{
+  padding: 60px 0 100px;
+  /* background-color: gainsboro; */
+  /* transform: translateY(150px); */
+  margin-top: 5%;
+}
+.cert-img,
+.cert-text{
+  grid-column: span 6;
+  align-self: center;
+}
+.cert-img img{
+  width: 100%;
+  /* border-radius: 30px; */
+}
+.cert-text ul li{
+  list-style: none;
+  font-family: 'Fira Sans', sans-serif;
+  line-height: 3;
+  font-weight: 500;
+}
+.cert-text .check{
+  width: 3%;
+}
+.cert-text h1{
+  font-size: 3rem;
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 600;
+    padding-bottom: 10px;
+}
+.cert-text p{
+  font-family: 'Fira Sans', sans-serif;
+    color:black;
+    /* text-transform: capitalize; */
+    font-size: 1rem;
+    line-height: 2;
+    /* width: 70%; */
+    /* font-size: 0.875rem; */
+    padding-bottom: 10px;
+}
+.cert-text h6{
+  text-transform: uppercase;
+  color: white;
+  font-weight: 500;
+  letter-spacing: 2px;
+  font-family: 'Fira Sans', sans-serif;
+  /* background-color: midnightblue; */
+  background: linear-gradient(to left, midnightblue, rgb(191, 29, 83));
+  width: 30%;
+  font-size: 0.6975rem;
+  /* padding: 10px 50px; */
+  padding: 7px;
+  text-align: center;
+  border-radius: 10px;
+  /* box-shadow: 5px 5px 5px silver; */
+}
+.button button{
+  border: none;
+  background: linear-gradient(to left, midnightblue, rgb(191, 29, 83));
+  padding: 10px 30px;
+  border-radius: 20px;
+}
+.button button a{
+  color: white;
+  text-transform: uppercase;
+}
+.button button a:hover{
+  text-decoration: none;
+}
+/* career sections end */
+
+/* job-opportunities start*/
+.opportunities{
+  padding: 40px 0 100px;
+  background-color: ghostwhite;
+  /* transform: translateY(150px); */
+  margin-top: 5%;
+}
+.opportune-img,
+.opportune-text{
+  grid-column: span 6;
+  align-self: center;
+}
+.opportune-img img{
+  width: 100%;
+  /* border-radius: 30px; */
+}
+.opportune-text ul li{
+  list-style: none;
+  font-family: 'Fira Sans', sans-serif;
+  line-height: 3;
+  font-weight: 500;
+}
+.opportune-text .check{
+  width: 3%;
+}
+.opportune-text h1{
+  font-size: 3rem;
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 600;
+    padding-bottom: 10px;
+}
+.opportune-text p{
+  font-family: 'Fira Sans', sans-serif;
+    color:black;
+    /* text-transform: capitalize; */
+    font-size: 1rem;
+    line-height: 2;
+    /* width: 70%; */
+    /* font-size: 0.875rem; */
+    padding-bottom: 10px;
+}
+.opportune-text h6{
+  text-transform: uppercase;
+  color: white;
+  font-weight: 500;
+  letter-spacing: 2px;
+  font-family: 'Fira Sans', sans-serif;
+  /* background-color: midnightblue; */
+  background: linear-gradient(to left, midnightblue, rgb(191, 29, 83));
+  width: 30%;
+  font-size: 0.6975rem;
+  /* padding: 10px 50px; */
+  padding: 7px;
+  text-align: center;
+  border-radius: 10px;
+  /* box-shadow: 5px 5px 5px silver; */
+}
+.button button{
+  border: none;
+  background: linear-gradient(to left, midnightblue, rgb(191, 29, 83));
+  padding: 10px 30px;
+  border-radius: 20px;
+}
+.button button a{
+  color: white;
+  text-transform: uppercase;
+}
+.button button a:hover{
+  text-decoration: none;
+}
+/* job-opportunities end*/
+
+/* application starts */
+.apply{
+  padding: 60px 0 60px;
+  background: linear-gradient(to right, rgb(191, 29, 83), purple);
+}
+.form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  line-height: 2;
+  font-weight: bold;
+}
+.form h1{
+  font-family: 'Fira Sans', sans-serif;
+  font-size: 2.3rem;
+}
+.form p{
+  font-family: 'Fira Sans', sans-serif; 
+}
+.form .butt button{
+  background: none;
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 10px 20px;
+}
+/* application end */
+
+
+/* Footer starts */
+.site-footer {
+  padding-top: 70px;
+  padding-bottom: 30px;
+  font-size: 14px; }
+  @media (max-width: 767.98px) {
+    .site-footer {
+      padding-top: 30px; } }
+  .site-footer a {
+    color: #000; }
+    .site-footer a:hover {
+      color: #fc5404; }
+  .site-footer .widget {
+    margin-bottom: 30px; }
+    .site-footer .widget h3, .site-footer .widget .h3 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 30px; }
+      .site-footer .widget img{
+        width: 30%;
+      }
+    .site-footer .widget .social li {
+      display: inline-block; }
+      .site-footer .widget .social li a {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: #f8f9fa;
+        display: inline-block;
+        position: relative;
+        color: black; }
+        .site-footer .widget .social li a span {
+          font-size: 20px;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          -webkit-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%); }
+        .site-footer .widget .social li a:hover {
+          /* background-color: #fc5404; */
+          background: rgb(191, 29, 83);
+          color: #fff; }
+    .site-footer .widget .links li {
+      display: block;
+      margin-bottom: 10px; }
+      .site-footer .widget .links li a {
+        color: black;
+      font-weight: bold;
+      line-height: 2; }
+        .site-footer .widget .links li a:hover {
+          color: rgb(191, 29, 83); }
+  .site-footer .copyright {
+    position: relative;
+    padding-top: 40px;
+    margin-top: 40px; }
+    .site-footer .copyright:before {
+      top: 0;
+      position: absolute;
+      left: 0px;
+      right: 0px;
+      content: "";
+      height: 1px;
+      background: #d3d8dc; }
+
+/* Footer end */
+
+/* media query starts */
+@media only screen and (max-width:1200px){
+  .head .contain{
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    /* padding: 15px; */
+    position: fixed;
+    z-index: 99;
+    box-shadow: 5px 7px 5px rgb(228, 224, 224);
+    /* background-color: rgb(4, 78, 78); */
+    background-color: white;
+}
+#show{
+  display: flex;
+}
+#hide{
+  display: none;
+}
+.contain nav .links{
+  display: block;
+  position: fixed;
+  /* background-color: #14181f; */
+  /* background-color: teal; */
+  background-color: white;
+  height: 100%;
+  width: 100%;
+  top:  9%;
+  left: -100%;
+  margin-left: 0;
+  overflow-y: auto;
+  padding-bottom: 100px;
+  /* max-width: 350px; */
+  transition:  all 0.3s ease;
+}
+nav #show-burger:checked ~ul{
+  left:  0%;
+}
+.contain input[type= "checkbox"]{
+  display: none;
+}
+ .logos img{
+  width: 200px;
+  margin-left: 30%;
+}
+nav ul li a{
+  display: none;
+}
+nav ul li{
+  width: 100%;
+  text-align: left;
+}
+.contain .links li{
+  margin:  15px 20px;
+}
+.contain .links li label{
+  line-height: 10px;
+  font-size: 1.125rem;
+  display: block;
+  padding: 8px 18px;
+  cursor: pointer;
+}
+ nav ul li a:hover{
+  transition: all ease-in-out 0.3s;
+  font-weight: bold;
+  text-decoration: none;
+}
+.contain .links li label{
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  color: rgb(150, 8, 55);
+  font-weight: bold;
+  font-family: 'Fira Sans',sans-serif;
+  position: relative;
+  top: 50px;
+  line-height: 2;
+}
+.contain .links ul{
+  position: static;
+  opacity: 1;
+  visibility: visible;
+  background:none;
+  max-height: 0px;
+  overflow: hidden;
+}
+.contain .links #show-started:checked ~ ul,
+.contain .links #show-courses:checked ~ ul,
+.contain .links #show-about:checked ~ ul,
+.contain .links #show-companies:checked ~ ul{
+  max-height: 170vh;
+}
+.burger img{
+  width: 50px;
+  position: relative;
+  right: 60px;
+  cursor: pointer;
+}
+.width{
+  text-align: center;
+  margin-top: 5%;
+  padding-bottom: 3%;
+}
+.shift{
+  text-align: center;
+}
+.width button{
+  padding: 15px 30px;
+  border: 2px solid rgb(191, 29, 83);
+  border-radius: 10px;
+  background: none;
+  width: 80%;
+}
+.width button a{
+  text-transform: uppercase;
+  text-decoration: none;
+  color: rgb(191, 29, 83);
+}
+.shift button {
+  padding: 15px 30px;
+  border: 2px solid rgb(191, 29, 83);
+  border-radius: 10px;
+  background: rgb(150, 8, 55);
+  width: 80%;
+  text-align: center;
+}
+.shift button a{
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
+  font-family: 'Fira Sans', sans-serif;
+}
+.home-text,
+.home-img{
+  margin-left:8.333333%;
+}
+.cert-text,
+.cert-img{
+  margin-left:8.333333%;
+}
+.opportune-img,
+.opportune-text{
+  margin-left:8.333333%;
+}
+}
+@media only screen and (max-width:991px){
+  .home-text,
+  .home-img{
+    grid-column: span 12;
+    align-self: center;
+    margin-left:8.333333%;
+  }
+  .home-img img{
+    width: 80%;
+  }
+  .cert-img,
+  .cert-text{
+    grid-column: span 12;
+    align-self: center;
+    margin-left:8.333333%;
+  }
+  .cert-text h1{
+    font-size: 2.5rem;
+  }
+  .cert-img img{
+    width: 70%;
+  }
+  .opportune-img,
+  .opportune-text{
+    grid-column: span 12;
+    align-self: center;
+    margin-left:8.333333%;
+  }
+  .opportune-text h1{
+    font-size: 2.5rem;
+  }
+  .opportune-img img{
+    width: 70%;
+  }
+  .section-titles h1,.section-title h1{
+    width: 100%;
+    font-size: 2.5rem;
+  }
+}
+@media only screen and (max-width:280px){
+  .home-text h1{
+    font-size: 2rem;
+  }
+  .home-text p{
+    font-size: 15px;
+    width: 70%;
+  }
+  .home-img img{
+    width: 70%;
+  }
+.pay-box1,.pay-box2{
+  width: 80%;
+}
+.pay-box1 h1, .pay-box2 h1{
+  font-size: 2rem;
+}
+.cert-text h1{
+  font-size: 2rem;
+}
+.cert-text p{
+  width: 70%;
+}
+.cert-text ul li{
+  width: 70%;
+}
+.opportune-text h1{
+  font-size: 2rem;
+  width: 80%;
+}
+.opportune-text p{
+  width: 70%;
+}
+.opportune-text ul li{
+  width: 70%;
+}
+.site-footer .widget h3, .site-footer .widget .h3 {
+    font-size: 1.2rem;
+  }
+}
+@media only screen and (max-width:414px){
+  .logos img{
+    margin-left: 5%;
+    width: 150px;
+  }
+  .burger img{
+    width: 40px;
+  }
+}
+/* media query ends */
+</style>
+<body>
+  <!-- page-wrapper -->
+  <div class="page-wrapper">
+    <header class="header" id="hide">
+      <div class="containers">
+        <div class="logo">
+          <a href="./codar.html">
+          <img src="./images/codar-logo.png" alt="">
+          </a>
+        </div>
+        <nav>
+          <input type="checkbox" id="show-menu">
+          <ul>
+            <li class="hovers"><a href="">get started</a>
+              <div class="dropdown">
+                <div class="dropdown-body">
+                  <ul class="dropdown-list">
+                    <li><a href="./how-it-works.html">how it works</a></li>
+                    <li><a href="./how-to-apply.html">how to apply</a></li>
+                    <li><a href="./tuition-options.html">tuition options</a></li>
+                    <li><a href="./career-support.html">career support</a></li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li class="hovers" id="hove"><a href="./courses.html">courses</a>
+              <div class="dropdown">
+                <div class="dropdown-body">
+                  <ul class="dropdown-list">
+                    <li><a href="./design.html">ui/ux</a></li>
+                    <li><a href="./digital.html">digital marketing</a></li>
+                    <li><a href="./data-science.html">data science</a></li>
+                    <li><a href="./web-dev.html">full stack web development</a></li>
+                    <li><a href="./backend-dev.html">backend development</a></li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li class="hovers" id="hove"><a href="./online-school.html">online school</a>
+            </li>
+            <li class="hovers" id="hove"><a href="">for companies</a>
+              <div class="dropdown">
+                <div class="dropdown-body">
+                  <ul class="dropdown-list">
+                    <li><a href="./work-force.html">build our workforce</a></li>
+                    <li><a href="./learn-more.html">learn more</a></li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </nav>
+        <div class="cons">
+          <button><a href="./apply.html">apply now</a></button>
+        </div>
+        <div class="log">
+          <p><a href="./apply.html">login</a></p>
+        </div>
+        <label for="show-menu" class="menu-icon">
+          <div class="ham">
+           <img src="./images/burger.jpeg" alt="">
+          </div>
+        </label>
+      </div>
+    </header>
+    <!-- header ends -->
+
+    <!-- Aside Nav -->
+    <header class="head" id="show">
+      <div class="contain">
+        <div class="logos">
+          <a href="./codar.html">
+          <img src="./images/codar-logo.png" alt="">
+          </a>
+        </div>
+        <nav>
+          <input type="checkbox" id="show-burger">
+          <ul class="links">
+            <li class="hovers" id="seperate"><a href="">get started</a>
+              <input type="checkbox" id="show-started">
+              <label for="show-started">get started</label>
+              <ul class="dropdown-list">
+                <li><a href="">get started</a></li>
+                <li><a href="./how-it-works.html">how it works</a></li>
+                <li><a href="./how-to-apply.html">how to apply</a></li>
+                <li><a href="./tuition-options.html">tuition options</a></li>
+                <li><a href="./career-support.html">career support</a></li>
+              </ul>
+            </li>
+            <li class="hovers" id="hove"><a href="./courses.html">courses</a>
+              <input type="checkbox" id="show-courses">
+              <label for="show-courses">courses</label>
+              <ul class="dropdown-list">
+                <li><a href="">courses</a></li>
+                <li><a href="./courses.html">courses</a></li>
+                <li><a href="./design.html">ui/ux</a></li>
+                <li><a href="./digital.html">digital marketing</a></li>
+                <li><a href="./data-science.html">data science</a></li>
+                <li><a href="./web-dev.html">full stack web development</a></li>
+                <li><a href="./backend-dev.html">backend development</a></li>
+              </ul>
+            </li>
+            <li class="hovers"><a href="./online-school.html">online school</a>
+              <input type="checkbox" id="show-about">
+              <label for="show-about">online school</label>
+              <ul class="dropdown-list">
+                <li><a href="">online school</a></li>
+                <li><a href="./online-school.html">online school</a></li>
+              </ul>
+            </li>
+            <li class="hovers" id="hove"><a href="">for companies</a>
+              <input type="checkbox" id="show-companies">
+              <label for="show-companies">for companies</label>
+              <ul class="dropdown-list">
+                <li><a href="">for companies</a></li>
+                <li><a href="./work-force.html">build your workforce</a></li>
+                <li><a href="./learn-more.html">learn more</a></li>
+              </ul>
+            </li>
+              <div class="width">
+                <button><a href="./apply.html">apply now</a></button>
+              </div>
+              <div class="shift">
+               <button><a href="./apply.html">login</a></button>
+              </div>
+          </ul>
+        </nav>
+        <label for="show-burger" class="menu-icon">
+          <div class="burger">
+           <img src="./images/burger.jpeg" alt="">
+          </div>
+        </label>
+      </div>
+    </header>
+    <!-- Aside Nav -->
+
+    <!-- banner starts -->
+    <section class="banner" id="banner">
+      <div class="container">
+        <div class="grid">
+          <div class="home-text" data-aos="fade-down" data-aos-easing=""ease-in-out>
+            <h6>career support</h6>
+            <h1>Land a job, with our full support.</h1>
+            <p>Our Career Support team works with learners and graduates to jumpstart their tech career, no matter their background. Unlike other bootcamps, we start preparing you for a successful job hunt as soon as you join Codar and continue until you land a well-paying job. We'll even help you negotiate a better salary! In other words: We got you.</p>
+          </div>
+          <div class="home-img" data-aos="fade-up">
+            <img src="./images/side3.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- banner ends -->
+
+    <!-- job-plan starts -->
+    <section class="job-plan" id="job-plan">
+      <div class="container">
+        <div class="section-titles" data-aos="zoom-out">
+          <h1>WE DO THE HEAVY LIFTING</h1>
+          <p> Our job search tools do a lot of the work for you—<span>so you find a great job faster.</span></p>
+          <p>You don't have to be a job hunt expert; we're with you every step of the way.</p>
+        </div>
+        <div class="pay-box">
+          <div class="pay-box1" data-aos="fade-right">
+            <h3>Job search support</h3>
+            <p>We help you find openings that match your goals, prepare for interviews, write messages to employers, apply to Hiring Partner jobs, negotiate salary, & more!</p>
+          </div>
+          <div class="pay-box2" data-aos="fade-left">
+            <h3>Resume Building & More</h3>
+            <p>Get individualized support to polish your resume, LinkedIn profile, and GitHub account, then complete mock interviews. We'll help you stand out and get noticed!</p>
+          </div>
+        </div>
+        <div class="center" data-aos="zoom-out">
+          <p>You don't have to be a job hunt expert; we're with you every step of the way.</p>
+        </div>
+        <div class="cone" data-aos="zoom-in">
+           <button><a href="./apply.html">apply now</a></button>
+         </div> 
+      </div>
+    </section>
+    <!-- job-plan end -->
+
+    <!-- career section starts -->
+    <section class="certified" id="certified">
+      <div class="container">
+        <div class="grid">
+          <div class="cert-text" data-aos="fade-right" data-aos-easing="ease-in-sine">
+            <h6>career support</h6>
+            <h1>Your career is waiting</h1>
+            <p>Dreaming of a job in tech? No matter your background, launch your career faster with our 1:1 job prep support. We help you network, practice interviewing, negotiate salary, ace technical interviews and skills tests, and more.</p>
+            <ul>
+              <li> <img src="./images/checked (1).png" alt="" class="check"> Graduate ready to work, no matter your background</li>
+              <li> <img src="./images/checked (1).png" alt="" class="check"> We do much of the the heavy lifting for your job hunt</li>
+              <li> <img src="./images/checked (1).png" alt="" class="check"> Apply to jobs from our Hiring Partners and alumni network</li>
+              <li> <img src="./images/checked (1).png" alt="" class="check">Save time and effort in the job hunt with our tools and coaching</li>
+              <li> <img src="./images/checked (1).png" alt="" class="check"> Get Codar coaching now!</li>
+            </ul>
+            <div class="button">
+              <button><a href="./apply.html">apply now</a></button>
+            </div>
+          </div>
+          <div class="cert-img" data-aos="fade-left" data-aos-easing="ease-in-sine">
+            <div class="peeps">
+              <img src="./illustration/flex7.svg" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- career section end -->
+
+    <!-- job opportunities start -->
+    <section class="opportunities" id="opportunities">
+      <div class="container">
+        <div class="grid">
+          <div class="opportune-text" data-aos="fade-right">
+            <h6>EXCLUSIVE OPPORTUNITIES</h6>
+            <h1>Hiring Partners look for Codar grads</h1>
+            <p>We partner with top-tier companies that want to hire Codar graduates. We have an entire team dedicated to helping you land these roles.</p>
+            <ul>
+              <li> <img src="./images/checked (1).png" alt="" class="check"> Get personalized prep for company-specific assessments and interviews</li>
+              <li> <img src="./images/checked (1).png" alt="" class="check"> Our team recommends learners for open roles so you're considered—even before you apply</li>
+              <li> <img src="./images/checked (1).png" alt="" class="check">Apply to companies specifically looking for non-traditional talent</li>
+            </ul>
+            <div class="button">
+              <button><a href="./apply.html">apply now</a></button>
+            </div>
+          </div>
+          <div class="opportune-img" data-aos="fade-left">
+            <img src="./illustration/flex6.svg" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- job opportunities end -->
+
+      <!-- course start -->
+    <section class="ftco-section background-color-section"  data-aos="fade-up">
+			<div class="container" id="slider-container">
+        <div class="slide-heading">
+          <h1>Kickstart your career in tech</h1>
+          <p>Discover the right program for you. From Python, through data, to web dev. We got everything you need</p>
+        </div>
+				<div class="row">
+					<div class="col-md-12 text-center">
+						<h2 class="heading-section mb-5 pb-md-4"></h2>
+					</div>
+					<div class="col-md-12">
+						<div class="featured-carousel owl-carousel">
+							<div class="item">
+								<div class="blog-entry">
+		              <a href="./data-science.html" class="block-20 d-flex align-items-start" style="background-image: url('./images/teacher7.jpg'); border-radius: 20px;">
+										<!-- <div class="meta-date text-center p-2">
+		                  <span class="day">26</span>
+		                  <span class="mos">Nov.</span>
+		                  <span class="yr">2019</span>
+		                </div> -->
+		              </a>
+		              <div class="text border border-top-0 p-4">
+		                <h3 class="heading"><a href="#">Data Science</a></h3>
+		                <p>Learn the core of Artificial Intelligence and become proficient in Predictive Modelling. Learn from beginner to Advanced. Start your Journey with us. Learn from the best</p>
+		                <div class="d-flex align-items-center mt-4">
+			                <p class="mb-0"><a href="./data-science.html" class="btn btn-primary">Read More <span class="ion-ios-arrow-round-forward"></span></a></p>
+			                <p class="ml-auto meta2 mb-0">
+			                	<!-- <a href="#" class="mr-2">Admin</a> -->
+			                	<!-- <a href="#" class="meta-chat"><span class="ion-ios-chatboxes"></span> 3</a> -->
+			                </p>
+		                </div>
+		              </div>
+		            </div>
+							</div>
+
+							<div class="item">
+								<div class="blog-entry">
+		              <a href="./digital.html" class="block-20 d-flex align-items-start" style="background-image: url('./images/side2.jpg'); border-radius: 20px;">
+										<!-- <div class="meta-date text-center p-2">
+		                  <span class="day">26</span>
+		                  <span class="mos">Nov.</span>
+		                  <span class="yr">2019</span>
+		                </div> -->
+		              </a>
+		              <div class="text border border-top-0 p-4">
+		                <h3 class="heading"><a href="#">Digital Marketing</a></h3>
+		                <p>Learn the core of Artificial Intelligence and become proficient in Predictive Modelling. Learn from beginner to Advanced. Start your Journey with us. Learn from the best</p>
+		                <div class="d-flex align-items-center mt-4">
+			                <p class="mb-0"><a href="./digital.html" class="btn btn-primary">Read More <span class="ion-ios-arrow-round-forward"></span></a></p>
+			                <p class="ml-auto meta2 mb-0">
+			                	<!-- <a href="#" class="mr-2">Admin</a> -->
+			                	<!-- <a href="#" class="meta-chat"><span class="ion-ios-chatboxes"></span> 3</a> -->
+			                </p>
+		                </div>
+		              </div>
+		            </div>
+							</div>
+
+							<div class="item">
+								<div class="blog-entry">
+		              <a href="./web-dev.html" class="block-20 d-flex align-items-start" style="background-image: url('./images/side3.jpg'); border-radius: 20px;">
+										<!-- <div class="meta-date text-center p-2">
+		                  <span class="day">26</span>
+		                  <span class="mos">Nov.</span>
+		                  <span class="yr">2019</span>
+		                </div> -->
+		              </a>
+		              <div class="text border border-top-0 p-4">
+		                <h3 class="heading"><a href="#">Programming</a></h3>
+		                <p>Learn the core of Artificial Intelligence and become proficient in Predictive Modelling. Learn from beginner to Advanced. Start your Journey with us. Learn from the best</p>
+		                <div class="d-flex align-items-center mt-4">
+			                <p class="mb-0"><a href="./web-dev.html" class="btn btn-primary">Read More <span class="ion-ios-arrow-round-forward"></span></a></p>
+			                <p class="ml-auto meta2 mb-0">
+			                	<!-- <a href="#" class="mr-2">Admin</a> -->
+			                	<!-- <a href="#" class="meta-chat"><span class="ion-ios-chatboxes"></span> 3</a> -->
+			                </p>
+		                </div>
+		              </div>
+		            </div>
+							</div>
+
+							<div class="item">
+								<div class="blog-entry">
+		              <a href="./design.html" class="block-20 d-flex align-items-start" style="background-image: url('./images/teacher4.jpeg'); border-radius: 20px;">
+										<!-- <div class="meta-date text-center p-2">
+		                  <span class="day">26</span>
+		                  <span class="mos">Nov.</span>
+		                  <span class="yr">2019</span>
+		                </div> -->
+		              </a>
+		              <div class="text border border-top-0 p-4">
+		                <h3 class="heading"><a href="#">UI/UX</a></h3>
+		                <p>Learn the core of Artificial Intelligence and become proficient in Predictive Modelling. Learn from beginner to Advanced. Start your Journey with us. Learn from the best</p>
+		                <div class="d-flex align-items-center mt-4">
+			                <p class="mb-0"><a href="./design.html" class="btn btn-primary">Read More <span class="ion-ios-arrow-round-forward"></span></a></p>
+			                <p class="ml-auto meta2 mb-0">
+			                	<!-- <a href="#" class="mr-2">Admin</a> -->
+			                	<!-- <a href="#" class="meta-chat"><span class="ion-ios-chatboxes"></span> 3</a> -->
+			                </p>
+		                </div>
+		              </div>
+		            </div>
+							</div>
+
+							<div class="item">
+								<div class="blog-entry">
+		              <a href="./backend-dev.html" class="block-20 d-flex align-items-start" style="background-image: url('./images/teacher5.jpeg'); border-radius: 20px;">
+										<!-- <div class="meta-date text-center p-2">
+		                  <span class="day">26</span>
+		                  <span class="mos">Nov.</span>
+		                  <span class="yr">2019</span>
+		                </div> -->
+		              </a>
+		              <div class="text border border-top-0 p-4">
+		                <h3 class="heading"><a href="#">Backend Development</a></h3>
+		                <p>Learn the core of Artificial Intelligence and become proficient in Predictive Modelling. Learn from beginner to Advanced. Start your Journey with us. Learn from the best.</p>
+		                <div class="d-flex align-items-center mt-4">
+			                <p class="mb-0"><a href="./backend-dev.html" class="btn btn-primary">Read More <span class="ion-ios-arrow-round-forward"></span></a></p>
+			                <p class="ml-auto meta2 mb-0">
+			                	<a href="#" class="mr-2">Admin</a>
+			                	<!-- <a href="#" class="meta-chat"><span class="ion-ios-chatboxes"></span> 3</a> -->
+			                </p>
+		                </div>
+		              </div>
+		            </div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+    <!-- course end -->
+
+     <!-- application starts -->
+     <section id="apply" class="apply"  data-aos="fade-down">
+      <div class="container">
+        <div class="form">
+          <h1>Start Your Application Today</h1>
+          <p>The Latest Application Deadline is 
+            30th of September, 2022</p>
+            <div class="butt">
+              <button><a href="./apply.html">apply now</a></button>
+            </div>
+        </div>
+      </div>
+    </section>    
+    <!-- application end -->   
+
+   <!-- footer starts -->
+   <div class="site-footer bg-light"  data-aos="fade-up">
+    <div class="container">
+
+      <div class="row justify-content-between">
+        <div class="col-lg-4">
+          <div class="widget">
+            <!-- <h3 class="line-top">About</h3> -->
+            <img src="./images/codar-logo.png" alt="">
+            <!-- <p class="mb-5">Delectus voluptatum distinctio quos eius excepturi sunt pariatur, aut, doloribus officia ea molestias beatae laudantium, quam odio ipsum veritatis est maiores velit quasi blanditiis et natus accusamus itaque. Veniam quidem debitis odio amet voluptas distinctio dicta placeat! Et pariatur doloremque ea veniam. Separated they live.</p> -->
+
+          </div>
+          <div class="widget">
+            <h3 class="line-top">Connect with us</h3>
+            <ul class="social list-unstyled mb-5">
+              <li><a href="https://www.linkedin.com/company/codarhq/"><span class="icon-linkedin"></span></a></li>
+              <li><a href="https://twitter.com/CodarHq?t=TtJxGuSU_i-EMkL2hwVFuw&s=09"><span class="icon-twitter"></span></a></li>
+              <li><a href="https://instagram.com/codarhq?igshid=YmMyMTA2M2Y="><span class="icon-instagram"></span></a></li>
+              <li><a href="https://youtube.com/channel/UCUaMPb7dm0K86sPOd-ZRucQ"><span class="icon-youtube"></span></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-6 top">
+          <div class="row">
+            <div class="col-12">
+              <div class="widget">
+              </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4">
+              <div class="widget">
+                <ul class="links list-unstyled">
+                  <h3 class="line-top">Get Started</h3>
+                  <li><a href="./how-it-works.html">How it Works</a></li>
+                  <li><a href="./how-to-apply.html">How to Apply</a></li>
+                  <li><a href="./tuition-options.html">Tuition Options</a></li>
+                  <li><a href="./career-support.html">Career Support</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4">
+              <div class="widget">
+                <ul class="links list-unstyled">
+                <h3 class="line-top">Courses</h3>
+                  <li><a href="./design.html">UI/UX Design</a></li>
+                  <li><a href="./digital.html">Digital Marketing</a></li>
+                  <li><a href="./data-science.html">Data Science</a></li>
+                  <li><a href="./web-dev.html">Full Stack Web Development</a></li>
+                  <li><a href="./backend-dev.html">Backend Development</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4">
+              <div class="widget">
+                <ul class="links list-unstyled">
+                <h3 class="line-top">Online School</h3>
+                  <li><a href="./online-school.html">Coming Soon</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4">
+              <div class="widget">
+                <ul class="links list-unstyled">
+                <h3 class="line-top">For Companies</h3>
+                  <li><a href="./work-force.html">Build Your Workforce</a></li>
+                  <li><a href="./learn-more.html">Learn More</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-6 col-sm-6 col-md-4">
+              <div class="widget">
+                <ul class="links list-unstyled">
+                <h3 class="line-top">Resources</h3>
+                  <li><a href="./privacy-policy.html">Privacy</a></li>
+                  <li><a href="./faqkuda.html">FAQ</a></li>
+                  <li><a href="./terms-of-use.html">Terms of Use</a></li>
+                  <li><a href="mailto:info@codarhq.com">Contact</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row justify-content-center text-center copyright">
+        <div class="col-md-8">
+          <p class="small text-black-50">Copyright &copy;<script>document.write(new Date().getFullYear());</script>. All Rights Reserved. &mdash; Designed with love by <a href="https://untree.co">programmingwithVee</a></br>Distributed By <a href="https://codarhq.com/">Codar Institute</a> <!-- License information: https://untree.co/license/ -->
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- footer end -->
+
+
+  </div>
+  <!-- Page wrapper ends -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration:1500,
+    });
+  </script>
+  <script src="./js/codar.js"></script>
+  <script src="./js/jquery.min.js"></script>
+  <script src="./js/popper.js"></script>
+  <script src="./js/bootstrap.min.js"></script>
+  <script src="./js/owl.carousel.min.js"></script>
+  <script src="./js/main.js"></script>
+  <script src="./js/bootstrap.bundle.min.js"></script>
+  <script src="./js/aos (2).js"></script>
+  <script src="./js/custom.js"></script>
+</body>
+</html>
