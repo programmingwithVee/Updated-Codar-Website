@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,220 +17,262 @@
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Fira+Sans&family=Karla&family=Source+Sans+Pro:wght@300;400;500;600;700&display=swap');
 
-  *{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-.page-wrapper{
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .page-wrapper {
     overflow: hidden;
   }
+
   /* container */
-.container{
-  max-width: 1170px;
-  margin: auto;
-}
-/* grid */
-.grid{
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: 30px;
-}
-/* header */
-.header .containers{
+  .container {
+    max-width: 1170px;
+    margin: auto;
+  }
+
+  /* grid */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 30px;
+  }
+
+  /* header */
+  .header .containers {
     max-width: 100%;
     width: 100%;
     display: flex;
     align-items: center;
     /* padding: 15px; */
     position: fixed;
+    top: 0;
     z-index: 99;
     box-shadow: 5px 5px 5px rgb(228, 224, 224);
     background-color: #fff;
-  /* background-color: rgb(3, 3, 54); */
-}
- .logo img{
-  width: 200px;
-  margin-left: 45%;
-}
-nav{
-  margin: 0 auto;
-  text-align: center;
-  margin-top: 2%;
-  /* margin-left: -10%; */
-}
-nav ul li{
-  list-style: none;
-  display: inline-block;
-  margin: 20px;
-}
-#seperate{
-  cursor: pointer;
-}
-nav ul li a{
-  text-decoration: none;
-  color: black;
-  font-size: 1rem;
-  text-transform: uppercase;
-  font-family: 'Fira Sans', sans-serif;
-  /* font-family: Arial, Helvetica, sans-serif; */
-  font-weight: bold;
-}
- nav ul li a:hover{
-  transition: all ease-in-out 0.3s;
-  font-weight: bold;
-  text-decoration: none;
-  color: rgb(150, 8, 55);
-}
-/* hover section */
-.containers .hovers .dropdown{
-  position: absolute;
-  /* left: 105%; */
-  width: 200px;
-  /* height: 200px; */
-  text-align: left;
-  z-index: 60;
-  -webkit-transform: translateY(10px);
-  -ms-transform: translateY(10px);
-  transform: translateY(10px);
-  opacity: 0;
-  visibility: hidden;
-  -webkit-transition: 0.2s all;
-  transition: 0.2s all;
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 1px 1px 1px 1px silver;
-}
-.containers #hove .dropdown{
-  width: 290px;
-}
-.containers .hovers:hover>.dropdown{
-  -webkit-transform: translateY(0px);
-  -ms-transform: translateY(0px);
-  /* transform: translateY(0px); */
-  transform: translate(-15px, 25px);
-  opacity: 1;
-  visibility: visible;
-}
-.dropdown-list li a{
-  font-size: 12px;
-  line-height: normal;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: 'Fira Sans', sans-serif;
-  /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
-  font-weight: 600;
-  color: grey;
-}
-.dropdown-list li a:hover{
-  color: rgb(191, 29, 83);
-}
-/* hover section end */
-.cons,.log{
-  position: relative;
-  right: 100px;
-}
-.cons button{
-  padding: 15px 30px;
-  border: 2px solid rgb(191, 29, 83);
-  border-radius: 10px;
-  background: none;
-}
-.cons button:hover{
-  transform: translateX(50px);
-  transition: all 0.30s ease-in-out;
-}
-.cons{
-  padding-right: 5%;
-}
-#width,#shift{
-  display: none;
-}
-.ham{
-  display: none;
-}
-.cons button a{
-  text-transform: uppercase;
-  text-decoration: none;
-  color: rgb(191, 29, 83);
-}
-.log p{
-  padding: 15px 30px;
-  border: 2px solid rgb(191, 29, 83);
-  border-radius: 10px;
-  background: rgb(191, 29, 83);
-}
-.log p:hover{
-  transform: translateX(-20px);
-  transition: all 0.3s ease-in-out;
-}
-.log p a{
-  text-transform: uppercase;
-  text-decoration: none;
-  color: white;
-  font-family: 'Fira Sans', sans-serif;
-  /* font-family: sans-serif; */
-}
-.contain .cons,.log{
-  position: relative;
-  right: 100px;
-}
-.contain .cons button{
-  padding: 15px 30px;
-  border: 2px solid rgb(191, 29, 83);
-  border-radius: 10px;
-  background: none;
-}
-.contain .cons{
-  padding-right: 5%;
-}
-.contain #width,#shift{
-  display: none;
-}
-.contain .cons button a{
-  text-transform: uppercase;
-  text-decoration: none;
-  color: rgb(191, 29, 83);
-}
-.contain .log{
-  margin-top: 1%;
-}
-.contain .log p{
-  padding: 15px 30px;
-  border: 2px solid rgb(191, 29, 83);
-  border-radius: 10px;
-  background: rgb(191, 29, 83);
-}
-.contain .log p a{
-  text-transform: uppercase;
-  text-decoration: none;
-  color: white;
-  font-family: 'Fira Sans', sans-serif;
-  /* font-family: sans-serif; */
-}
-.ham img{
-  width: 50px;
-  position: relative;
-  right: 60px;
-  cursor: pointer;
-}
-.containers input[type= "checkbox"]{
-  display: none;
-}
-/* home section start */
-.home{
-  background-image: url(./images/world-dotted-map.png);
-  background-color: midnightblue;
-  height: 100vh;
-  /* background-attachment: fixed; */
-  background-repeat: no-repeat;
-  background-size: cover;
-  /* background-position:center; */
-  position: relative;
-  overflow: hidden;
-}
-/* .hero-text h6{
+    /* background-color: rgb(3, 3, 54); */
+  }
+
+  .logo img {
+    width: 200px;
+    margin-left: 45%;
+  }
+
+  nav {
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 2%;
+    /* margin-left: -10%; */
+  }
+
+  nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 20px;
+  }
+
+  #seperate {
+    cursor: pointer;
+  }
+
+  nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-family: 'Fira Sans', sans-serif;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-weight: bold;
+  }
+
+  nav ul li a:hover {
+    transition: all ease-in-out 0.3s;
+    font-weight: bold;
+    text-decoration: none;
+    color: rgb(150, 8, 55);
+  }
+
+  /* hover section */
+  .containers .hovers .dropdown {
+    position: absolute;
+    /* left: 105%; */
+    width: 200px;
+    /* height: 200px; */
+    text-align: left;
+    z-index: 60;
+    -webkit-transform: translateY(10px);
+    -ms-transform: translateY(10px);
+    transform: translateY(10px);
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: 0.2s all;
+    transition: 0.2s all;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px 1px silver;
+  }
+
+  .containers #hove .dropdown {
+    width: 290px;
+  }
+
+  .containers .hovers:hover>.dropdown {
+    -webkit-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    /* transform: translateY(0px); */
+    transform: translate(-15px, 25px);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .dropdown-list li a {
+    font-size: 12px;
+    line-height: normal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Fira Sans', sans-serif;
+    /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+    font-weight: 600;
+    color: grey;
+  }
+
+  .dropdown-list li a:hover {
+    color: rgb(191, 29, 83);
+  }
+
+  /* hover section end */
+  .cons,
+  .log {
+    position: relative;
+    right: 100px;
+  }
+
+  .cons button {
+    padding: 15px 30px;
+    border: 2px solid rgb(191, 29, 83);
+    border-radius: 10px;
+    background: none;
+  }
+
+  .cons button:hover {
+    transform: translateX(50px);
+    transition: all 0.30s ease-in-out;
+  }
+
+  .cons {
+    padding-right: 5%;
+  }
+
+  #width,
+  #shift {
+    display: none;
+  }
+
+  .ham {
+    display: none;
+  }
+
+  .cons button a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: rgb(191, 29, 83);
+  }
+
+  .log p {
+    padding: 15px 30px;
+    border: 2px solid rgb(191, 29, 83);
+    border-radius: 10px;
+    background: rgb(191, 29, 83);
+  }
+
+  .log p:hover {
+    transform: translateX(-20px);
+    transition: all 0.3s ease-in-out;
+  }
+
+  .log p a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    font-family: 'Fira Sans', sans-serif;
+    /* font-family: sans-serif; */
+  }
+
+  .contain .cons,
+  .log {
+    position: relative;
+    right: 100px;
+  }
+
+  .contain .cons button {
+    padding: 15px 30px;
+    border: 2px solid rgb(191, 29, 83);
+    border-radius: 10px;
+    background: none;
+  }
+
+  .contain .cons {
+    padding-right: 5%;
+  }
+
+  .contain #width,
+  #shift {
+    display: none;
+  }
+
+  .contain .cons button a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: rgb(191, 29, 83);
+  }
+
+  .contain .log {
+    margin-top: 1%;
+  }
+
+  .contain .log p {
+    padding: 15px 30px;
+    border: 2px solid rgb(191, 29, 83);
+    border-radius: 10px;
+    background: rgb(191, 29, 83);
+  }
+
+  .contain .log p a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    font-family: 'Fira Sans', sans-serif;
+    /* font-family: sans-serif; */
+  }
+
+  .ham img {
+    width: 50px;
+    position: relative;
+    right: 60px;
+    cursor: pointer;
+  }
+
+  .containers input[type="checkbox"] {
+    display: none;
+  }
+
+  /* home section start */
+  .home {
+    background-image: url(./images/world-dotted-map.png);
+    background-color: midnightblue;
+    height: 100vh;
+    /* background-attachment: fixed; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-position:center; */
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* .hero-text h6{
   text-transform: uppercase;
   color: white;
   font-weight: 500;
@@ -242,156 +285,196 @@ nav ul li a{
   text-align: center;
   border-radius: 10px;
 } */
-.hero-text{
-  position: absolute;
-  top: 35%;
-  z-index: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  overflow: hidden;
-}
-.hero-text h1{
-  width: 50%;
-  text-align: center;
-  line-height: 1.3;
-  padding-bottom: 30px;
-  font-family: 'Fira Sans',sans-serif;
-  font-size: 3.5rem;
-  color: white;
-  font-weight: bolder;
-  margin: 0 auto;
-}
-.hero-text p{
-  line-height: 1.5;
-  width: 40%;
-  color: white;
-  font-weight: bold;
-  font-size: 1.1rem;
-  text-align: center;
-  margin: 0 auto;
-  font-family: 'Fira Sans',sans-serif;
-}
-.cone{
-  padding-top: 30px;
-}
-.cone button{
-  border: 1px solid rgb(150, 8, 55);
-  background-color: rgb(150, 8, 55);
-  padding: 10px 100px;
-  border-radius: 10px;
-}
-.cone button a{
-  color: white;
-}
-.cone button a{
-  text-decoration: none;
-  color: white;
-}
-.cone button:hover{
-  background-color:rgb(191, 29, 83);
-} 
-/* home section ends */
+  .hero-text {
+    position: absolute;
+    top: 35%;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+  }
 
-/* Footer starts */
-.site-footer {
-  padding-top: 70px;
-  padding-bottom: 30px;
-  font-size: 14px; }
+  .hero-text h1 {
+    width: 50%;
+    text-align: center;
+    line-height: 1.3;
+    padding-bottom: 30px;
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 3.5rem;
+    color: white;
+    font-weight: bolder;
+    margin: 0 auto;
+  }
+
+  .hero-text p {
+    line-height: 1.5;
+    width: 40%;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-align: center;
+    margin: 0 auto;
+    font-family: 'Fira Sans', sans-serif;
+  }
+
+  .cone {
+    padding-top: 30px;
+  }
+
+  .cone button {
+    border: 1px solid rgb(150, 8, 55);
+    background-color: rgb(150, 8, 55);
+    padding: 10px 100px;
+    border-radius: 10px;
+  }
+
+  .cone button a {
+    color: white;
+  }
+
+  .cone button a {
+    text-decoration: none;
+    color: white;
+  }
+
+  .cone button:hover {
+    background-color: rgb(191, 29, 83);
+  }
+
+  /* home section ends */
+
+  /* Footer starts */
+  .site-footer {
+    padding-top: 70px;
+    padding-bottom: 30px;
+    font-size: 14px;
+  }
+
   @media (max-width: 767.98px) {
     .site-footer {
-      padding-top: 30px; } }
+      padding-top: 30px;
+    }
+  }
+
   .site-footer a {
-    color: #000; }
-    .site-footer a:hover {
-      color: #fc5404; }
+    color: #000;
+  }
+
+  .site-footer a:hover {
+    color: #fc5404;
+  }
+
   .site-footer .widget {
-    margin-bottom: 30px; }
-    .site-footer .widget h3, .site-footer .widget .h3 {
-      font-size: 1.5rem;
-      font-weight: 700;
-      margin-bottom: 30px; }
-      .site-footer .widget img{
-        width: 30%;
-      }
-    .site-footer .widget .social li {
-      display: inline-block; }
-      .site-footer .widget .social li a {
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        background: #f8f9fa;
-        display: inline-block;
-        position: relative;
-        color: black; }
-        .site-footer .widget .social li a span {
-          font-size: 20px;
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          -webkit-transform: translate(-50%, -50%);
-          -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%); }
-        .site-footer .widget .social li a:hover {
-          /* background-color: #fc5404; */
-          background: rgb(191, 29, 83);
-          color: #fff; }
-    .site-footer .widget .links li {
-      display: block;
-      margin-bottom: 10px; }
-      .site-footer .widget .links li a {
-        color: black;
-      font-weight: bold;
-      line-height: 2; }
-        .site-footer .widget .links li a:hover {
-          color: rgb(191, 29, 83); }
+    margin-bottom: 30px;
+  }
+
+  .site-footer .widget h3,
+  .site-footer .widget .h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+  }
+
+  .site-footer .widget img {
+    width: 30%;
+  }
+
+  .site-footer .widget .social li {
+    display: inline-block;
+  }
+
+  .site-footer .widget .social li a {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #f8f9fa;
+    display: inline-block;
+    position: relative;
+    color: black;
+  }
+
+  .site-footer .widget .social li a span {
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+
+  .site-footer .widget .social li a:hover {
+    /* background-color: #fc5404; */
+    background: rgb(191, 29, 83);
+    color: #fff;
+  }
+
+  .site-footer .widget .links li {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .site-footer .widget .links li a {
+    color: black;
+    font-weight: bold;
+    line-height: 2;
+  }
+
+  .site-footer .widget .links li a:hover {
+    color: rgb(191, 29, 83);
+  }
+
   .site-footer .copyright {
     position: relative;
     padding-top: 40px;
-    margin-top: 40px; }
-    .site-footer .copyright:before {
-      top: 0;
-      position: absolute;
-      left: 0px;
-      right: 0px;
-      content: "";
-      height: 1px;
-      background: #d3d8dc; }
-
-/* Footer end */
-#show{
-  display:none;
-}
-
-/* testimonials start */
-.test{
-  padding: 100px 0 10px;
-  animation: background-color 60s;
-  min-height: 100vh;
-  /* background: linear-gradient(to bottom,rgb(191, 29, 83), purple); */
-  background-color: white;
+    margin-top: 40px;
   }
 
-.contained {
+  .site-footer .copyright:before {
+    top: 0;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    content: "";
+    height: 1px;
+    background: #d3d8dc;
+  }
+
+  /* Footer end */
+  #show {
+    display: none;
+  }
+
+  /* testimonials start */
+  .test {
+    padding: 100px 0 10px;
+    animation: background-color 60s;
+    min-height: 100vh;
+    /* background: linear-gradient(to bottom,rgb(191, 29, 83), purple); */
+    background-color: white;
+  }
+
+  .contained {
     margin-top: 30px;
-}
+  }
 
-.contained .col-lg-4 {
-  display: flex;
-  justify-content: center; 
-  padding-bottom: 100px;
-}
+  .contained .col-lg-4 {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 100px;
+  }
 
-.card {
+  .card {
     width: 300px;
     height: 300px;
     transform-style: preserve-3d;
     perspective: 500px;
     background-color: inherit;
-}
+  }
 
-.card .face {
+  .card .face {
     position: absolute;
     color: black;
     font-weight: 600;
@@ -403,78 +486,80 @@ nav ul li a{
     transform-style: preserve-3d;
     transition: 0.5s;
     backface-visibility: hidden;
-}
+  }
 
-.card .face.front-face,
-.card .face.back-face {
+  .card .face.front-face,
+  .card .face.back-face {
     position: absolute;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}
+  }
 
-.card .face.front-face .profile {
+  .card .face.front-face .profile {
     width: 150px;
     height: 150px;
     border-radius: 50%;
     object-fit: cover;
-}
+  }
 
-.card .face.front-face .name {
+  .card .face.front-face .name {
     letter-spacing: 2px;
-}
+  }
 
-.card .face.front-face .designation {
+  .card .face.front-face .designation {
     font-size: 0.8rem;
     color: black;
     letter-spacing: 0.8px;
-}
+  }
 
-.card:hover .face.front-face {
+  .card:hover .face.front-face {
     transform: rotateY(180deg);
-}
+  }
 
-.card .face.back-face {
+  .card .face.back-face {
     position: absolute;
     background-color: ghostwhite;
     transform: rotateY(180deg);
     padding: 20px 30px;
     text-align: center;
     user-select: none;
-}
+  }
 
-.card .face.back-face .fa-quote-left {
+  .card .face.back-face .fa-quote-left {
     position: absolute;
     top: 25px;
     left: 25px;
     font-size: 1.2rem;
-}
+  }
 
-.card .face.back-face .fa-quote-right {
+  .card .face.back-face .fa-quote-right {
     position: absolute;
     bottom: 35px;
     right: 25px;
     font-size: 1.2rem;
-}
+  }
 
-.card:hover .face.back-face {
+  .card:hover .face.back-face {
     transform: rotateY(360deg);
-}
+  }
 
-@media(max-width: 991.5px) {
+  @media(max-width: 991.5px) {
     .col-lg-4 {
-        margin-top: 40px;
-        margin-bottom: 20px;
+      margin-top: 40px;
+      margin-bottom: 20px;
     }
-}
-  .section-titles{
+  }
+
+  .section-titles {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-  .section-titles h1{
+
+  .section-titles h1 {
     font-size: 2.7rem;
     font-family: 'Fira Sans', sans-serif;
     font-weight: 600;
@@ -483,7 +568,8 @@ nav ul li a{
     color: rgb(191, 29, 83);
     padding-bottom: 10px;
   }
-  .section-titles p{
+
+  .section-titles p {
     font-family: 'Fira Sans', sans-serif;
     color: black;
     font-size: 1.1rem;
@@ -493,403 +579,532 @@ nav ul li a{
     text-align: center;
     padding-bottom: 30px;
   }
-/* testimonials end */
 
-/* application starts */
-.achieve{
-  /* margin-top: 5%; */
-  background-color: lavender;
-  padding: 100px;
-}
-.flex-img-container .flex-img-content{
-  /* display: flex;
+  /* testimonials end */
+
+  /* application starts */
+  .achieve {
+    /* margin-top: 5%; */
+    background-color: lavender;
+    padding: 100px;
+  }
+
+  .flex-img-container .flex-img-content {
+    /* display: flex;
   flex-wrap: wrap; */
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  /* gap: 30px; */
-}
-.think-it-heading h1{
-  font-family: 'Fira Sans',sans-serif;
-  font-weight: bold;
-  font-size: 4rem;
-  width: 60%;
-}
-.think-it-heading h1 span{
-  color: rgb(3, 3, 54);
-}
-.flex-img-container .flex-img-content img{
-  width: 100%;
-}
-.flex-img-content .flex-text{
-  background-color: rgb(150, 8, 55);
-  text-align: center;
-  width: 100%;
-  padding-top: 30%;
-}
-.flex-img-content .flex1-text{
-  background-color: rgb(3, 3, 54);
-  width: 100%;
-  text-align: center;
-  padding-top: 30%;
-}
-.flex-img-content .flex-text h1{
-  color: white;
-  font-weight: bold;
-  font-family: 'Fira Sans',sans-serif;
-  font-size: 4rem;
-}
-.flex-img-content .flex-text p{
-  color: white;
-  font-family: 'Fira Sans',sans-serif;
-  font-size: 1rem;
-}
-.flex-img-content .flex1-text p{
-  color: white;
-  font-family: 'Fira Sans',sans-serif;
-  font-size: 1rem;
-}
-.flex-img-content .flex1-text h1{
-  color: white;
-  font-weight: bold;
-  font-family: 'Fira Sans',sans-serif;
-  font-size: 4rem;
-}
-/* application end */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /* gap: 30px; */
+  }
 
+  .think-it-heading h1 {
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: bold;
+    font-size: 4rem;
+    width: 60%;
+  }
 
-/* application starts */
-.apply{
-  padding: 60px 0 60px;
-  background: linear-gradient(to right, rgb(191, 29, 83), purple);
-}
-.form{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  line-height: 2;
-  font-weight: bold;
-}
-.form h1{
-  font-family: 'Fira Sans', sans-serif;
-  font-size: 3rem;
-  text-transform: capitalize;
-  margin: 0 auto;
-  text-align: center;
-}
-.form p{
-  font-family: 'Fira Sans', sans-serif; 
-  width: 50%;
-  margin: 0 auto;
-  text-align: center;
-}
-.form #change button{
-  background: none;
-  border: 1px solid white;
-  border-radius: 20px;
-  padding: 10px 30px;
-}
-.form .butt button a{
-  color: white;
-  text-transform: uppercase;
-}
-/* application end */
+  .think-it-heading h1 span {
+    color: rgb(3, 3, 54);
+  }
 
-/* media query starts */
-@media only screen and (max-width:1200px){
-  .head .contain{
-    max-width: 100%;
+  .flex-img-container .flex-img-content img {
     width: 100%;
-    display: flex;
-    align-items: center;
-    position: fixed;
-    z-index: 99;
-    box-shadow: 5px 7px 5px rgb(228, 224, 224);
-    background-color: white;
-}
-#show{
-  display: flex;
-}
-#hide{
-  display: none;
-}
-.contain nav .links{
-  display: block;
-  position: fixed;
-  background-color: white;
-  height: 100%;
-  width: 100%;
-  top:  9%;
-  left: -100%;
-  margin-left: 0;
-  overflow-y: auto;
-  padding-bottom: 100px;
-  transition:  all 0.3s ease;
-}
-nav #show-burger:checked ~ul{
-  left:  0%;
-}
-.contain input[type= "checkbox"]{
-  display: none;
-}
- .logos img{
-  width: 200px;
-  margin-left: 30%;
-}
-nav ul li a{
-  display: none;
-}
-nav ul li{
-  width: 100%;
-  text-align: left;
-}
-.contain .links li{
-  margin:  15px 20px;
-}
-.contain .links li label{
-  line-height: 10px;
-  font-size: 1.125rem;
-  display: block;
-  padding: 8px 18px;
-  cursor: pointer;
-}
- nav ul li a:hover{
-  transition: all ease-in-out 0.3s;
-  font-weight: bold;
-  text-decoration: none;
-}
-.contain .links li label{
-  cursor: pointer;
-  text-transform: uppercase;
-  font-size: 1.3rem;
-  color: rgb(150, 8, 55);
-  font-weight: bold;
-  font-family: 'Fira Sans',sans-serif;
-  position: relative;
-  top: 50px;
-  line-height: 2;
-}
-.contain .links ul{
-  position: static;
-  opacity: 1;
-  visibility: visible;
-  background:none;
-  max-height: 0px;
-  overflow: hidden;
-}
-.contain .links #show-started:checked ~ ul,
-.contain .links #show-courses:checked ~ ul,
-.contain .links #show-about:checked ~ ul,
-.contain .links #show-companies:checked ~ ul{
-  max-height: 170vh;
-}
-.burger img{
-  width: 50px;
-  position: relative;
-  right: 60px;
-  cursor: pointer;
-}
-.width{
-  text-align: center;
-  margin-top: 5%;
-  padding-bottom: 3%;
-}
-.shift{
-  text-align: center;
-}
-.width button{
-  padding: 15px 30px;
-  border: 2px solid rgb(191, 29, 83);
-  border-radius: 10px;
-  background: none;
-  width: 80%;
-}
-.width button a{
-  text-transform: uppercase;
-  text-decoration: none;
-  color: rgb(191, 29, 83);
-}
-.shift button {
-  padding: 15px 30px;
-  border: 2px solid rgb(191, 29, 83);
-  border-radius: 10px;
-  background: rgb(150, 8, 55);
-  width: 80%;
-  text-align: center;
-}
-.shift button a{
-  text-transform: uppercase;
-  text-decoration: none;
-  color: white;
-  font-family: 'Fira Sans', sans-serif;
-}
-}
-@media only screen and (max-width:991px){
-  .home{
-  background-position: center;
-}
-.hero-text h1{
-  font-size: 3rem;
-  width: 40%;
-}
-.think-it-heading h1{
-  width: 100%;
-}
-}
-@media only screen and (max-width:820px){
-.hero-text p{
-    font-size: 1.5rem;
   }
-}
-@media only screen and (max-width:912px){
-  .hero-text h1{
-  font-size: 3rem;
-  width: 40%;
-}
-  .hero-text p{
-    font-size: 1.1rem;
-    width: 40%;
-  }
-  .carousel-item .slide-text{
-    position: absolute;
-    top: 50%;
-  }
-  .home{
-    height: 100vh;
-  }
-}
-@media only screen and (max-width:786px){
-  .hero-text h1{
-    width: 80%;
-  }
-  .hero-text p{
-    width: 80%;
-  }
-  .think-it-heading h1{
-    font-size: 3rem;
-  }
-}
-@media only screen and (max-width:586px){
-  .hero-text p{
+
+  .flex-img-content .flex-text {
+    background-color: rgb(150, 8, 55);
     text-align: center;
-  }
-  .hero-text h1{
-    font-size: 3.5rem;
-    width: 90%;
-  }
-  .hero-text h6{
-    width: 30%;
-  }
-  .team{
-    padding: 70px 10px 70px 10px;
-  }
-  .form p{
     width: 100%;
+    padding-top: 30%;
   }
-  .card-heading h1{
-    font-size: 2.5rem;
-  }
-  .think-it-heading h1{
-    font-size: 2.5rem;
+
+  .flex-img-content .flex1-text {
+    background-color: rgb(3, 3, 54);
     width: 100%;
+    text-align: center;
+    padding-top: 30%;
   }
-  .achieve{
-    padding: 70px 10px 70px 10px;
-    /* padding-top: 70px; */
+
+  .flex-img-content .flex-text h1 {
+    color: white;
+    font-weight: bold;
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 4rem;
   }
-}
-@media only screen and (max-width:540px){
-  .hero-text h1{
+
+  .flex-img-content .flex-text p {
+    color: white;
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 1rem;
+  }
+
+  .flex-img-content .flex1-text p {
+    color: white;
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 1rem;
+  }
+
+  .flex-img-content .flex1-text h1 {
+    color: white;
+    font-weight: bold;
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 4rem;
+  }
+
+  /* application end */
+
+
+  /* application starts */
+  .apply {
+    padding: 60px 0 60px;
+    background: linear-gradient(to right, rgb(191, 29, 83), purple);
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    line-height: 2;
+    font-weight: bold;
+  }
+
+  .form h1 {
+    font-family: 'Fira Sans', sans-serif;
     font-size: 3rem;
-  }
-  .hero-text p{
-    font-size: 1.1rem;
-  }
-}
-@media only screen and (max-width:414px){
-.hero-text h1{
-  width: 100%;
-  font-size: 3rem;
-}
-.hero-text p{
-  text-align: left;
-}
-.achieve{
-  padding: 70px 10px 70px 10px;
-  /* padding-top: 70px; */
-}
-.think-it-heading h1{
-  width: 100%;
-  font-size: 2rem;
-}
-}
-@media only screen and (max-width:375px){
-.home{
-    background-position: center;
-  }
-  .hero-text p{
-    text-align: left;
-  }
-  .hero-text{
-    position: absolute;
-    top: 20%;
-  }
-  .form h1{
+    text-transform: capitalize;
     margin: 0 auto;
     text-align: center;
   }
-  .about-text h1{
-    font-size: 2.5rem;
+
+  .form p {
+    font-family: 'Fira Sans', sans-serif;
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
   }
-}
-@media only screen and (max-width:280px){
-  .hero-text h1{
-    font-size: 2rem;
+
+  .form #change button {
+    background: none;
+    border: 1px solid white;
+    border-radius: 20px;
+    padding: 10px 30px;
   }
-  .hero-text p{
-    font-size: 15px;
+
+  .form .butt button a {
+    color: white;
+    text-transform: uppercase;
   }
-  .logos img{
-    width: 100px;
+
+  /* application end */
+
+  /* media query starts */
+  @media only screen and (max-width:1200px) {
+    .head .contain {
+      max-width: 100%;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      z-index: 99;
+      box-shadow: 5px 7px 5px rgb(228, 224, 224);
+      background-color: white;
+    }
+
+    #show {
+      display: flex;
+    }
+
+    #hide {
+      display: none;
+    }
+
+    .contain nav .links {
+      display: block;
+      position: fixed;
+      background-color: white;
+      height: 100%;
+      width: 100%;
+      top: 9%;
+      left: -100%;
+      margin-left: 0;
+      overflow-y: auto;
+      padding-bottom: 100px;
+      transition: all 0.3s ease;
+    }
+
+    nav #show-burger:checked~ul {
+      left: 0%;
+    }
+
+    .contain input[type="checkbox"] {
+      display: none;
+    }
+
+    .logos img {
+      width: 200px;
+      margin-left: 30%;
+    }
+
+    nav ul li a {
+      display: none;
+    }
+
+    nav ul li {
+      width: 100%;
+      text-align: left;
+    }
+
+    .contain .links li {
+      margin: 15px 20px;
+    }
+
+    .contain .links li label {
+      line-height: 10px;
+      font-size: 1.125rem;
+      display: block;
+      padding: 8px 18px;
+      cursor: pointer;
+    }
+
+    nav ul li a:hover {
+      transition: all ease-in-out 0.3s;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .contain .links li label {
+      cursor: pointer;
+      text-transform: uppercase;
+      font-size: 1.3rem;
+      color: rgb(150, 8, 55);
+      font-weight: bold;
+      font-family: 'Fira Sans', sans-serif;
+      position: relative;
+      top: 50px;
+      line-height: 2;
+    }
+
+    .contain .links ul {
+      position: static;
+      opacity: 1;
+      visibility: visible;
+      background: none;
+      max-height: 0px;
+      overflow: hidden;
+    }
+
+    .contain .links #show-started:checked~ul,
+    .contain .links #show-courses:checked~ul,
+    .contain .links #show-about:checked~ul,
+    .contain .links #show-companies:checked~ul {
+      max-height: 170vh;
+    }
+
+    .burger img {
+      width: 50px;
+      position: relative;
+      right: 60px;
+      cursor: pointer;
+    }
+
+    .width {
+      text-align: center;
+      margin-top: 5%;
+      padding-bottom: 3%;
+    }
+
+    .shift {
+      text-align: center;
+    }
+
+    .width button {
+      padding: 15px 30px;
+      border: 2px solid rgb(191, 29, 83);
+      border-radius: 10px;
+      background: none;
+      width: 80%;
+    }
+
+    .width button a {
+      text-transform: uppercase;
+      text-decoration: none;
+      color: rgb(191, 29, 83);
+    }
+
+    .shift button {
+      padding: 15px 30px;
+      border: 2px solid rgb(191, 29, 83);
+      border-radius: 10px;
+      background: rgb(150, 8, 55);
+      width: 80%;
+      text-align: center;
+    }
+
+    .shift button a {
+      text-transform: uppercase;
+      text-decoration: none;
+      color: white;
+      font-family: 'Fira Sans', sans-serif;
+    }
   }
-  .burger img{
-    width: 30px;
-    padding-top: 5px;
+
+  @media only screen and (max-width:991px) {
+    .head .contain {
+      position: fixed;
+      top: 0;
+    }
+
+    .home {
+      background-position: center;
+    }
+
+    .hero-text h1 {
+      font-size: 3rem;
+      width: 40%;
+    }
+
+    .think-it-heading h1 {
+      width: 100%;
+    }
   }
-  .site-footer .widget .links li a {
-    font-size: 10px;
-    line-height: 0;
+
+  @media only screen and (max-width:820px) {
+    .head .contain {
+      position: fixed;
+      top: 0;
+    }
+
+    .hero-text p {
+      font-size: 1.5rem;
+    }
   }
-  .site-footer .widget h3, .site-footer .widget .h3 {
-    font-size: 1.2rem;
+
+  @media only screen and (max-width:912px) {
+    .head .contain {
+      position: fixed;
+      top: 0;
+    }
+
+    .hero-text h1 {
+      font-size: 3rem;
+      width: 40%;
+    }
+
+    .hero-text p {
+      font-size: 1.1rem;
+      width: 40%;
+    }
+
+    .carousel-item .slide-text {
+      position: absolute;
+      top: 50%;
+    }
+
+    .home {
+      height: 100vh;
+    }
   }
-  .think-it-heading h1{
-    font-size: 1.5rem;
+
+  @media only screen and (max-width:786px) {
+    .head .contain {
+      position: fixed;
+      top: 0;
+    }
+
+    .hero-text h1 {
+      width: 80%;
+    }
+
+    .hero-text p {
+      width: 80%;
+    }
+
+    .think-it-heading h1 {
+      font-size: 3rem;
+    }
   }
-  .section-titles h1{
-    font-size: 2rem;
+
+  @media only screen and (max-width:586px) {
+    .head .contain {
+      position: fixed;
+      top: 0;
+    }
+
+    .hero-text p {
+      text-align: center;
+    }
+
+    .hero-text h1 {
+      font-size: 3.5rem;
+      width: 90%;
+    }
+
+    .hero-text h6 {
+      width: 30%;
+    }
+
+    .team {
+      padding: 70px 10px 70px 10px;
+    }
+
+    .form p {
+      width: 100%;
+    }
+
+    .card-heading h1 {
+      font-size: 2.5rem;
+    }
+
+    .think-it-heading h1 {
+      font-size: 2.5rem;
+      width: 100%;
+    }
+
+    .achieve {
+      padding: 70px 10px 70px 10px;
+      /* padding-top: 70px; */
+    }
   }
-  .section-titles p{
-    width: 80%;
+
+  @media only screen and (max-width:540px) {
+    .head .contain {
+      position: fixed;
+      top: 0;
+    }
+
+    .hero-text h1 {
+      font-size: 3rem;
+    }
+
+    .hero-text p {
+      font-size: 1.1rem;
+    }
   }
-  .form h1{
-    font-size: 2rem;
-    font-weight: bolder;
+
+  @media only screen and (max-width:414px) {
+    .head .contain {
+      position: fixed;
+      top: 0;
+    }
+
+    .hero-text h1 {
+      width: 100%;
+      font-size: 3rem;
+    }
+
+    .hero-text p {
+      text-align: left;
+    }
+
+    .achieve {
+      padding: 70px 10px 70px 10px;
+      /* padding-top: 70px; */
+    }
+
+    .think-it-heading h1 {
+      width: 100%;
+      font-size: 2rem;
+    }
   }
-  .form p{
-    font-weight: 200;
+
+  @media only screen and (max-width:375px) {
+    .head .contain {
+      position: fixed;
+      top: 0;
+    }
+
+    .home {
+      background-position: center;
+    }
+
+    .hero-text p {
+      text-align: left;
+    }
+
+    .hero-text {
+      position: absolute;
+      top: 20%;
+    }
+
+    .form h1 {
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .about-text h1 {
+      font-size: 2.5rem;
+    }
   }
-}
-/* media query ends */
+
+  @media only screen and (max-width:280px) {
+    .head .contain {
+      position: fixed;
+      top: 0;
+    }
+
+    .hero-text h1 {
+      font-size: 2rem;
+    }
+
+    .hero-text p {
+      font-size: 15px;
+    }
+
+    .logos img {
+      width: 100px;
+    }
+
+    .burger img {
+      width: 30px;
+      padding-top: 5px;
+    }
+
+    .site-footer .widget .links li a {
+      font-size: 10px;
+      line-height: 0;
+    }
+
+    .site-footer .widget h3,
+    .site-footer .widget .h3 {
+      font-size: 1.2rem;
+    }
+
+    .think-it-heading h1 {
+      font-size: 1.5rem;
+    }
+
+    .section-titles h1 {
+      font-size: 2rem;
+    }
+
+    .section-titles p {
+      width: 80%;
+    }
+
+    .form h1 {
+      font-size: 2rem;
+      font-weight: bolder;
+    }
+
+    .form p {
+      font-weight: 200;
+    }
+  }
+
+  /* media query ends */
 </style>
+
 <body>
   <div class="page-wrapper">
     <header class="header" id="hide">
       <div class="containers">
         <div class="logo">
           <a href="./index.html">
-          <img src="./images/codar-logo.png" alt="">
+            <img src="./images/codar-logo.png" alt="">
           </a>
         </div>
         <nav>
@@ -920,7 +1135,7 @@ nav ul li{
                 </div>
               </div>
             </li>
-            <li class="hovers" id="hove"><a href="./online-school.html">online school</a>   
+            <li class="hovers" id="hove"><a href="./online-school.html">online school</a>
             </li>
             <li class="hovers" id="hove"><a href="">for companies</a>
               <div class="dropdown">
@@ -942,7 +1157,7 @@ nav ul li{
         </div>
         <label for="show-menu" class="menu-icon">
           <div class="ham">
-           <img src="./images/burger.jpeg" alt="">
+            <img src="./images/burger.jpeg" alt="">
           </div>
         </label>
       </div>
@@ -953,7 +1168,7 @@ nav ul li{
       <div class="contain">
         <div class="logos">
           <a href="./index.html">
-          <img src="./images/codar-logo.png" alt="">
+            <img src="./images/codar-logo.png" alt="">
           </a>
         </div>
         <nav>
@@ -998,17 +1213,17 @@ nav ul li{
                 <li><a href="./learn-more.html">learn more</a></li>
               </ul>
             </li>
-              <div class="width">
-                <button><a href="./apply.html">apply now</a></button>
-              </div>
-              <div class="shift">
-               <button><a href="./apply.html">login now</a></button>
-              </div>
+            <div class="width">
+              <button><a href="./apply.html">apply now</a></button>
+            </div>
+            <div class="shift">
+              <button><a href="./apply.html">login now</a></button>
+            </div>
           </ul>
         </nav>
         <label for="show-burger" class="menu-icon">
           <div class="burger">
-           <img src="./images/burger.jpeg" alt="">
+            <img src="./images/burger.jpeg" alt="">
           </div>
         </label>
       </div>
@@ -1021,14 +1236,15 @@ nav ul li{
         <div class="hero-text">
           <!-- <h6>our mission</h6> -->
           <h1>We are Loved By Our Learners</h1>
-          <p>The little stories of each person that has gone through Codar really counts for something more. And that is why we are intentional about collecting this success story.</p>
+          <p>The little stories of each person that has gone through Codar really counts for something more. And that is
+            why we are intentional about collecting this success story.</p>
           <div class="cone">
             <button><a href="./apply.html">Apply Now</a></button>
           </div>
         </div>
       </div>
     </section>
-  <!-- home section end -->
+    <!-- home section end -->
 
     <!-- testimonials start -->
     <section class="test" id="test">
@@ -1039,449 +1255,470 @@ nav ul li{
         </div>
         <div class="contained">
           <div class="row">
-              <div class="col-lg-4">
-                  <div class="card">
-                      <div class="face front-face">
-                          <img src="./images/test1.jpg"
-                              alt="" class="profile">
-                          <div class="pt-3 text-uppercase name">
-                              Onyiyechi Anyawu
-                          </div>
-                          <div class="designation">Front-end Developer</div>
-                      </div>
-                      <div class="face back-face">
-                          <span class="fas fa-quote-left"></span>
-                          <div class="testimonial">
-                            I never thought I could turn out this good! I am very grateful to Codar for this Opportunity. This is a starting milestone to changing my career life for the better. I am ready to pursue more and more with the support I get from my trainers and other students, making the experience a dream come true.
-                          </div>
-                          <span class="fas fa-quote-right"></span>
-                      </div>
+            <div class="col-lg-4">
+              <div class="card">
+                <div class="face front-face">
+                  <img src="./images/test1.jpg" alt="" class="profile">
+                  <div class="pt-3 text-uppercase name">
+                    Onyiyechi Anyawu
                   </div>
-              </div>
-              <div class="col-lg-4">
-                  <div class="card">
-                      <div class="face front-face">
-                          <img src="./images/test2.jpg"
-                              alt="" class="profile">
-                          <div class="pt-3 text-uppercase name">
-                              Bright Williams
-                          </div>
-                          <div class="designation">Full Stack Developer</div>
-                      </div>
-                      <div class="face back-face">
-                          <span class="fas fa-quote-left"></span>
-                          <div class="testimonial">
-                            Codar has impacted my career progression in a positive way as the changes in the last couple of months have been rapid. I've had opportunities to implement my learnings in real-life scenarios.I feel fulfilled implementing my passion.
-                          </div>
-                          <span class="fas fa-quote-right"></span>
-                      </div>
+                  <div class="designation">Front-end Developer</div>
+                </div>
+                <div class="face back-face">
+                  <span class="fas fa-quote-left"></span>
+                  <div class="testimonial">
+                    I never thought I could turn out this good! I am very grateful to Codar for this Opportunity. This
+                    is a starting milestone to changing my career life for the better. I am ready to pursue more and
+                    more with the support I get from my trainers and other students, making the experience a dream come
+                    true.
                   </div>
+                  <span class="fas fa-quote-right"></span>
+                </div>
               </div>
-              <div class="col-lg-4">
-                  <div class="card">
-                      <div class="face front-face">
-                          <img src="./images/cus-2.png"
-                              alt="" class="profile">
-                          <div class="pt-3 text-uppercase name">
-                              Isaac Maxwell
-                          </div>
-                          <div class="designation">Back-end Developer</div>
-                      </div>
-                      <div class="face back-face">
-                          <span class="fas fa-quote-left"></span>
-                          <div class="testimonial">
-                            Codar gave me the opportunity to know more. I had the opportunity to do things I thought I couldn’t do with the help of wonderful Tutors.The training significantly helped me with my career transition
-                          </div>
-                          <span class="fas fa-quote-right"></span>
-                      </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card">
+                <div class="face front-face">
+                  <img src="./images/test2.jpg" alt="" class="profile">
+                  <div class="pt-3 text-uppercase name">
+                    Bright Williams
                   </div>
-              </div>
-              <div class="col-lg-4">
-                  <div class="card">
-                      <div class="face front-face">
-                          <img src="./images/test4.jpg"
-                              alt="" class="profile">
-                          <div class="pt-3 text-uppercase name">
-                            Peterson Igwe
-                          </div>
-                          <div class="designation">Data Analyst</div>
-                      </div>
-                      <div class="face back-face">
-                          <span class="fas fa-quote-left"></span>
-                          <div class="testimonial">
-                            I was really excited about Codar going virtual. Excited that I was able to learn from home. I believe in self-learning but as a student, I couldn't drive myself but Codar was able to drive me to discipline myself. The team is highly organized and the community is amazing and interactive.
-                          </div>
-                          <span class="fas fa-quote-right"></span>
-                      </div>
+                  <div class="designation">Full Stack Developer</div>
+                </div>
+                <div class="face back-face">
+                  <span class="fas fa-quote-left"></span>
+                  <div class="testimonial">
+                    Codar has impacted my career progression in a positive way as the changes in the last couple of
+                    months have been rapid. I've had opportunities to implement my learnings in real-life scenarios.I
+                    feel fulfilled implementing my passion.
                   </div>
+                  <span class="fas fa-quote-right"></span>
+                </div>
               </div>
-              <div class="col-lg-4">
-                  <div class="card">
-                      <div class="face front-face">
-                          <img src="./images/cus-3.png"
-                              alt="" class="profile">
-                          <div class="pt-3 text-uppercase name">
-                            Rachael Johnson
-                          </div>
-                          <div class="designation">UI/UX Designer</div>
-                      </div>
-                      <div class="face back-face">
-                          <span class="fas fa-quote-left"></span>
-                          <div class="testimonial">
-                            Since I've taken this class, I have been able to see how web development is important to my job, I have also been able to make recommendations within the organization. It has also positioned me as a better professional in my workplace.
-                          </div>
-                          <span class="fas fa-quote-right"></span>
-                      </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card">
+                <div class="face front-face">
+                  <img src="./images/cus-2.png" alt="" class="profile">
+                  <div class="pt-3 text-uppercase name">
+                    Isaac Maxwell
                   </div>
-              </div>
-              <div class="col-lg-4">
-                  <div class="card">
-                      <div class="face front-face">
-                          <img src="./images/cus-1.png"
-                              alt="" class="profile">
-                          <div class="pt-3 text-uppercase name">
-                            Jaiyeola Aminat
-                          </div>
-                          <div class="designation">Cyber Engineer</div>
-                      </div>
-                      <div class="face back-face">
-                          <span class="fas fa-quote-left"></span>
-                          <div class="testimonial">
-                            The Codar digital marketing program is important for me because today, I can boldly say I am a Social Media Manager. Codar has done really well with me and for me, I am a better person.
-                          </div>
-                          <span class="fas fa-quote-right"></span>
-                      </div>
+                  <div class="designation">Back-end Developer</div>
+                </div>
+                <div class="face back-face">
+                  <span class="fas fa-quote-left"></span>
+                  <div class="testimonial">
+                    Codar gave me the opportunity to know more. I had the opportunity to do things I thought I couldn’t
+                    do with the help of wonderful Tutors.The training significantly helped me with my career transition
                   </div>
+                  <span class="fas fa-quote-right"></span>
+                </div>
               </div>
-              <div class="col-lg-4">
-                  <div class="card">
-                      <div class="face front-face">
-                          <img src="./images/codar-logo1.png"
-                              alt="" class="profile">
-                          <div class="pt-3 text-uppercase name">
-                            Ndubisis Williams
-                          </div>
-                          <div class="designation">Sales Performance Developer</div>
-                      </div>
-                      <div class="face back-face">
-                          <span class="fas fa-quote-left"></span>
-                          <div class="testimonial">
-                            Great facilitators and the learning delivery was quite interesting. I will be eager to undertake more training with Codar. Welldone!
-                          </div>
-                          <span class="fas fa-quote-right"></span>
-                      </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card">
+                <div class="face front-face">
+                  <img src="./images/test4.jpg" alt="" class="profile">
+                  <div class="pt-3 text-uppercase name">
+                    Peterson Igwe
                   </div>
-              </div>
-              <div class="col-lg-4">
-                  <div class="card">
-                      <div class="face front-face">
-                          <img src="./images/codar-logo1.png"
-                              alt="" class="profile">
-                          <div class="pt-3 text-uppercase name">
-                            Udochukwu Innocent
-                          </div>
-                          <div class="designation">Sales Executive</div>
-                      </div>
-                      <div class="face back-face">
-                          <span class="fas fa-quote-left"></span>
-                          <div class="testimonial">
-                            Its really a whole new world and experience learning data analysis and I am glad to be part of this COHORT. The teachers are patient and sacrificing in their teachings and I can't wait to put all what I have learnt into practice. I love Codar, you guys ROCK.
-                          </div>
-                          <span class="fas fa-quote-right"></span>
-                      </div>
+                  <div class="designation">Data Analyst</div>
+                </div>
+                <div class="face back-face">
+                  <span class="fas fa-quote-left"></span>
+                  <div class="testimonial">
+                    I was really excited about Codar going virtual. Excited that I was able to learn from home. I
+                    believe in self-learning but as a student, I couldn't drive myself but Codar was able to drive me to
+                    discipline myself. The team is highly organized and the community is amazing and interactive.
                   </div>
+                  <span class="fas fa-quote-right"></span>
+                </div>
               </div>
-              <div class="col-lg-4">
-                  <div class="card">
-                      <div class="face front-face">
-                          <img src="./images/codar-logo1.png"
-                              alt="" class="profile">
-                          <div class="pt-3 text-uppercase name">
-                            Sarah Owolabi
-                          </div>
-                          <div class="designation">Data Analyst</div>
-                      </div>
-                      <div class="face back-face">
-                          <span class="fas fa-quote-left"></span>
-                          <div class="testimonial">
-                            So far, my journey with Codar has been a smooth ride. Very patient instructors who are ready to repeat themselves in case one of us seems ‘lost.’ I can’t wait to continue this amazing journey
-                          </div>
-                          <span class="fas fa-quote-right"></span>
-                      </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card">
+                <div class="face front-face">
+                  <img src="./images/cus-3.png" alt="" class="profile">
+                  <div class="pt-3 text-uppercase name">
+                    Rachael Johnson
                   </div>
-              </div>
-              <div class="col-lg-4">
-                  <div class="card">
-                      <div class="face front-face">
-                          <img src="./images/codar-logo1.png"
-                              alt="" class="profile">
-                          <div class="pt-3 text-uppercase name">
-                            Nkechi Onu
-                          </div>
-                          <div class="designation">UI Designer</div>
-                      </div>
-                      <div class="face back-face">
-                          <span class="fas fa-quote-left"></span>
-                          <div class="testimonial">
-                            Desgin thinking use to be a hard thing for me before, but my first class at Utiva answered my long time question of 'how do I start my process?' . I understood Design thinking from the very first class.
-                          </div>
-                          <span class="fas fa-quote-right"></span>
-                      </div>
+                  <div class="designation">UI/UX Designer</div>
+                </div>
+                <div class="face back-face">
+                  <span class="fas fa-quote-left"></span>
+                  <div class="testimonial">
+                    Since I've taken this class, I have been able to see how web development is important to my job, I
+                    have also been able to make recommendations within the organization. It has also positioned me as a
+                    better professional in my workplace.
                   </div>
+                  <span class="fas fa-quote-right"></span>
+                </div>
               </div>
-              <div class="col-lg-4">
-                  <div class="card">
-                      <div class="face front-face">
-                          <img src="./images/codar-logo1.png"
-                              alt="" class="profile">
-                          <div class="pt-3 text-uppercase name">
-                            Oluwaseun Ayomide
-                          </div>
-                          <div class="designation">Backend Developer</div>
-                      </div>
-                      <div class="face back-face">
-                          <span class="fas fa-quote-left"></span>
-                          <div class="testimonial">
-                            It has been an awesome experience so far. I enjoyed the excel class. I am yet to grasp SQL perfectly. I believe i will catch up as time goes on. I am glad i could enrol with Codar. I am having a beautiful experience so far
-                          </div>
-                          <span class="fas fa-quote-right"></span>
-                      </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card">
+                <div class="face front-face">
+                  <img src="./images/cus-1.png" alt="" class="profile">
+                  <div class="pt-3 text-uppercase name">
+                    Jaiyeola Aminat
                   </div>
-              </div>
-              <div class="col-lg-4">
-                  <div class="card">
-                      <div class="face front-face">
-                          <img src="./images/codar-logo1.png"
-                              alt="" class="profile">
-                          <div class="pt-3 text-uppercase name">
-                            Sandra Eze
-                          </div>
-                          <div class="designation">Senior Architect </div>
-                      </div>
-                      <div class="face back-face">
-                          <span class="fas fa-quote-left"></span>
-                          <div class="testimonial">
-                            It’s a great time to be alive learn from this institution at Codar. UX is such a wonderful course, it has opened my eyes to greater opportunities and the tutors/moderator has been exceptionally wonderful and helpful. Their intense patience in carrying everybody along at their pace of learning has really been wonderful and it shows great professionalism..
-                          </div>
-                          <span class="fas fa-quote-right"></span>
-                      </div>
+                  <div class="designation">Cyber Engineer</div>
+                </div>
+                <div class="face back-face">
+                  <span class="fas fa-quote-left"></span>
+                  <div class="testimonial">
+                    The Codar digital marketing program is important for me because today, I can boldly say I am a
+                    Social Media Manager. Codar has done really well with me and for me, I am a better person.
                   </div>
+                  <span class="fas fa-quote-right"></span>
+                </div>
               </div>
-              <div class="col-lg-4">
-                  <div class="card">
-                      <div class="face front-face">
-                          <img src="./images/codar-logo1.png"
-                              alt="" class="profile">
-                          <div class="pt-3 text-uppercase name">
-                            John Bassey
-                          </div>
-                          <div class="designation">Lead Product Designer</div>
-                      </div>
-                      <div class="face back-face">
-                          <span class="fas fa-quote-left"></span>
-                          <div class="testimonial">
-                            My Codar experience has been one of the defining moments for me as a UX Designer. As a design fellow, I learned the technical fundamentals of UX and also the importance of collaboration.
-                          </div>
-                          <span class="fas fa-quote-right"></span>
-                      </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card">
+                <div class="face front-face">
+                  <img src="./images/codar-logo1.png" alt="" class="profile">
+                  <div class="pt-3 text-uppercase name">
+                    Ndubisis Williams
                   </div>
-              </div>
-              <div class="col-lg-4">
-                  <div class="card">
-                      <div class="face front-face">
-                          <img src="./images/codar-logo1.png"
-                              alt="" class="profile">
-                          <div class="pt-3 text-uppercase name">
-                            Ahmed Hamzat
-                          </div>
-                          <div class="designation">Web Developer</div>
-                      </div>
-                      <div class="face back-face">
-                          <span class="fas fa-quote-left"></span>
-                          <div class="testimonial">
-                            Codar is a wonderful platform. So far the experience has been great. I never missed a class yet. The group assignment has been another great experience. It really help us to understand how to solve problems. The tutors are great people and they are always there to assist.. Thanks kindly.
-                          </div>
-                          <span class="fas fa-quote-right"></span>
-                      </div>
+                  <div class="designation">Sales Performance Developer</div>
+                </div>
+                <div class="face back-face">
+                  <span class="fas fa-quote-left"></span>
+                  <div class="testimonial">
+                    Great facilitators and the learning delivery was quite interesting. I will be eager to undertake
+                    more training with Codar. Welldone!
                   </div>
+                  <span class="fas fa-quote-right"></span>
+                </div>
               </div>
-              <div class="col-lg-4">
-                  <div class="card">
-                      <div class="face front-face">
-                          <img src="./images/codar-logo1.png"
-                              alt="" class="profile">
-                          <div class="pt-3 text-uppercase name">
-                           Osamede Oluwatosin
-                          </div>
-                          <div class="designation">Product Management</div>
-                      </div>
-                      <div class="face back-face">
-                          <span class="fas fa-quote-left"></span>
-                          <div class="testimonial">
-                            It has been a fun filled learning experience with the facilitator. The facilitators are well vast in their respective domains. There's a superb support of carrying every single student along in the classes. Thanks.
-                          </div>
-                          <span class="fas fa-quote-right"></span>
-                      </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card">
+                <div class="face front-face">
+                  <img src="./images/codar-logo1.png" alt="" class="profile">
+                  <div class="pt-3 text-uppercase name">
+                    Udochukwu Innocent
                   </div>
-              </div>
-              <div class="col-lg-4">
-                  <div class="card">
-                      <div class="face front-face">
-                          <img src="./images/codar-logo1.png"
-                              alt="" class="profile">
-                          <div class="pt-3 text-uppercase name">
-                            Anyawu Esther
-                          </div>
-                          <div class="designation">Research Specialist</div>
-                      </div>
-                      <div class="face back-face">
-                          <span class="fas fa-quote-left"></span>
-                          <div class="testimonial">
-                            Codar is great learning platform with great tutors. When I wanted to transition to tech, I asked a friend who is a Product Manager and he recommended Codar and Codar has exceeded my expectation. The training I received at Codar is part of what helped me to get my current job and it is stilling helping in terms of productivity.
-                          </div>
-                          <span class="fas fa-quote-right"></span>
-                      </div>
+                  <div class="designation">Sales Executive</div>
+                </div>
+                <div class="face back-face">
+                  <span class="fas fa-quote-left"></span>
+                  <div class="testimonial">
+                    Its really a whole new world and experience learning data analysis and I am glad to be part of this
+                    COHORT. The teachers are patient and sacrificing in their teachings and I can't wait to put all what
+                    I have learnt into practice. I love Codar, you guys ROCK.
                   </div>
+                  <span class="fas fa-quote-right"></span>
+                </div>
               </div>
-              <div class="col-lg-4">
-                  <div class="card">
-                      <div class="face front-face">
-                          <img src="./images/codar-logo1.png"
-                              alt="" class="profile">
-                          <div class="pt-3 text-uppercase name">
-                            Peace Osuchukwu
-                          </div>
-                          <div class="designation">Medical Doctor</div>
-                      </div>
-                      <div class="face back-face">
-                          <span class="fas fa-quote-left"></span>
-                          <div class="testimonial">
-                            It's been wonderful. I love that my Content writing class, we are given room to share our thoughts and this process makes learning more interesting and encouraging. I look forward to learning new things in tech. Thank you Codar.
-                          </div>
-                          <span class="fas fa-quote-right"></span>
-                      </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card">
+                <div class="face front-face">
+                  <img src="./images/codar-logo1.png" alt="" class="profile">
+                  <div class="pt-3 text-uppercase name">
+                    Sarah Owolabi
                   </div>
-              </div>
-              <div class="col-lg-4">
-                  <div class="card">
-                      <div class="face front-face">
-                          <img src="./images/codar-logo1.png"
-                              alt="" class="profile">
-                          <div class="pt-3 text-uppercase name">
-                            Joanne Oderinde
-                          </div>
-                          <div class="designation">Content Writer</div>
-                      </div>
-                      <div class="face back-face">
-                          <span class="fas fa-quote-left"></span>
-                          <div class="testimonial">
-                            It's been a great learning experience getting the right insight to building successful content as a Content Writer. I enjoyed every stage at which the information is been broken down for a newbie pivoting in content writing role.
-                          </div>
-                          <span class="fas fa-quote-right"></span>
-                      </div>
+                  <div class="designation">Data Analyst</div>
+                </div>
+                <div class="face back-face">
+                  <span class="fas fa-quote-left"></span>
+                  <div class="testimonial">
+                    So far, my journey with Codar has been a smooth ride. Very patient instructors who are ready to
+                    repeat themselves in case one of us seems ‘lost.’ I can’t wait to continue this amazing journey
                   </div>
+                  <span class="fas fa-quote-right"></span>
+                </div>
               </div>
-              <div class="col-lg-4">
-                  <div class="card">
-                      <div class="face front-face">
-                          <img src="./images/codar-logo1.png"
-                              alt="" class="profile">
-                          <div class="pt-3 text-uppercase name">
-                           Laura Usoro
-                          </div>
-                          <div class="designation">Cyber Engineer</div>
-                      </div>
-                      <div class="face back-face">
-                          <span class="fas fa-quote-left"></span>
-                          <div class="testimonial">
-                            Studying with Codar has been worthwhile. I must commend the experience of the training lead and the entire faculty. All the staff of Codar is amazing in response to requests. I'm enjoying the value for the money I paid.
-                          </div>
-                          <span class="fas fa-quote-right"></span>
-                      </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card">
+                <div class="face front-face">
+                  <img src="./images/codar-logo1.png" alt="" class="profile">
+                  <div class="pt-3 text-uppercase name">
+                    Nkechi Onu
                   </div>
-              </div>
-              <div class="col-lg-4">
-                  <div class="card">
-                      <div class="face front-face">
-                          <img src="./images/codar-logo1.png"
-                              alt="" class="profile">
-                          <div class="pt-3 text-uppercase name">
-                            Ifeoma Obiakor
-                          </div>
-                          <div class="designation">Front-end Developer</div>
-                      </div>
-                      <div class="face back-face">
-                          <span class="fas fa-quote-left"></span>
-                          <div class="testimonial">
-                            My Codar experience has been quite interesting. it has opened my eyes to various aspects of Front-end Developing. I am particularly excited about the case study that I and my team are working on. I also love the number of new people I have connected with while taking this class. It has been awesome.
-                          </div>
-                          <span class="fas fa-quote-right"></span>
-                      </div>
+                  <div class="designation">UI Designer</div>
+                </div>
+                <div class="face back-face">
+                  <span class="fas fa-quote-left"></span>
+                  <div class="testimonial">
+                    Desgin thinking use to be a hard thing for me before, but my first class at Utiva answered my long
+                    time question of 'how do I start my process?' . I understood Design thinking from the very first
+                    class.
                   </div>
+                  <span class="fas fa-quote-right"></span>
+                </div>
               </div>
-              <div class="col-lg-4">
-                  <div class="card">
-                      <div class="face front-face">
-                          <img src="./images/codar-logo1.png"
-                              alt="" class="profile">
-                          <div class="pt-3 text-uppercase name">
-                            Bukola Adeniyi
-                          </div>
-                          <div class="designation">Freelancer</div>
-                      </div>
-                      <div class="face back-face">
-                          <span class="fas fa-quote-left"></span>
-                          <div class="testimonial">
-                            I started Codarat a point I left the banking sector full-time and moved to an intern role at the digital Lab of the bank, it no coincidence but divine that opportunity came at a time I moved into product management and I got to learn a lot. I look forward to my next roles in product management.
-                          </div>
-                          <span class="fas fa-quote-right"></span>
-                      </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card">
+                <div class="face front-face">
+                  <img src="./images/codar-logo1.png" alt="" class="profile">
+                  <div class="pt-3 text-uppercase name">
+                    Oluwaseun Ayomide
                   </div>
+                  <div class="designation">Backend Developer</div>
+                </div>
+                <div class="face back-face">
+                  <span class="fas fa-quote-left"></span>
+                  <div class="testimonial">
+                    It has been an awesome experience so far. I enjoyed the excel class. I am yet to grasp SQL
+                    perfectly. I believe i will catch up as time goes on. I am glad i could enrol with Codar. I am
+                    having a beautiful experience so far
+                  </div>
+                  <span class="fas fa-quote-right"></span>
+                </div>
               </div>
-          </div>
-      </div>
-      </div>
-    </section>
-    <!-- testimonials end -->  
-
-      <!-- application starts -->
-      <section id="achieve" class="achieve">
-        <div class="container">
-          <div class="think-it-heading">
-            <h1>Accelerate Your Growth. <span>Think it, become it with Codar</span></h1>
-          </div>
-          <div class="flex-img-container">
-            <div class="flex-img-content">
-              <div class="flex-text">
-                <h1>10K+</h1>
-                <p>students trained</p>
+            </div>
+            <div class="col-lg-4">
+              <div class="card">
+                <div class="face front-face">
+                  <img src="./images/codar-logo1.png" alt="" class="profile">
+                  <div class="pt-3 text-uppercase name">
+                    Sandra Eze
+                  </div>
+                  <div class="designation">Senior Architect </div>
+                </div>
+                <div class="face back-face">
+                  <span class="fas fa-quote-left"></span>
+                  <div class="testimonial">
+                    It’s a great time to be alive learn from this institution at Codar. UX is such a wonderful course,
+                    it has opened my eyes to greater opportunities and the tutors/moderator has been exceptionally
+                    wonderful and helpful. Their intense patience in carrying everybody along at their pace of learning
+                    has really been wonderful and it shows great professionalism..
+                  </div>
+                  <span class="fas fa-quote-right"></span>
+                </div>
               </div>
-              <img src="./images/flex-img.jpeg" alt="">
-              <div class="flex1-text">
-                <h1>80%</h1>
-                <p>Hiring rate of Codar Learners</p>
+            </div>
+            <div class="col-lg-4">
+              <div class="card">
+                <div class="face front-face">
+                  <img src="./images/codar-logo1.png" alt="" class="profile">
+                  <div class="pt-3 text-uppercase name">
+                    John Bassey
+                  </div>
+                  <div class="designation">Lead Product Designer</div>
+                </div>
+                <div class="face back-face">
+                  <span class="fas fa-quote-left"></span>
+                  <div class="testimonial">
+                    My Codar experience has been one of the defining moments for me as a UX Designer. As a design
+                    fellow, I learned the technical fundamentals of UX and also the importance of collaboration.
+                  </div>
+                  <span class="fas fa-quote-right"></span>
+                </div>
               </div>
-              <img src="./images/flex1-img.jpeg" alt="">
+            </div>
+            <div class="col-lg-4">
+              <div class="card">
+                <div class="face front-face">
+                  <img src="./images/codar-logo1.png" alt="" class="profile">
+                  <div class="pt-3 text-uppercase name">
+                    Ahmed Hamzat
+                  </div>
+                  <div class="designation">Web Developer</div>
+                </div>
+                <div class="face back-face">
+                  <span class="fas fa-quote-left"></span>
+                  <div class="testimonial">
+                    Codar is a wonderful platform. So far the experience has been great. I never missed a class yet. The
+                    group assignment has been another great experience. It really help us to understand how to solve
+                    problems. The tutors are great people and they are always there to assist.. Thanks kindly.
+                  </div>
+                  <span class="fas fa-quote-right"></span>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card">
+                <div class="face front-face">
+                  <img src="./images/codar-logo1.png" alt="" class="profile">
+                  <div class="pt-3 text-uppercase name">
+                    Osamede Oluwatosin
+                  </div>
+                  <div class="designation">Product Management</div>
+                </div>
+                <div class="face back-face">
+                  <span class="fas fa-quote-left"></span>
+                  <div class="testimonial">
+                    It has been a fun filled learning experience with the facilitator. The facilitators are well vast in
+                    their respective domains. There's a superb support of carrying every single student along in the
+                    classes. Thanks.
+                  </div>
+                  <span class="fas fa-quote-right"></span>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card">
+                <div class="face front-face">
+                  <img src="./images/codar-logo1.png" alt="" class="profile">
+                  <div class="pt-3 text-uppercase name">
+                    Anyawu Esther
+                  </div>
+                  <div class="designation">Research Specialist</div>
+                </div>
+                <div class="face back-face">
+                  <span class="fas fa-quote-left"></span>
+                  <div class="testimonial">
+                    Codar is great learning platform with great tutors. When I wanted to transition to tech, I asked a
+                    friend who is a Product Manager and he recommended Codar and Codar has exceeded my expectation. The
+                    training I received at Codar is part of what helped me to get my current job and it is stilling
+                    helping in terms of productivity.
+                  </div>
+                  <span class="fas fa-quote-right"></span>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card">
+                <div class="face front-face">
+                  <img src="./images/codar-logo1.png" alt="" class="profile">
+                  <div class="pt-3 text-uppercase name">
+                    Peace Osuchukwu
+                  </div>
+                  <div class="designation">Medical Doctor</div>
+                </div>
+                <div class="face back-face">
+                  <span class="fas fa-quote-left"></span>
+                  <div class="testimonial">
+                    It's been wonderful. I love that my Content writing class, we are given room to share our thoughts
+                    and this process makes learning more interesting and encouraging. I look forward to learning new
+                    things in tech. Thank you Codar.
+                  </div>
+                  <span class="fas fa-quote-right"></span>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card">
+                <div class="face front-face">
+                  <img src="./images/codar-logo1.png" alt="" class="profile">
+                  <div class="pt-3 text-uppercase name">
+                    Joanne Oderinde
+                  </div>
+                  <div class="designation">Content Writer</div>
+                </div>
+                <div class="face back-face">
+                  <span class="fas fa-quote-left"></span>
+                  <div class="testimonial">
+                    It's been a great learning experience getting the right insight to building successful content as a
+                    Content Writer. I enjoyed every stage at which the information is been broken down for a newbie
+                    pivoting in content writing role.
+                  </div>
+                  <span class="fas fa-quote-right"></span>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card">
+                <div class="face front-face">
+                  <img src="./images/codar-logo1.png" alt="" class="profile">
+                  <div class="pt-3 text-uppercase name">
+                    Laura Usoro
+                  </div>
+                  <div class="designation">Cyber Engineer</div>
+                </div>
+                <div class="face back-face">
+                  <span class="fas fa-quote-left"></span>
+                  <div class="testimonial">
+                    Studying with Codar has been worthwhile. I must commend the experience of the training lead and the
+                    entire faculty. All the staff of Codar is amazing in response to requests. I'm enjoying the value
+                    for the money I paid.
+                  </div>
+                  <span class="fas fa-quote-right"></span>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card">
+                <div class="face front-face">
+                  <img src="./images/codar-logo1.png" alt="" class="profile">
+                  <div class="pt-3 text-uppercase name">
+                    Ifeoma Obiakor
+                  </div>
+                  <div class="designation">Front-end Developer</div>
+                </div>
+                <div class="face back-face">
+                  <span class="fas fa-quote-left"></span>
+                  <div class="testimonial">
+                    My Codar experience has been quite interesting. it has opened my eyes to various aspects of
+                    Front-end Developing. I am particularly excited about the case study that I and my team are working
+                    on. I also love the number of new people I have connected with while taking this class. It has been
+                    awesome.
+                  </div>
+                  <span class="fas fa-quote-right"></span>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="card">
+                <div class="face front-face">
+                  <img src="./images/codar-logo1.png" alt="" class="profile">
+                  <div class="pt-3 text-uppercase name">
+                    Bukola Adeniyi
+                  </div>
+                  <div class="designation">Freelancer</div>
+                </div>
+                <div class="face back-face">
+                  <span class="fas fa-quote-left"></span>
+                  <div class="testimonial">
+                    I started Codarat a point I left the banking sector full-time and moved to an intern role at the
+                    digital Lab of the bank, it no coincidence but divine that opportunity came at a time I moved into
+                    product management and I got to learn a lot. I look forward to my next roles in product management.
+                  </div>
+                  <span class="fas fa-quote-right"></span>
+                </div>
+              </div>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+    <!-- testimonials end -->
+
+    <!-- application starts -->
+    <section id="achieve" class="achieve">
+      <div class="container">
+        <div class="think-it-heading">
+          <h1>Accelerate Your Growth. <span>Think it, become it with Codar</span></h1>
+        </div>
+        <div class="flex-img-container">
+          <div class="flex-img-content">
+            <div class="flex-text">
+              <h1>10K+</h1>
+              <p>students trained</p>
+            </div>
+            <img src="./images/flex-img.jpeg" alt="">
+            <div class="flex1-text">
+              <h1>80%</h1>
+              <p>Hiring rate of Codar Learners</p>
+            </div>
+            <img src="./images/flex1-img.jpeg" alt="">
           </div>
         </div>
-      </section>    
-      <!-- application end -->    
+      </div>
+  </div>
+  </section>
+  <!-- application end -->
 
-   <!-- application starts -->
-   <section id="apply" class="apply">
+  <!-- application starts -->
+  <section id="apply" class="apply">
     <div class="container">
       <div class="form">
         <h1>Start Your Application Today</h1>
-        <p>In a world where lifelong learning is the new imperative, we have the opportunity to empower millions to unlock their future potential. Ready to join us?</p>
-          <div class="butt" id="change">
-            <button><a href="./apply.html">apply now</a></button>
-          </div>
+        <p>In a world where lifelong learning is the new imperative, we have the opportunity to empower millions to
+          unlock their future potential. Ready to join us?</p>
+        <div class="butt" id="change">
+          <button><a href="./apply.html">apply now</a></button>
+        </div>
       </div>
     </div>
-  </section>    
-  <!-- application end -->    
+  </section>
+  <!-- application end -->
 
   <!-- footer starts -->
   <div class="site-footer bg-light">
@@ -1496,9 +1733,12 @@ nav ul li{
             <h3 class="line-top">Connect with us</h3>
             <ul class="social list-unstyled mb-5">
               <li><a href="https://www.linkedin.com/company/codarhq/"><span class="icon-linkedin"></span></a></li>
-              <li><a href="https://twitter.com/CodarHq?t=TtJxGuSU_i-EMkL2hwVFuw&s=09"><span class="icon-twitter"></span></a></li>
-              <li><a href="https://instagram.com/codarhq?igshid=YmMyMTA2M2Y="><span class="icon-instagram"></span></a></li>
-              <li><a href="https://youtube.com/channel/UCUaMPb7dm0K86sPOd-ZRucQ"><span class="icon-youtube"></span></a></li>
+              <li><a href="https://twitter.com/CodarHq?t=TtJxGuSU_i-EMkL2hwVFuw&s=09"><span
+                    class="icon-twitter"></span></a></li>
+              <li><a href="https://instagram.com/codarhq?igshid=YmMyMTA2M2Y="><span class="icon-instagram"></span></a>
+              </li>
+              <li><a href="https://youtube.com/channel/UCUaMPb7dm0K86sPOd-ZRucQ"><span class="icon-youtube"></span></a>
+              </li>
             </ul>
           </div>
         </div>
@@ -1522,7 +1762,7 @@ nav ul li{
             <div class="col-6 col-sm-6 col-md-4">
               <div class="widget">
                 <ul class="links list-unstyled">
-                <h3 class="line-top">Courses</h3>
+                  <h3 class="line-top">Courses</h3>
                   <li><a href="./design.html">UI/UX Design</a></li>
                   <li><a href="./digital.html">Digital Marketing</a></li>
                   <li><a href="./data-science.html">Data Science</a></li>
@@ -1534,7 +1774,7 @@ nav ul li{
             <div class="col-6 col-sm-6 col-md-4">
               <div class="widget">
                 <ul class="links list-unstyled">
-                <h3 class="line-top">Online School</h3>
+                  <h3 class="line-top">Online School</h3>
                   <li><a href="./online-school.html">Coming Soon</a></li>
                 </ul>
               </div>
@@ -1542,7 +1782,7 @@ nav ul li{
             <div class="col-6 col-sm-6 col-md-4">
               <div class="widget">
                 <ul class="links list-unstyled">
-                <h3 class="line-top">For Companies</h3>
+                  <h3 class="line-top">For Companies</h3>
                   <li><a href="./work-force.html">Build your Workforce</a></li>
                   <li><a href="./digital.html">Learn More</a></li>
                 </ul>
@@ -1551,7 +1791,7 @@ nav ul li{
             <div class="col-6 col-sm-6 col-md-4">
               <div class="widget">
                 <ul class="links list-unstyled">
-                <h3 class="line-top">Resources</h3>
+                  <h3 class="line-top">Resources</h3>
                   <li><a href="./privacy-policy.html">Privacy</a></li>
                   <li><a href="./faqkuda.html">FAQ</a></li>
                   <li><a href="./terms-of-use.html">Terms of Use</a></li>
@@ -1565,7 +1805,10 @@ nav ul li{
 
       <div class="row justify-content-center text-center copyright">
         <div class="col-md-8">
-          <p class="small text-black-50">Copyright &copy;<script>document.write(new Date().getFullYear());</script>. All Rights Reserved. &mdash; Designed with love by <a href="https://untree.co">programmingwithVee</a></br>Distributed By <a href="https://codarhq.com/">Codar Institute</a> <!-- License information: https://untree.co/license/ -->
+          <p class="small text-black-50">Copyright &copy;
+            <script>document.write(new Date().getFullYear());</script>. All Rights Reserved. &mdash; Designed with love
+            by <a href="https://untree.co">programmingwithVee</a></br>Distributed By <a
+              href="https://codarhq.com/">Codar Institute</a> <!-- License information: https://untree.co/license/ -->
           </p>
         </div>
       </div>
@@ -1574,4 +1817,5 @@ nav ul li{
   <!-- footer end -->
   </div>
 </body>
+
 </html>

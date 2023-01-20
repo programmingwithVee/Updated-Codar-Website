@@ -36,8 +36,93 @@
     align-items: center;
     position: fixed;
     z-index: 99;
+    top: 10%;
     box-shadow: 5px 5px 5px rgb(228, 224, 224);
     background-color: #fff;
+}
+/*----------------------------*\
+	Top header
+\*----------------------------*/
+
+#top-header {
+  padding-top: 10px;
+  padding-bottom: 0px;
+  position: fixed;
+  top: 0px;
+  z-index: 99;
+  width: 100%;
+  text-align: center;
+  background-color: #1E1F29;
+}
+#top-header .container p{
+  color: white;
+}
+#top-header .container p span{
+  font-weight: bold;
+}
+.header-links li {
+  display: inline-block;
+  margin-right: 15px;
+  font-size: 12px;
+}
+
+.header-links li:last-child {
+  margin-right: 0px;
+}
+
+.header-links li a {
+  color: #FFF;
+}
+
+.header-links li a:hover {
+  color: #D10024;
+}
+
+.header-links li i {
+  color: #D10024;
+  margin-right: 5px;
+}
+.timer .ends{
+  font-family: 'Fira Sans', sans-serif;
+  text-transform: capitalize;
+  color: white;
+  padding-right: 0.5%;
+  font-size: 1.3rem;
+}
+.timer{
+  margin-top: -1.5%;
+}
+.timer li
+{
+	display: inline-block;
+	/* width: 120px; */
+	/* height: 120px; */
+	/* border-radius: 50%; */
+	/* background: #FFFFFF; */
+	/* margin-right: 10px; */
+}
+.timer_num
+{
+	font-size: 1.3rem;
+	font-weight: 600;
+	color: #fe4c50;
+	/* margin-top: 10px; */
+}
+.timer_unit
+{
+	/* margin-top: 12px; */
+	font-size: 16px;
+	font-weight: 500;
+	color: #51545f;
+}
+.categories__deal__countdown span {
+	color: #e53637;
+	font-size: 14px;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	margin-bottom: 15px;
+	display: block;
 }
  .logo img{
   width: 200px;
@@ -225,6 +310,7 @@ nav ul li a{
   background-size: cover;
   /* background-position:center; */
   position: relative;
+  z-index: 10;
 }
 .home::after{
   content: "";
@@ -239,7 +325,7 @@ nav ul li a{
 .hero-text{
   /* padding-bottom: 50px; */
   position: absolute;
-  top: 30%;
+  top: 35%;
   z-index: 1;
   display: flex;
   /* justify-content: center; */
@@ -895,12 +981,6 @@ padding: 60px 0 60px;
   display: none;
 }
 /* media query starts */
-@media only screen and (max-width:1024px){
-  .hero-text{
-    position: absolute;
-    top: 20%;
-  }
-}
 
 @media only screen and (max-width:1200px){
   .head .contain{
@@ -909,6 +989,7 @@ padding: 60px 0 60px;
     display: flex;
     align-items: center;
     position: fixed;
+    top: 10%;
     z-index: 99;
     box-shadow: 5px 7px 5px rgb(228, 224, 224);
     background-color: white;
@@ -925,7 +1006,7 @@ padding: 60px 0 60px;
   background-color: white;
   height: 100%;
   width: 100%;
-  top:  9%;
+  top:  19.5%;
   left: -100%;
   margin-left: 0;
   overflow-y: auto;
@@ -1030,8 +1111,27 @@ nav ul li{
   font-family: 'Fira Sans', sans-serif;
 }
 }
+@media only screen and (max-width:1100px){
+  .hero-text{
+    /* background-color: green; */
+    position: absolute;
+    top: 28%;
+  }
+  .home{
+    height: 110vh;
+  }
+}
+@media only screen and (max-width:1024px){
+  .home{
+    height: 130vh;
+  }
+  .hero-text{
+    position: absolute;
+    top: 25%;
+  }
+}
 @media only screen and (max-width:991px){
-.carousel-item .slide-text h1{
+  .carousel-item .slide-text h1{
   font-size: 4rem;
 }
 .carousel-item .slide-text p{
@@ -1076,7 +1176,35 @@ nav ul li{
   left: 8%;
 }
 }
+@media only screen and (max-width:912px){
+  .hero-text{
+    position: absolute;
+    top: 28%;
+  }
+  .head .contain{
+    position: fixed;
+    top: 11%;
+  }
+  .hero-text h1{
+    font-size: 3.2rem;
+  }
+  .carousel-item .slide-text{
+    position: absolute;
+    top: 50%;
+  }
+  .home{
+    height: 95vh;
+  }
+}
 @media only screen and (max-width:820px){
+  .contain nav .links{
+    position: fixed;
+    top: 12%;
+  }
+  .head .contain{
+    position: fixed;
+    top: 11%;
+  }
   .hero-text h1{
     font-size: 3rem;
     width: 90%;
@@ -1086,7 +1214,7 @@ nav ul li{
   }
   .hero-text{
     position: absolute;
-    top: 20%;
+    top: 30%;
   }
   .carousel-item .slide-text{
     position: absolute;
@@ -1094,18 +1222,6 @@ nav ul li{
   }
   #footer{
     margin-left: 8.333333%;
-  }
-}
-@media only screen and (max-width:912px){
-  .hero-text h1{
-    font-size: 3.2rem;
-  }
-  .carousel-item .slide-text{
-    position: absolute;
-    top: 50%;
-  }
-  .home{
-    height: 80vh;
   }
 }
 @media only screen and (max-width:786px){
@@ -1150,6 +1266,10 @@ nav ul li{
   }
 }
 @media  only screen and (max-width:768px) {
+  .contain nav .links{
+    position: fixed;
+    top: 21%;
+  }
   .events{
     height: 90vh;
   }
@@ -1163,12 +1283,19 @@ nav ul li{
     font-size: 3rem;
     width: 90%;
   }
+  .home{
+    height: 100vh;
+  }
   .hero-text p{
     font-size: 1.5rem;
   }
   .hero-text{
     position: absolute;
-    top: 20%;
+    top: 35%;
+  }
+  .head .contain{
+    position: fixed;
+    top: 15%;
   }
 }
 @media only screen and (max-width:586px){
@@ -1237,10 +1364,26 @@ nav ul li{
     height: 170vh;
   }
   .home{
-    height: 100vh;
+    height: 120vh;
+  }
+  .head .contain{
+    position: fixed;
+    top: 16%;
+  }
+  .hero-text{
+    position: absolute;
+    top: 30%;
   }
 }
 @media only screen and (max-width:540px){
+  .head .contain{
+    position: fixed;
+    top: 16%;
+  }
+  .hero-text{
+    position: absolute;
+    top: 30%;
+  }
   .hero-text h1{
     font-size: 3.2rem;
   }
@@ -1263,6 +1406,18 @@ nav ul li{
 }
 }
 @media only screen and (max-width:414px){
+  .contain nav .links{
+    position: fixed;
+    top: 18%;
+  }
+  .head .contain{
+    position: fixed;
+    top: 13%;
+  }
+  .hero-text{
+    position: absolute;
+    top: 30%;
+  }
 .hero-text h1{
   width: 100%;
   font-size: 3rem;
@@ -1341,6 +1496,14 @@ nav ul li{
 }
 }
 @media only screen and (max-width:375px){
+  .contain nav .links{
+    position: fixed;
+    top: 22%;
+  }
+  .head .contain{
+    position: fixed;
+    top: 15%;
+  }
   .text h1{
     font-size: 2rem;
   }
@@ -1373,9 +1536,12 @@ nav ul li{
   .hero-text p{
     text-align: left;
   }
+  .hero-text h1{
+    font-size: 2.5rem;
+  }
   .hero-text{
     position: absolute;
-    top: 20%;
+    top: 30%;
   }
 }
 @media only screen and (max-width:320px){
@@ -1396,6 +1562,25 @@ nav ul li{
   }
 }
 @media only screen and (max-width:280px){
+  .hero-text{
+    position: absolute;
+    top: 30%;
+  }
+  .head .contain{
+    position: fixed;
+    top: 12%;
+  }
+  #top-header .container p{
+    color: white;
+    font-size: 0.6875rem;
+  }
+  .timer_num
+{
+	font-size: 1rem;
+}
+.timer .ends{
+  font-size: 1rem;
+}
   .hero-text h1{
     font-size: 2rem;
   }
@@ -1480,7 +1665,7 @@ nav ul li{
     margin-top: 100%;
   }
   .home{
-    height: 70vh;
+    height: 90vh;
   }
 }
 /* media query end */

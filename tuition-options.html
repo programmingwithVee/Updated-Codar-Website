@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -54,6 +55,7 @@
     align-items: center;
     /* padding: 15px; */
     position: fixed;
+    top: 0;
     z-index: 1;
     box-shadow: 5px 7px 5px rgb(228, 224, 224);
     /* background-color: rgb(4, 78, 78); */
@@ -526,10 +528,16 @@
 
   /* media query starts */
   @media only screen and (max-width:1280px) {
-    .tuition-text{
+    .head .contain {
+      position: fixed;
+      top: 0;
+    }
+
+    .tuition-text {
       margin-left: 8.333333%;
     }
   }
+
   @media only screen and (max-width:1200px) {
     .head .contain {
       max-width: 100%;
@@ -538,6 +546,7 @@
       align-items: center;
       /* padding: 15px; */
       position: fixed;
+      top: 0;
       z-index: 1;
       box-shadow: 5px 7px 5px rgb(228, 224, 224);
       /* background-color: rgb(4, 78, 78); */
@@ -695,6 +704,11 @@
   }
 
   @media only screen and (max-width:991px) {
+    .head .contain {
+      position: fixed;
+      top: 0;
+    }
+
     .tuition-text {
       margin-top: 20%;
     }
@@ -738,89 +752,144 @@
   }
 
   @media only screen and (max-width:586px) {
+    .head .contain {
+      position: fixed;
+      top: 0;
+    }
+
     .tuition-img {
       margin-top: 1%;
     }
   }
+
   @media only screen and (max-width:540px) {
-    .img1{
-    transform: translate(-10px, -300px);
+    .head .contain {
+      position: fixed;
+      top: 0;
     }
-    .img{
-    transform: translate(50px, 200px);
+
+    .img1 {
+      transform: translate(-10px, -300px);
+    }
+
+    .img {
+      transform: translate(50px, 200px);
     }
   }
+
   @media only screen and (max-width:375px) {
-    .img{
-    transform: translate(50px, 150px);
+    .head .contain {
+      position: fixed;
+      top: 0;
     }
-    .tuition-text h1{
+
+    .img {
+      transform: translate(50px, 150px);
+    }
+
+    .tuition-text h1 {
       font-size: 2rem;
     }
   }
+
   @media only screen and (max-width:414px) {
-    .img{
-    transform: translate(50px, 200px);
+    .head .contain {
+      position: fixed;
+      top: 0;
     }
-    .img1{
-    transform: translate(-10px, -200px);
+
+    .img {
+      transform: translate(50px, 200px);
     }
-    .tuition-text h6{
+
+    .img1 {
+      transform: translate(-10px, -200px);
+    }
+
+    .tuition-text h6 {
       width: 50%;
     }
-    .tuition-text{
+
+    .tuition-text {
       margin-top: 30%;
     }
-    .logos img{
-    margin-left: 5%;
-    width: 150px;
-  }
-  .burger img{
-    width: 40px;
-  }
-  }
-  @media only screen and (max-width:320px) {
-    .tuition-text h1{
-    font-size: 2rem;
-    width: 80%;
-  }
-  .tuition-text p{
-    font-size: 15px;
-    width: 70%;
-  }
-  .img img{
-    width: 130%;
-  }
-  .img1 img{
-    width: 100%;
-  }
-  .img{
-    transform: translate(5px, 100px);
+
+    .logos img {
+      margin-left: 5%;
+      width: 150px;
     }
-    .img img{
+
+    .burger img {
+      width: 40px;
+    }
+  }
+
+  @media only screen and (max-width:320px) {
+    .head .contain {
+      position: fixed;
+      top: 0;
+    }
+
+    .tuition-text h1 {
+      font-size: 2rem;
+      width: 80%;
+    }
+
+    .tuition-text p {
+      font-size: 15px;
+      width: 70%;
+    }
+
+    .img img {
+      width: 130%;
+    }
+
+    .img1 img {
+      width: 100%;
+    }
+
+    .img {
+      transform: translate(5px, 100px);
+    }
+
+    .img img {
       border-radius: 5px;
     }
-    .pay-box1,.pay-box2{
-  width: 80%;
-}
-.pay-box1 h1, .pay-box2 h1{
-  font-size: 2rem;
-}
-.help-text h1{
-  font-size: 2rem;
-  width: 80%;
-  margin: 0 auto;
-  text-align: center;
-}
-.site-footer .widget h3, .site-footer .widget .h3 {
-    font-size: 1.2rem;
+
+    .pay-box1,
+    .pay-box2 {
+      width: 80%;
+    }
+
+    .pay-box1 h1,
+    .pay-box2 h1 {
+      font-size: 2rem;
+    }
+
+    .help-text h1 {
+      font-size: 2rem;
+      width: 80%;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .site-footer .widget h3,
+    .site-footer .widget .h3 {
+      font-size: 1.2rem;
+    }
   }
-}
-@media only screen and (max-width:280px) {
-  .pay-text h1{
-    font-size: 2rem;
+
+  @media only screen and (max-width:280px) {
+    .head .contain {
+      position: fixed;
+      top: 0;
+    }
+
+    .pay-text h1 {
+      font-size: 2rem;
+    }
   }
-}
+
   /* media query end */
 </style>
 
@@ -894,7 +963,7 @@
       <div class="contain">
         <div class="logos">
           <a href="./index.html">
-          <img src="./images/codar-logo.png" alt="">
+            <img src="./images/codar-logo.png" alt="">
           </a>
         </div>
         <nav>
@@ -962,7 +1031,7 @@
     <section class="tuition" id="tuition">
       <div class="container">
         <div class="grid">
-          <div class="tuition-text"data-aos="fade-down">
+          <div class="tuition-text" data-aos="fade-down">
             <div class="section-title">
               <h6>tuition options</h6>
             </div>
@@ -1000,13 +1069,13 @@
             below.</p>
         </div>
         <div class="pay-box">
-          <div class="pay-box1" data-aos="fade-right" >
+          <div class="pay-box1" data-aos="fade-right">
             <h1>pay tuition in one payment</h1>
             <p>Once you are enrolled and have selected the upfront tuition option, you will receive an emailed invoice
               that you can pay by ACH, wire, credit card, or check. To make an ACH payment use the link in your invoice
               email. To make a wire or check payment, follow the instructions in the invoice email.</p>
           </div>
-          <div class="pay-box2"  data-aos="fade-left">
+          <div class="pay-box2" data-aos="fade-left">
             <h1>pay tuition in 3 installments</h1>
             <p>With this option, tuition is divided into 3 equal installments . Your first payment will be due by the
               enrollment deadline. The timing of the following 2 payments amd the amount that you pay will vary
@@ -1018,7 +1087,7 @@
     <!-- payments end -->
 
     <!-- support starts -->
-    <section class="support" id="support"  data-aos="zoom-in">
+    <section class="support" id="support" data-aos="zoom-in">
       <div class="help-text">
         <h1>Talk to our support team</h1>
         <p>Reach out with questions at <span><a href="">support@codarhq.com</a></span> or book a call with an Enrollment
@@ -1043,7 +1112,7 @@
     <!-- application end -->
 
     <!-- footer starts -->
-    <div class="site-footer bg-light"  data-aos="fade-up">
+    <div class="site-footer bg-light" data-aos="fade-up">
       <div class="container">
 
         <div class="row justify-content-between">
@@ -1058,9 +1127,12 @@
               <h3 class="line-top">Connect with us</h3>
               <ul class="social list-unstyled mb-5">
                 <li><a href="https://www.linkedin.com/company/codarhq/"><span class="icon-linkedin"></span></a></li>
-                <li><a href="https://twitter.com/CodarHq?t=TtJxGuSU_i-EMkL2hwVFuw&s=09"><span class="icon-twitter"></span></a></li>
-                <li><a href="https://instagram.com/codarhq?igshid=YmMyMTA2M2Y="><span class="icon-instagram"></span></a></li>
-                <li><a href="https://youtube.com/channel/UCUaMPb7dm0K86sPOd-ZRucQ"><span class="icon-youtube"></span></a></li>
+                <li><a href="https://twitter.com/CodarHq?t=TtJxGuSU_i-EMkL2hwVFuw&s=09"><span
+                      class="icon-twitter"></span></a></li>
+                <li><a href="https://instagram.com/codarhq?igshid=YmMyMTA2M2Y="><span class="icon-instagram"></span></a>
+                </li>
+                <li><a href="https://youtube.com/channel/UCUaMPb7dm0K86sPOd-ZRucQ"><span
+                      class="icon-youtube"></span></a></li>
               </ul>
             </div>
           </div>
@@ -1096,7 +1168,7 @@
               <div class="col-6 col-sm-6 col-md-4">
                 <div class="widget">
                   <ul class="links list-unstyled">
-                  <h3 class="line-top">Online School</h3>
+                    <h3 class="line-top">Online School</h3>
                     <li><a href="./online-school.html">Coming Soon</a></li>
                   </ul>
                 </div>
@@ -1104,7 +1176,7 @@
               <div class="col-6 col-sm-6 col-md-4">
                 <div class="widget">
                   <ul class="links list-unstyled">
-                  <h3 class="line-top">For Companies</h3>
+                    <h3 class="line-top">For Companies</h3>
                     <li><a href="./work-force.html">Build Your Workforce</a></li>
                     <li><a href="./learn-more.html">Learn More</a></li>
                   </ul>
@@ -1142,7 +1214,7 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init({
-      duration:1500,
+      duration: 1500,
     });
   </script>
   <script src="./js/aos (2).js"></script>

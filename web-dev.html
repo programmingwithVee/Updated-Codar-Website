@@ -57,6 +57,7 @@
     align-items: center;
     /* padding: 15px; */
     position: fixed;
+    top: 0;
     z-index: 99;
     box-shadow: 5px 7px 5px rgb(228, 224, 224);
     /* background-color: rgb(4, 78, 78); */
@@ -812,31 +813,35 @@ border-bottom: 1px solid #999; */
     text-align: center;
     padding-bottom: 30px;
   }
-  .read-more{
+
+  .read-more {
     display: flex;
     justify-content: center;
     align-items: center;
     background: linear-gradient(to left, rgb(191, 29, 83), purple);
     width: 80%;
-    margin:  0 auto;
+    margin: 0 auto;
     padding: 3px 3px;
     text-align: center;
     border-radius: 20px;
     margin-top: 7%;
   }
-  .read-more a{
+
+  .read-more a {
     text-transform: capitalize;
     font-size: 13px;
     color: white;
     text-decoration: none;
     font-weight: bold;
-    font-family: 'Fira Sans',sans-serif;
+    font-family: 'Fira Sans', sans-serif;
   }
-  .read-more a:hover{
+
+  .read-more a:hover {
     color: white;
     font-weight: bold;
     text-decoration: none;
   }
+
   /* testimonials end */
 
   /* application starts */
@@ -1054,6 +1059,7 @@ border-bottom: 1px solid #999; */
       align-items: center;
       /* padding: 15px; */
       position: fixed;
+      top: 0;
       z-index: 1;
       box-shadow: 5px 7px 5px rgb(228, 224, 224);
       /* background-color: rgb(4, 78, 78); */
@@ -1228,6 +1234,10 @@ border-bottom: 1px solid #999; */
   }
 
   @media only screen and (max-width:991px) {
+    .head .contain {
+      position: fixed;
+      top: 0;
+    }
 
     .home-text,
     .home-course {
@@ -1279,6 +1289,11 @@ border-bottom: 1px solid #999; */
   }
 
   @media only screen and (max-width:820px) {
+    .head .contain {
+      position: fixed;
+      top: 0;
+    }
+
     .learn-text {
       margin-left: 8.333333%;
     }
@@ -1289,6 +1304,11 @@ border-bottom: 1px solid #999; */
   }
 
   @media only screen and (max-width:786px) {
+    .head .contain {
+      position: fixed;
+      top: 0;
+    }
+
     .section-topic h1 {
       width: 100%;
     }
@@ -1312,6 +1332,11 @@ border-bottom: 1px solid #999; */
   }
 
   @media only screen and (max-width:540px) {
+    .head .contain {
+      position: fixed;
+      top: 0;
+    }
+
     .think-it-heading h1 {
       width: 30%;
     }
@@ -1326,6 +1351,11 @@ border-bottom: 1px solid #999; */
   }
 
   @media only screen and (max-width:586px) {
+    .head .contain {
+      position: fixed;
+      top: 0;
+    }
+
     .think-it-heading h1 {
       font-size: 2.5rem;
       width: 110%;
@@ -1341,6 +1371,11 @@ border-bottom: 1px solid #999; */
   }
 
   @media only screen and (max-width:414px) {
+    .head .contain {
+      position: fixed;
+      top: 0;
+    }
+
     .apply {
       padding: 70px 10px 70px 10px;
       /* padding-top: 70px; */
@@ -1397,6 +1432,10 @@ border-bottom: 1px solid #999; */
   }
 
   @media only screen and (max-width:375px) {
+    .head .contain {
+      position: fixed;
+      top: 0;
+    }
 
     .learn-text .text1 h1,
     .learn-text .text2 h1,
@@ -1456,6 +1495,11 @@ border-bottom: 1px solid #999; */
   }
 
   @media only screen and (max-width:320px) {
+    .head .contain {
+      position: fixed;
+      top: 0;
+    }
+
     .logos img {
       width: 100px;
       margin-left: 15%;
@@ -1579,6 +1623,11 @@ border-bottom: 1px solid #999; */
   }
 
   @media only screen and (max-width:280px) {
+    .head .contain {
+      position: fixed;
+      top: 0;
+    }
+
     .home-text h1 {
       font-size: 1.2rem;
       width: 75%;
@@ -1710,7 +1759,8 @@ border-bottom: 1px solid #999; */
     .section-titleds p {
       width: 65%;
     }
-    .section-titled h1{
+
+    .section-titled h1 {
       font-size: 2rem;
     }
   }
@@ -1789,7 +1839,7 @@ border-bottom: 1px solid #999; */
       <div class="contain">
         <div class="logos">
           <a href="./index.html">
-          <img src="./images/codar-logo.png" alt="">
+            <img src="./images/codar-logo.png" alt="">
           </a>
         </div>
         <nav>
@@ -1918,15 +1968,15 @@ border-bottom: 1px solid #999; */
     <!-- course section starts -->
     <section class="course" id="course">
       <div class="container">
-        <div class="section-titles"  data-aos="zoom-in">
+        <div class="section-titles" data-aos="zoom-in">
           <h1>Curriculum</h1>
           <p>Codar offers a wide variety of programs and course led by experts.</p>
         </div>
         <div class="grid course-whole">
-          <div class="course-img"  data-aos="fade-right">
+          <div class="course-img" data-aos="fade-right">
             <img src="./images/education.jpeg" alt="">
           </div>
-          <div class="course-content"  data-aos="fade-left">
+          <div class="course-content" data-aos="fade-left">
             <h1>Our full stack web curriculum is designed to teach you the technical and professional skills hiring
               managers need most.</h1>
             <p> In the Full Stack Web Dev Course you’ll attend live, online lectures led by industry experts who will
@@ -1942,47 +1992,46 @@ border-bottom: 1px solid #999; */
     <!-- what we will do section starts -->
     <section class="what-to-do" id="what-to-do">
       <div class="container">
-        <div class="section-title"  data-aos="zoom-in">
+        <div class="section-title" data-aos="zoom-in">
           <h1>what we will do</h1>
         </div>
         <div class="learn-text left">
-          <div class="text1"  data-aos="flip-down">
+          <div class="text1" data-aos="flip-down">
             <h6>sprint</h6>
             <h1>00</h1>
             <h4>Orientation & Precourse Work</h4>
             <p>All Data Science learners are required to complete orientation and the precourse work</p>
           </div>
-          <div class="text2"  data-aos="flip-up">
+          <div class="text2" data-aos="flip-up">
             <h6>sprint</h6>
             <h1>01-04</h1>
             <h4>Web Foundations</h4>
             <p>‍ HTML, CSS, Git, JavaScript and UI Principle</p>
           </div>
-          <div class="text3"  data-aos="flip-down">
+          <div class="text3" data-aos="flip-down">
             <h6>sprint</h6>
             <h1>05-08</h1>
             <h4>Web Application Development</h4>
             <p>React, Redux, React Router, HTTP/Ajax, and Functional Programming Techniques</p>
           </div>
-          <div class="text4"  data-aos="flip-up">
+          <div class="text4" data-aos="flip-up">
             <h6>sprint</h6>
             <h1>09-12</h1>
             <h4>Advanced Web Development</h4>
             <p>Advanced React, State Management and Web Applications</p>
           </div>
-          <div class="text5"  data-aos="flip-down">
+          <div class="text5" data-aos="flip-down">
             <h6>sprint</h6>
             <h1>13-16</h1>
             <h4>Back End Development</h4>
             <p> Node – Node.js Web APIs, Data Persistence, Authentication and Testing</p>
           </div>
-          <div class="text6"  data-aos="flip-up"
-            <h6>sprint</h6>
+          <div class="text6" data-aos="flip-up" <h6>sprint</h6>
             <h1>17-20</h1>
             <h4>Computer Science</h4>
             <p>Intro to Python and OOP, Algorithms, Data Structures, Graphs, Hash Tables, and Coding Interview Tips</p>
           </div>
-          <div class="text7"  data-aos="flip-down">
+          <div class="text7" data-aos="flip-down">
             <h6>sprint</h6>
             <h1>21-24</h1>
             <h4>Labs</h4>
@@ -2086,7 +2135,8 @@ border-bottom: 1px solid #999; */
                 <div class="face back-face">
                   <span class="fas fa-quote-left"></span>
                   <div class="testimonial">
-                    I never thought I could turn out this good! I am very grateful to Codar for this Opportunity. I am ready to pursue more and
+                    I never thought I could turn out this good! I am very grateful to Codar for this Opportunity. I am
+                    ready to pursue more and
                     more with the support I get from my trainers and other students.
                     <div class="read-more">
                       <a href="./outcomes.html">read more testimonials <i class="fas fa-arrow-alt-circle-right"></i></a>
@@ -2131,7 +2181,8 @@ border-bottom: 1px solid #999; */
                 <div class="face back-face">
                   <span class="fas fa-quote-left"></span>
                   <div class="testimonial">
-                    Codar gave me the opportunity to know more. The training significantly helped me with my career transition
+                    Codar gave me the opportunity to know more. The training significantly helped me with my career
+                    transition
                     <div class="read-more">
                       <a href="./outcomes.html">read more testimonials <i class="fas fa-arrow-alt-circle-right"></i></a>
                     </div>
@@ -2152,7 +2203,8 @@ border-bottom: 1px solid #999; */
                 <div class="face back-face">
                   <span class="fas fa-quote-left"></span>
                   <div class="testimonial">
-                    I was really excited about Codar going virtual. Excited that I was able to learn from home. I couldn't drive myself but Codar was able to drive me to
+                    I was really excited about Codar going virtual. Excited that I was able to learn from home. I
+                    couldn't drive myself but Codar was able to drive me to
                     discipline myself.
                     <div class="read-more">
                       <a href="./outcomes.html">read more testimonials <i class="fas fa-arrow-alt-circle-right"></i></a>
@@ -2174,7 +2226,8 @@ border-bottom: 1px solid #999; */
                 <div class="face back-face">
                   <span class="fas fa-quote-left"></span>
                   <div class="testimonial">
-                    Since I've taken this class, I have been able to see how web development is important to my job. It has also positioned me as a better professional in my workplace.
+                    Since I've taken this class, I have been able to see how web development is important to my job. It
+                    has also positioned me as a better professional in my workplace.
                     <div class="read-more">
                       <a href="./outcomes.html">read more testimonials <i class="fas fa-arrow-alt-circle-right"></i></a>
                     </div>
@@ -2267,9 +2320,12 @@ border-bottom: 1px solid #999; */
             <h3 class="line-top">Connect with us</h3>
             <ul class="social list-unstyled mb-5">
               <li><a href="https://www.linkedin.com/company/codarhq/"><span class="icon-linkedin"></span></a></li>
-              <li><a href="https://twitter.com/CodarHq?t=TtJxGuSU_i-EMkL2hwVFuw&s=09"><span class="icon-twitter"></span></a></li>
-              <li><a href="https://instagram.com/codarhq?igshid=YmMyMTA2M2Y="><span class="icon-instagram"></span></a></li>
-              <li><a href="https://youtube.com/channel/UCUaMPb7dm0K86sPOd-ZRucQ"><span class="icon-youtube"></span></a></li>
+              <li><a href="https://twitter.com/CodarHq?t=TtJxGuSU_i-EMkL2hwVFuw&s=09"><span
+                    class="icon-twitter"></span></a></li>
+              <li><a href="https://instagram.com/codarhq?igshid=YmMyMTA2M2Y="><span class="icon-instagram"></span></a>
+              </li>
+              <li><a href="https://youtube.com/channel/UCUaMPb7dm0K86sPOd-ZRucQ"><span class="icon-youtube"></span></a>
+              </li>
             </ul>
           </div>
         </div>

@@ -55,6 +55,7 @@
     align-items: center;
     /* padding: 15px; */
     position: fixed;
+    top: 0;
     z-index: 1;
     box-shadow: 5px 7px 5px rgb(228, 224, 224);
     /* background-color: rgb(4, 78, 78); */
@@ -246,13 +247,14 @@
     font-size: 1.5rem;
     font-family: 'Fira Sans', sans-serif;
   }
-  .section-topic h1{
+
+  .section-topic h1 {
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 3rem;
     font-weight: bold;
-    font-family: 'Fira Sans',sans-serif;
+    font-family: 'Fira Sans', sans-serif;
     width: 70%;
     margin: 0 auto;
     text-align: center;
@@ -429,6 +431,7 @@
       align-items: center;
       /* padding: 15px; */
       position: fixed;
+      top: 0;
       z-index: 1;
       box-shadow: 5px 7px 5px rgb(228, 224, 224);
       /* background-color: rgb(4, 78, 78); */
@@ -577,6 +580,11 @@
   }
 
   @media only screen and (max-width:586px) {
+    .head .contain {
+      position: fixed;
+      top: 0;
+    }
+
     .section-title h6 {
       width: 50%;
     }
@@ -587,25 +595,39 @@
   }
 
   @media only screen and (max-width:414px) {
-    .section-topic h1{
+    .head .contain {
+      position: fixed;
+      top: 0;
+    }
+
+    .section-topic h1 {
       width: 100%;
       font-size: 2.5rem;
       padding-top: 10%;
     }
-    .logos img{
-    width: 100px;
+
+    .logos img {
+      width: 100px;
+    }
+
+    .burger img {
+      width: 30px;
+      padding-top: 5px;
+    }
   }
-  .burger img{
-    width: 30px;
-    padding-top: 5px;
-  }
-  }
+
   @media only screen and (max-width:280px) {
-    .section-topic h1{
+    .head .contain {
+      position: fixed;
+      top: 0;
+    }
+
+    .section-topic h1 {
       font-size: 2rem;
       width: 100%;
     }
   }
+
   /* media query end */
 </style>
 
@@ -679,7 +701,7 @@
       <div class="contain">
         <div class="logos">
           <a href="./index.html">
-          <img src="./images/codar-logo.png" alt="">
+            <img src="./images/codar-logo.png" alt="">
           </a>
         </div>
         <nav>
@@ -750,89 +772,161 @@
             <h1> Codar Terms of Use</h1>
           </div>
           <div class="first">
-            <p>Introduction, Use and Eligibility. Welcome! Please read these Terms of Use carefully. They provide information on your legal rights and obligations. </p>
-            <p>Codar Inc. and its affiliates (“Codar Institute,” “Codar”, “we,” “us”) provide online classes, seminars, collaboration spaces, platforms, programs, products, tools, systems, services and other offerings through which among other things, users can learn, teach, develop, communicate, and connect (collectively, the “Service”).</p>
-            <p>You agree to these Terms whenever you visit, view, attend, use or access our Service, website Codar.com and/or any Codar Institute controlled websites, software, applications, functionalities, content, materials, or other online services provided by Codar Institute, whether partial, mobile, or otherwise. </p>
-            <p>You may express an interest in and, if admitted, sign up for a program using the Service. We do not promise admission to nor ongoing availability of any particular program, or warrant its content. We determine scheduling, rescheduling, and cancellation policies and apply them at our discretion.</p>
-            <p>Codar Institute may change, suspend, or evolve any aspect of the Service over time or any feature of the Service, how the Service is delivered (in a particular app, software, or otherwise) or who may access it, without notice or liability. For example, we may condition access to our Service on good standing or compliance with these Terms and your agreements with us.</p>
-            <p>By using or accessing the Service, you (a) acknowledge that you have read and understand these Terms; (b) represent that you are at least 18 years of age and capable of agreeing to the Terms, or if you are under 18, that your parent or guardian has provided consent for you to access and use the Services; and (c) agree that you are legally bound by them. Your use of the Service is subject to your ongoing compliance with these Terms and any other written agreements between us. </p>
+            <p>Introduction, Use and Eligibility. Welcome! Please read these Terms of Use carefully. They provide
+              information on your legal rights and obligations. </p>
+            <p>Codar Inc. and its affiliates (“Codar Institute,” “Codar”, “we,” “us”) provide online classes, seminars,
+              collaboration spaces, platforms, programs, products, tools, systems, services and other offerings through
+              which among other things, users can learn, teach, develop, communicate, and connect (collectively, the
+              “Service”).</p>
+            <p>You agree to these Terms whenever you visit, view, attend, use or access our Service, website Codar.com
+              and/or any Codar Institute controlled websites, software, applications, functionalities, content,
+              materials, or other online services provided by Codar Institute, whether partial, mobile, or otherwise.
+            </p>
+            <p>You may express an interest in and, if admitted, sign up for a program using the Service. We do not
+              promise admission to nor ongoing availability of any particular program, or warrant its content. We
+              determine scheduling, rescheduling, and cancellation policies and apply them at our discretion.</p>
+            <p>Codar Institute may change, suspend, or evolve any aspect of the Service over time or any feature of the
+              Service, how the Service is delivered (in a particular app, software, or otherwise) or who may access it,
+              without notice or liability. For example, we may condition access to our Service on good standing or
+              compliance with these Terms and your agreements with us.</p>
+            <p>By using or accessing the Service, you (a) acknowledge that you have read and understand these Terms; (b)
+              represent that you are at least 18 years of age and capable of agreeing to the Terms, or if you are under
+              18, that your parent or guardian has provided consent for you to access and use the Services; and (c)
+              agree that you are legally bound by them. Your use of the Service is subject to your ongoing compliance
+              with these Terms and any other written agreements between us. </p>
             <p></p>
           </div>
           <div class="second">
             <div class="section-title">
               <h1>Revisions to Terms</h1>
             </div>
-            <p>We reserve the right to modify, update or change these Terms at any time, and we’ll give you notice by posting an updated version here. Your use of the Service is subject to the most current version of these Terms available at the time of your use. Your continued use of the Service after a change to these Terms constitutes your binding acceptance of them.</p>
+            <p>We reserve the right to modify, update or change these Terms at any time, and we’ll give you notice by
+              posting an updated version here. Your use of the Service is subject to the most current version of these
+              Terms available at the time of your use. Your continued use of the Service after a change to these Terms
+              constitutes your binding acceptance of them.</p>
           </div>
           <div class="third">
             <div class="section-title">
               <h1>Cancelation/Withdrawal.</h1>
             </div>
-            <p>We are aligned for your success and support you, but we understand in some cases you may not be able to continue, and may want to withdraw from Codar Institute or otherwise stop using the Service. </p>
-            <p>For some programs, you may be responsible for a pro-rata portion of tuition under agreement(s) with us. These Terms do not relieve your responsibilities under those agreement(s), including for applicable amounts owed. We may determine that your material breach of these Terms means you are not in good standing as a student.</p>
+            <p>We are aligned for your success and support you, but we understand in some cases you may not be able to
+              continue, and may want to withdraw from Codar Institute or otherwise stop using the Service. </p>
+            <p>For some programs, you may be responsible for a pro-rata portion of tuition under agreement(s) with us.
+              These Terms do not relieve your responsibilities under those agreement(s), including for applicable
+              amounts owed. We may determine that your material breach of these Terms means you are not in good standing
+              as a student.</p>
           </div>
         </div>
         <div class="fourth">
           <div class="section-title">
             <h1>Third Party Services.</h1>
           </div>
-          <p>The Service may include links or access to third-party tools, websites, systems or applications such as messaging platforms, content systems, or webinar software. We use third-party software, applications, systems, tools and services to help us communicate with you and to provide the Service, including email and Slack. </p>
-          <p>Codar Institute is not liable or responsible for anything that happens outside of official Codar Institute channels or systems and does not endorse third-party services, features, content, advertising, products, or other materials on other websites or applications, regardless of whether or not Codar Institute has an affiliation with such third-party services. You agree that Codar Institute is not responsible or liable for any loss or damage incurred as a result of any such dealings you may have on or through a third-party service or site. You may be subject to the privacy policy and Terms of use of any third party website or application that you use or visit. We urge you to review their Terms and conditions.</p>
+          <p>The Service may include links or access to third-party tools, websites, systems or applications such as
+            messaging platforms, content systems, or webinar software. We use third-party software, applications,
+            systems, tools and services to help us communicate with you and to provide the Service, including email and
+            Slack. </p>
+          <p>Codar Institute is not liable or responsible for anything that happens outside of official Codar Institute
+            channels or systems and does not endorse third-party services, features, content, advertising, products, or
+            other materials on other websites or applications, regardless of whether or not Codar Institute has an
+            affiliation with such third-party services. You agree that Codar Institute is not responsible or liable for
+            any loss or damage incurred as a result of any such dealings you may have on or through a third-party
+            service or site. You may be subject to the privacy policy and Terms of use of any third party website or
+            application that you use or visit. We urge you to review their Terms and conditions.</p>
         </div>
         <div class="third">
           <div class="section-title">
             <h1>Featuring an instructor or program. </h1>
           </div>
-          <p> We may feature, advertise or recommend a program or instructor, but that doesn’t mean we represent that they will be your instructor, or assure their individual quality or any learning you may achieve as a result of taking that instructor’s courses or our Service overall. Different learners have different styles and learn at different paces, however it is ultimately the learner’s responsibility to take an active role in their learning and understanding, alongside the structure and support provided by Codar Institute.</p>
+          <p> We may feature, advertise or recommend a program or instructor, but that doesn’t mean we represent that
+            they will be your instructor, or assure their individual quality or any learning you may achieve as a result
+            of taking that instructor’s courses or our Service overall. Different learners have different styles and
+            learn at different paces, however it is ultimately the learner’s responsibility to take an active role in
+            their learning and understanding, alongside the structure and support provided by Codar Institute.</p>
         </div>
         <div class="third">
           <div class="section-title">
             <h1>Program Fees.</h1>
           </div>
-          <p>We may vary the cost of our services, including tuition, payment methods and deferred tuition programs, or fees from time to time by region, in our sole discretion, and availability is not guaranteed and other Terms may apply based on your program or individual agreement(s) you may have. Please review the Terms in your Enrollment Agreement or other agreement(s) applicable to your program for additional information.</p>
+          <p>We may vary the cost of our services, including tuition, payment methods and deferred tuition programs, or
+            fees from time to time by region, in our sole discretion, and availability is not guaranteed and other Terms
+            may apply based on your program or individual agreement(s) you may have. Please review the Terms in your
+            Enrollment Agreement or other agreement(s) applicable to your program for additional information.</p>
         </div>
         <div class="third">
           <div class="section-title">
             <h1>Communications; Electronic Notices.</h1>
           </div>
-          <p>You agree to receive communications from or on behalf of Codar Institute at any email address, phone number, or other point of contact you provide us pursuant to our policies. </p>
+          <p>You agree to receive communications from or on behalf of Codar Institute at any email address, phone
+            number, or other point of contact you provide us pursuant to our policies. </p>
         </div>
         <div class="third">
           <div class="section-title">
             <h1>Communications; Electronic Notices.</h1>
           </div>
-          <p>You agree to receive communications from or on behalf of Codar Institute at any email address, phone number, or other point of contact you provide us pursuant to our policies. </p>
+          <p>You agree to receive communications from or on behalf of Codar Institute at any email address, phone
+            number, or other point of contact you provide us pursuant to our policies. </p>
         </div>
         <div class="third">
           <div class="section-title">
             <h1>License to You.</h1>
           </div>
-          <p>We authorize you, subject to these Terms, to access and use the Service and the Content solely for your personal, non-commercial use of our Service, in our sole discretion. All other use is expressly prohibited.  </p>
-          <p>No material made available on or through the Service may be copied, reproduced, republished, uploaded, posted, transmitted, or distributed in any way without written permission of the copyright owner unless such Content is specifically made available for and authorized to be downloaded from the Service, in which case you are authorized to download a single copy of such Content for your own personal use. You agree to immediately return any and all Codar Institute property in your possession or control if you leave, withdraw or are withdrawn. </p>
-          <p>Certain Content made available for download from or through the Service may also be subject to additional or different license Terms and conditions. Any such Terms and conditions shall be identified in advance for such Content, and by downloading or using any Content governed by any other license Terms and conditions, you hereby agree to be bound by and comply with such Terms and conditions.</p>
-          <p>Unauthorized use of the Content may violate copyright, trademark, and applicable communications regulations and statutes and is strictly prohibited. The modification of Content and other materials obtained from the Service, including, but not limited to, User Content (defined below), for any other purpose, including, without limitation, any commercial purpose, is a violation of the copyrights and other proprietary rights of Codar Institute or its licensors, unless you have obtained express written authorization to the contrary. You must preserve all applicable copyright, trademarks, service marks, and other proprietary notices. </p>
+          <p>We authorize you, subject to these Terms, to access and use the Service and the Content solely for your
+            personal, non-commercial use of our Service, in our sole discretion. All other use is expressly prohibited.
+          </p>
+          <p>No material made available on or through the Service may be copied, reproduced, republished, uploaded,
+            posted, transmitted, or distributed in any way without written permission of the copyright owner unless such
+            Content is specifically made available for and authorized to be downloaded from the Service, in which case
+            you are authorized to download a single copy of such Content for your own personal use. You agree to
+            immediately return any and all Codar Institute property in your possession or control if you leave, withdraw
+            or are withdrawn. </p>
+          <p>Certain Content made available for download from or through the Service may also be subject to additional
+            or different license Terms and conditions. Any such Terms and conditions shall be identified in advance for
+            such Content, and by downloading or using any Content governed by any other license Terms and conditions,
+            you hereby agree to be bound by and comply with such Terms and conditions.</p>
+          <p>Unauthorized use of the Content may violate copyright, trademark, and applicable communications regulations
+            and statutes and is strictly prohibited. The modification of Content and other materials obtained from the
+            Service, including, but not limited to, User Content (defined below), for any other purpose, including,
+            without limitation, any commercial purpose, is a violation of the copyrights and other proprietary rights of
+            Codar Institute or its licensors, unless you have obtained express written authorization to the contrary.
+            You must preserve all applicable copyright, trademarks, service marks, and other proprietary notices. </p>
           <p>This license is revocable by Codar Institute at any time without notice and with or without cause.</p>
         </div>
         <div class="third">
           <div class="section-title">
             <h1>Consequences of Violating these Terms. </h1>
           </div>
-          <p>Codar Institute can suspend access to the Service, terminate your account, and/or withdraw you and prevent access to the Service for any reason, and refuse to provide the Service to you in the future at our sole discretion, inline with these Terms and subject to any other agreements we may have with you at that time.  </p>
-          <p>If you are withdrawn from Codar Institute, the tuition proration policy may apply based on when you are withdrawn. You agree to pay for applicable Services you have used, and that you are responsible for repaying under agreement(s) you may have with us, such as an Income Share Agreement (ISA) or Enrollment Agreement. Please note that depending on the reason for withdrawal, you may not be eligible for re-admission. </p>
-          <p>We may review and remove any User Content at any time for any reason, including activity that violates these Terms, our Code of Conduct, or applicable law; is abusive, disruptive, offensive or illegal; or violates the rights of, or harms or threatens the safety or wellbeing of others or the Codar Institute community. We are not obligated to review User Content, however, if a potential violation is brought to our attention, we reserve the right to further investigation and possibly remove a student for offenses that violate our community norms and/or policies.</p>
+          <p>Codar Institute can suspend access to the Service, terminate your account, and/or withdraw you and prevent
+            access to the Service for any reason, and refuse to provide the Service to you in the future at our sole
+            discretion, inline with these Terms and subject to any other agreements we may have with you at that time.
+          </p>
+          <p>If you are withdrawn from Codar Institute, the tuition proration policy may apply based on when you are
+            withdrawn. You agree to pay for applicable Services you have used, and that you are responsible for repaying
+            under agreement(s) you may have with us, such as an Income Share Agreement (ISA) or Enrollment Agreement.
+            Please note that depending on the reason for withdrawal, you may not be eligible for re-admission. </p>
+          <p>We may review and remove any User Content at any time for any reason, including activity that violates
+            these Terms, our Code of Conduct, or applicable law; is abusive, disruptive, offensive or illegal; or
+            violates the rights of, or harms or threatens the safety or wellbeing of others or the Codar Institute
+            community. We are not obligated to review User Content, however, if a potential violation is brought to our
+            attention, we reserve the right to further investigation and possibly remove a student for offenses that
+            violate our community norms and/or policies.</p>
         </div>
         <div class="third">
           <div class="section-title">
             <h1>General Terms.</h1>
           </div>
-          <p>Bloom Institute of Technology’s failure to exercise or enforce any right or provision of these Terms shall not constitute a waiver of such right or provision.</p>
-          <p>The various provisions contained within these Terms are separate and independent. If any provision of these Terms is found by a court of competent jurisdiction to be invalid or unenforceable, the parties nevertheless agree that the court should endeavor to give effect to the parties’ intentions as reflected in the provision, and the remaining provisions of these Terms shall remain in full force and effect.</p>
+          <p>Bloom Institute of Technology’s failure to exercise or enforce any right or provision of these Terms shall
+            not constitute a waiver of such right or provision.</p>
+          <p>The various provisions contained within these Terms are separate and independent. If any provision of these
+            Terms is found by a court of competent jurisdiction to be invalid or unenforceable, the parties nevertheless
+            agree that the court should endeavor to give effect to the parties’ intentions as reflected in the
+            provision, and the remaining provisions of these Terms shall remain in full force and effect.</p>
         </div>
         <div class="third">
           <div class="section-title">
             <h1>Contact/Feedback. </h1>
           </div>
-          <p> If you have any questions or comments, please email us at <a href="mailto:info@codarhq.com">info@codarhq.com</a></p>
+          <p> If you have any questions or comments, please email us at <a
+              href="mailto:info@codarhq.com">info@codarhq.com</a></p>
         </div>
       </div>
     </section>
@@ -854,7 +948,7 @@
     <!-- application end -->
 
     <!-- footer starts -->
-    <div class="site-footer bg-light"  data-aos="fade-up" data-aos-easing="ease-in-sine">
+    <div class="site-footer bg-light" data-aos="fade-up" data-aos-easing="ease-in-sine">
       <div class="container">
         <div class="row justify-content-between">
           <div class="col-lg-4">
@@ -863,15 +957,18 @@
               <img src="./images/codar-logo.png" alt="">
               <a href=""></a>
               <!-- <p class="mb-5">Delectus voluptatum distinctio quos eius excepturi sunt pariatur, aut, doloribus officia ea molestias beatae laudantium, quam odio ipsum veritatis est maiores velit quasi blanditiis et natus accusamus itaque. Veniam quidem debitis odio amet voluptas distinctio dicta placeat! Et pariatur doloremque ea veniam. Separated they live.</p> -->
-  
+
             </div>
             <div class="widget">
               <h3 class="line-top">Connect with us</h3>
               <ul class="social list-unstyled mb-5">
                 <li><a href="https://www.linkedin.com/company/codarhq/"><span class="icon-linkedin"></span></a></li>
-                <li><a href="https://twitter.com/CodarHq?t=TtJxGuSU_i-EMkL2hwVFuw&s=09"><span class="icon-twitter"></span></a></li>
-                <li><a href="https://instagram.com/codarhq?igshid=YmMyMTA2M2Y="><span class="icon-instagram"></span></a></li>
-                <li><a href="https://youtube.com/channel/UCUaMPb7dm0K86sPOd-ZRucQ"><span class="icon-youtube"></span></a></li>
+                <li><a href="https://twitter.com/CodarHq?t=TtJxGuSU_i-EMkL2hwVFuw&s=09"><span
+                      class="icon-twitter"></span></a></li>
+                <li><a href="https://instagram.com/codarhq?igshid=YmMyMTA2M2Y="><span class="icon-instagram"></span></a>
+                </li>
+                <li><a href="https://youtube.com/channel/UCUaMPb7dm0K86sPOd-ZRucQ"><span
+                      class="icon-youtube"></span></a></li>
               </ul>
             </div>
           </div>
@@ -895,7 +992,7 @@
               <div class="col-6 col-sm-6 col-md-4">
                 <div class="widget">
                   <ul class="links list-unstyled">
-                  <h3 class="line-top">Courses</h3>
+                    <h3 class="line-top">Courses</h3>
                     <li><a href="./design.html">UI/UX Design</a></li>
                     <li><a href="./digital.html">Digital Marketing</a></li>
                     <li><a href="./data-science.html">Data Science</a></li>
@@ -907,7 +1004,7 @@
               <div class="col-6 col-sm-6 col-md-4">
                 <div class="widget">
                   <ul class="links list-unstyled">
-                  <h3 class="line-top">Online School</h3>
+                    <h3 class="line-top">Online School</h3>
                     <li><a href="./online-school.html">Coming Soon</a></li>
                   </ul>
                 </div>
@@ -915,7 +1012,7 @@
               <div class="col-6 col-sm-6 col-md-4">
                 <div class="widget">
                   <ul class="links list-unstyled">
-                  <h3 class="line-top">For Companies</h3>
+                    <h3 class="line-top">For Companies</h3>
                     <li><a href="./work-force.html">Build Your Workforce</a></li>
                     <li><a href="./learn-more.html">Learn More</a></li>
                   </ul>
@@ -924,7 +1021,7 @@
               <div class="col-6 col-sm-6 col-md-4">
                 <div class="widget">
                   <ul class="links list-unstyled">
-                  <h3 class="line-top">Resources</h3>
+                    <h3 class="line-top">Resources</h3>
                     <li><a href="./privacy-policy.html">Privacy</a></li>
                     <li><a href="./faqkuda.html">FAQ</a></li>
                     <li><a href="./terms-of-use.html">Terms of Use</a></li>
@@ -935,10 +1032,13 @@
             </div>
           </div>
         </div>
-  
+
         <div class="row justify-content-center text-center copyright">
           <div class="col-md-8">
-            <p class="small text-black-50">Copyright &copy;<script>document.write(new Date().getFullYear());</script>. All Rights Reserved. &mdash; Designed with love by <a href="https://untree.co">programmingwithVee</a></br>Distributed By <a href="https://codarhq.com/">Codar Institute</a> <!-- License information: https://untree.co/license/ -->
+            <p class="small text-black-50">Copyright &copy;
+              <script>document.write(new Date().getFullYear());</script>. All Rights Reserved. &mdash; Designed with
+              love by <a href="https://untree.co">programmingwithVee</a></br>Distributed By <a
+                href="https://codarhq.com/">Codar Institute</a> <!-- License information: https://untree.co/license/ -->
             </p>
           </div>
         </div>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,6 +16,229 @@
   <link rel="stylesheet" href="./fonts/flaticon/font/flaticon.css">
 </head>
 <style>
+  .header .containers {
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    /* padding: 15px; */
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    box-shadow: 5px 5px 5px rgb(228, 224, 224);
+    background-color: #fff;
+    /* background-color: rgb(3, 3, 54); */
+  }
+
+  .logo img {
+    width: 200px;
+    margin-left: 45%;
+  }
+
+  nav {
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 2%;
+    /* margin-left: -10%; */
+  }
+
+  nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 20px;
+  }
+
+  #seperate {
+    cursor: pointer;
+  }
+
+  nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-family: 'Fira Sans', sans-serif;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-weight: bold;
+  }
+
+  nav ul li a:hover {
+    transition: all ease-in-out 0.3s;
+    font-weight: bold;
+    text-decoration: none;
+    color: rgb(150, 8, 55);
+  }
+
+  /* hover section */
+  .containers .hovers .dropdown {
+    position: absolute;
+    /* left: 105%; */
+    width: 200px;
+    /* height: 200px; */
+    text-align: left;
+    z-index: 60;
+    -webkit-transform: translateY(10px);
+    -ms-transform: translateY(10px);
+    transform: translateY(10px);
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: 0.2s all;
+    transition: 0.2s all;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px 1px silver;
+  }
+
+  .containers #hove .dropdown {
+    width: 200px;
+  }
+
+  .containers .hovers:hover>.dropdown {
+    -webkit-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    /* transform: translateY(0px); */
+    transform: translate(-15px, 25px);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .dropdown-list li a {
+    font-size: 12px;
+    line-height: normal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Fira Sans', sans-serif;
+    /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+    font-weight: 600;
+    color: grey;
+  }
+
+  .dropdown-list li a:hover {
+    color: rgb(191, 29, 83);
+  }
+
+  /* hover section end */
+  .cons,
+  .log {
+    position: relative;
+    right: 100px;
+  }
+
+  .cons {
+    position: relative;
+    left: -50px;
+    color: ro;
+  }
+
+  .cons button {
+    padding: 15px 30px;
+    border: 2px solid rgb(191, 29, 83);
+    border-radius: 10px;
+    background: none;
+  }
+
+  .cons button:hover {
+    transform: translateX(-50px);
+    transition: all 0.30s ease-in-out;
+  }
+
+  .cons {
+    padding-right: 5%;
+  }
+
+  #width,
+  #shift {
+    display: none;
+  }
+
+  .ham {
+    display: none;
+  }
+
+  .cons button a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: rgb(191, 29, 83);
+  }
+
+  .log p {
+    padding: 15px 30px;
+    border: 2px solid rgb(191, 29, 83);
+    border-radius: 10px;
+    background: rgb(191, 29, 83);
+  }
+
+  /* .log p:hover{
+  transform: translateX(-20px);
+  transition: all 0.3s ease-in-out;
+} */
+  .log p a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    font-family: 'Fira Sans', sans-serif;
+    /* font-family: sans-serif; */
+  }
+
+  .contain .cons,
+  .log {
+    position: relative;
+    right: 100px;
+  }
+
+  .contain .cons button {
+    padding: 15px 30px;
+    border: 2px solid rgb(191, 29, 83);
+    border-radius: 10px;
+    background: none;
+  }
+
+  .contain .cons {
+    padding-right: 5%;
+  }
+
+  .contain #width,
+  #shift {
+    display: none;
+  }
+
+  .contain .cons button a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: rgb(191, 29, 83);
+  }
+
+  .contain .log {
+    margin-top: 1%;
+  }
+
+  .contain .log p {
+    padding: 15px 30px;
+    border: 2px solid rgb(191, 29, 83);
+    border-radius: 10px;
+    background: rgb(191, 29, 83);
+  }
+
+  .contain .log p a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    font-family: 'Fira Sans', sans-serif;
+    /* font-family: sans-serif; */
+  }
+
+  .ham img {
+    width: 50px;
+    position: relative;
+    right: 60px;
+    cursor: pointer;
+  }
+
+  .containers input[type="checkbox"] {
+    display: none;
+  }
+
   /* banner starts */
   .banner {
     padding: 60px 0 100px;
@@ -161,53 +385,84 @@
 
   /* how it will be done end */
 
-/* media query starts */
-@media only screen and (max-width:1200px){
-  .home-text,
-  .home-img{
-    margin-left:8.333333%;
+  /* media query starts */
+  @media only screen and (max-width:1200px) {
+    .head .contain {
+      position: fixed;
+      top: 0;
+    }
+
+    .home-text,
+    .home-img {
+      margin-left: 8.333333%;
+    }
   }
-}
-@media only screen and (max-width:1200px){
-  .home-text,
-  .home-img{
-    grid-column: span 12;
-    align-self: center;
-    margin-left:8.333333%;
+
+  @media only screen and (max-width:1200px) {
+    .head .contain {
+      position: fixed;
+      top: 0;
+    }
+
+    .home-text,
+    .home-img {
+      grid-column: span 12;
+      align-self: center;
+      margin-left: 8.333333%;
+    }
+
+    .home-img img {
+      width: 80%;
+    }
   }
-  .home-img img{
-    width: 80%;
+
+  @media only screen and (max-width:280px) {
+    .head .contain {
+      position: fixed;
+      top: 0;
+    }
+
+    .home-text h1 {
+      font-size: 2rem;
+      width: 80%;
+    }
+
+    .home-text h4 {
+      font-size: 1.3rem;
+    }
+
+    .home-text p {
+      font-size: 15px;
+      width: 70%;
+    }
+
+    .home-img img {
+      width: 70%;
+    }
+
+    .site-footer .widget h3,
+    .site-footer .widget .h3 {
+      font-size: 1.2rem;
+    }
   }
-}
-@media only screen and (max-width:280px){
-  .home-text h1{
-    font-size: 2rem;
-    width: 80%;
+
+  @media only screen and (max-width:414px) {
+    .head .contain {
+      position: fixed;
+      top: 0;
+    }
+
+    .logos img {
+      margin-left: 5%;
+      width: 150px;
+    }
+
+    .burger img {
+      width: 40px;
+    }
   }
-  .home-text h4{
-    font-size: 1.3rem;
-  }
-  .home-text p{
-    font-size: 15px;
-    width: 70%;
-  }
-  .home-img img{
-    width: 70%;
-  }
-.site-footer .widget h3, .site-footer .widget .h3 {
-    font-size: 1.2rem;
-  }
-}
-@media only screen and (max-width:414px){
-  .logos img{
-    margin-left: 5%;
-    width: 150px;
-  }
-  .burger img{
-    width: 40px;
-  }
-}
-/* media query end */
+
+  /* media query end */
 </style>
 
 <body>
@@ -281,7 +536,7 @@
       <div class="contain">
         <div class="logos">
           <a href="./index.html">
-          <img src="./images/codar-logo.png" alt="">
+            <img src="./images/codar-logo.png" alt="">
           </a>
         </div>
         <nav>
@@ -351,7 +606,8 @@
           <div class="home-text" data-aos="fade-down" data-aos-easing="" ease-in-out>
             <h4>Welcome to Codar</h4>
             <h1>School Africa</h1>
-            <p>Codar Institute is designed to shape you to the best you can be in your current role or transitioning to a new career. We have the best & experience trainers to help you on that journey.</p>
+            <p>Codar Institute is designed to shape you to the best you can be in your current role or transitioning to
+              a new career. We have the best & experience trainers to help you on that journey.</p>
             <div class="butt">
               <button><a href="./apply.html">apply now</a></button>
             </div>
@@ -666,9 +922,12 @@
               <h3 class="line-top">Connect with us</h3>
               <ul class="social list-unstyled mb-5">
                 <li><a href="https://www.linkedin.com/company/codarhq/"><span class="icon-linkedin"></span></a></li>
-                <li><a href="https://twitter.com/CodarHq?t=TtJxGuSU_i-EMkL2hwVFuw&s=09"><span class="icon-twitter"></span></a></li>
-                <li><a href="https://instagram.com/codarhq?igshid=YmMyMTA2M2Y="><span class="icon-instagram"></span></a></li>
-                <li><a href="https://youtube.com/channel/UCUaMPb7dm0K86sPOd-ZRucQ"><span class="icon-youtube"></span></a></li>
+                <li><a href="https://twitter.com/CodarHq?t=TtJxGuSU_i-EMkL2hwVFuw&s=09"><span
+                      class="icon-twitter"></span></a></li>
+                <li><a href="https://instagram.com/codarhq?igshid=YmMyMTA2M2Y="><span class="icon-instagram"></span></a>
+                </li>
+                <li><a href="https://youtube.com/channel/UCUaMPb7dm0K86sPOd-ZRucQ"><span
+                      class="icon-youtube"></span></a></li>
               </ul>
             </div>
           </div>
@@ -746,7 +1005,7 @@
     </div>
     <!-- footer end -->
   </div>
- <!-- Page wrapper ends -->
+  <!-- Page wrapper ends -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init({
@@ -754,14 +1013,15 @@
     });
   </script>
   <script src="./js/codar.js"></script>
-  <scrip t src="./js/jquery.min.js"></script>
-  <script src="./js/popper.js"></script>
-  <script src="./js/bootstrap.min.js"></script>
-  <script src="./js/owl.carousel.min.js"></script>
-  <script src="./js/main.js"></script>
-  <script src="./js/bootstrap.bundle.min.js"></script>
-  <script src="./js/aos (2).js"></script>
-  <script src="./js/custom.js"></script>
+  <scrip t src="./js/jquery.min.js">
+    </script>
+    <script src="./js/popper.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/owl.carousel.min.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/aos (2).js"></script>
+    <script src="./js/custom.js"></script>
 </body>
 
 </html>
