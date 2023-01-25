@@ -8384,6 +8384,14 @@ h1, h2, h3, h4, h5,
     margin-top: -5%;
   }
 }
+@media only screen and (max-width:320px){
+.course-heading h1{
+  font-size: 2rem;
+}
+.course-heading p{
+  width: 100%;
+}
+}
 @media only screen and (max-width:280px){
   #slider-container{
     margin-top: -40%;
