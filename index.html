@@ -874,7 +874,7 @@
     function getTimeRemaining(endtime) {
 
 
-      var t = Date.parse('Feb 01 2023 2:00:00') - Date.parse(new Date());
+      var t = Date.parse('Feb 10 2023 2:00:00') - Date.parse(new Date());
       var seconds = Math.floor((t / 1000) % 60);
       var minutes = Math.floor((t / 1000 / 60) % 60);
       var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
@@ -882,7 +882,7 @@
 
       return {
         'total': t,
-        'days': days,
+        'days': days + 'd',
         'hours': hours + 'h',
         'minutes': minutes + 'm',
         'seconds': seconds
@@ -921,7 +921,7 @@
       var timeinterval = setInterval(updateClock, 1000);
     }
 
-    var deadline = new Date(Date.parse('Feb 01 2023 2:00:00') + 1 * 1 * 1 * 6 * 1000);
+    var deadline = new Date(Date.parse('Feb 10 2023 2:00:00') + 1 * 1 * 1 * 6 * 1000);
     initializeClock('clockdiv', deadline);
   </script>
   <script src="./js/codar.js"></script>
